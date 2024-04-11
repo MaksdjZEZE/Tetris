@@ -10,11 +10,11 @@
   * falling blocks `- []`
   * rotation of blocks `- []`
   * failing and winning conditions `- []`
-  * single players mode `- []`
-  * multiple players mode `- []`
+  * single player version `- []`
+  * multi-player version `- []`
   * button for mode switch `- []`
   * support of strings display `- []`
-  
+
   
 ## additional features
   We may want to add something more such as **Support of background music and sound effect**, **support for history score table with players' name**, **garbage system** (refered to <https://tetris.wiki/Tetris_Guideline>)
@@ -25,4 +25,4 @@
   * support of garbage system `- []`
 
 ## difficulty points for this project
-  
+  5 points for basic game functionality, 2 for switching between single and mult-player version, 1 for audio, 0.5 for history score table, 0.5 for garbage system
