@@ -21,7 +21,7 @@
 
   * support of background music `- []`
   * support of sound effect `- []`
-  * drawing history score table with players' name
+  * drawing history score table with players' name `- []`
   * support of garbage system `- []`
 
 ## difficulty points for this project
