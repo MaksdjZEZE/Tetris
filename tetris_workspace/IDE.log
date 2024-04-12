@@ -1,0 +1,14 @@
+21:11:03 DEBUG : Logs will be stored at 'D:/ece385sp24/Tetris/tetris_workspace/IDE.log'.
+21:11:05 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\ece385sp24\Tetris\tetris_workspace\temp_xsdb_launch_script.tcl
+21:11:05 INFO  : Platform repository initialization has completed.
+21:11:05 INFO  : Registering command handlers for Vitis TCF services
+21:11:07 INFO  : XSCT server has started successfully.
+21:11:07 INFO  : Successfully done setting XSCT server connection channel  
+21:11:07 INFO  : plnx-install-location is set to ''
+21:11:07 INFO  : Successfully done query RDI_DATADIR 
+21:11:07 INFO  : Successfully done setting workspace for the tool. 
+21:11:44 INFO  : Result from executing command 'getProjects': tetris_top
+21:11:44 INFO  : Result from executing command 'getPlatforms': 
+21:11:44 WARN  : An unexpected exception occurred in the module 'platform project logging'
+21:11:44 INFO  : Platform 'tetris_top' is added to custom repositories.
+21:11:45 INFO  : Platform 'tetris_top' is added to custom repositories.
