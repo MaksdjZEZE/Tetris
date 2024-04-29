@@ -10,6 +10,11 @@ typedef enum { MOVE_DOWN,
                MOVE_ROTATE,
                MOVE_APPEAR } block_move_t;
 
+`define MOVE_LEFT_1  8'h04 // A
+`define MOVE_ROTATE_1    8'h1A // W
+`define MOVE_RIGHT_1 8'h07 // D
+`define MOVE_DOWN_1  8'h16 // S
+`define NEW_GAME_1 8'h28 // ENTER
 `define BLOCK_I 0
 `define BLOCK_O 1
 `define BLOCK_T 2
@@ -17,6 +22,7 @@ typedef enum { MOVE_DOWN,
 `define BLOCK_Z 4
 `define BLOCK_J 5
 `define BLOCK_L 6
+`define BLOCK_NUM 7
 
 `define  BLOCK_SIZE           16
 `define  BLOCK_SIZE_WIDTH           $clog2( `BLOCK_SIZE )
@@ -35,11 +41,11 @@ typedef enum { MOVE_DOWN,
 `define TETRIS_COLORS_NUM_WIDTH     $clog2( `TETRIS_COLORS_NUM )
 
 typedef struct packed {
-          logic        [0:3][3:0][3:0]                 data;
+          logic        [0:3][0:3][0:3]                 data;
           logic        [`TETRIS_COLORS_NUM_WIDTH-1:0]      color;
           logic        [1:0]                           point;
-          logic signed [`PLAYFIELD_COL_WIDTH-1:0]        x;
-          logic signed [`PLAYFIELD_ROW_WIDTH-1:0]        y;
+          logic signed [`PLAYFIELD_COL_WIDTH:0]        x;
+          logic signed [`PLAYFIELD_ROW_WIDTH:0]        y;
 } block_info_t;
 
 `endif

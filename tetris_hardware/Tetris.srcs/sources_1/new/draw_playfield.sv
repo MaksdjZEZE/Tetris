@@ -33,21 +33,22 @@ module draw_playfield #(parameter [9:0] PLAYFIELD_X_ = 80,
     localparam [9:0] PLAYFIELD_WIDTH_ = `PLAYFIELD_WIDTH;
     localparam [9:0] PLAYFIELD_HEIGHT_ = `PLAYFIELD_HEIGHT;
     
-    localparam [11:0] TETRIS_COLOR [`TETRIS_COLORS_NUM] = {
-        12'hfff, //0 0 0 
+    localparam [11:0] TETRIS_COLOR [`TETRIS_COLORS_NUM + 1] = {
+        12'hfff, //f f f 
         12'h3cf, //49 199 239
         12'hfd0, //247 211 8
         12'ha5a, //66 182 66
         12'h4b4, //66 182 66
         12'he23, //239 32 41
         12'h66b, //90 101 173
-        12'hf82 //239 121 33
+        12'hf82, //239 121 33
+        12'h000 // 0 0 0
     };
     logic [`PLAYFIELD_COL_WIDTH-1:0] col;
     logic [`PLAYFIELD_ROW_WIDTH-1:0] row;
     logic [9:0] field_x, field_y;
     logic [`BLOCK_SIZE_WIDTH-1:0] block_x, block_y;
-    logic [`TETRIS_COLORS_NUM_WIDTH-1:0] color_picker;
+    logic [`TETRIS_COLORS_NUM_WIDTH:0] color_picker;
     always_comb begin
         color_picker = 0;
         draw_field_en = 1'b0;
@@ -68,6 +69,11 @@ module draw_playfield #(parameter [9:0] PLAYFIELD_X_ = 80,
             else
                 color_picker = playfield[row][col];
               
+        end
+        else
+        begin
+            if ((draw_x == PLAYFIELD_X_-1) || (draw_x == PLAYFIELD_X_ + PLAYFIELD_WIDTH_) || (draw_y == PLAYFIELD_Y_-1) || (draw_y == PLAYFIELD_Y_ + PLAYFIELD_HEIGHT_))
+                color_picker = 8;
         end
 
         red = TETRIS_COLOR[color_picker][11:8];

@@ -2,3 +2,180 @@ timestamp=[2024-04-11 21:11:04], mode=WORKBENCH_START, duration=0:00:04.074, dur
 timestamp=[2024-04-11 21:11:04], mode=WORKBENCH_UI_INIT, duration=0:00:00.253, duration_ms=253, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
 timestamp=[2024-04-11 21:11:05], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.058, duration_ms=58, data={}
 timestamp=[2024-04-11 21:11:45], mode=APP_CREATION, duration=0:00:02.229, duration_ms=2229, data={name=tetris, project_type=sdk, os=standalone, processor=microblaze, runtime=cpp, platform=tetris_top, application_type=application}
+timestamp=[2024-04-16 22:14:16], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.018, duration_ms=18, data={}
+timestamp=[2024-04-16 22:14:17], mode=WORKBENCH_START, duration=0:00:06.228, duration_ms=6228, data={}
+timestamp=[2024-04-16 22:14:17], mode=WORKBENCH_UI_INIT, duration=0:00:00.550, duration_ms=550, data={editors_count=2, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,tetris,tetris_system,tetris_top}
+timestamp=[2024-04-16 22:14:58], mode=PLATFORM_GENERATION, duration=0:00:02.135, duration_ms=2135, data={name=tetris_top}
+timestamp=[2024-04-16 22:15:23], mode=PLATFORM_GENERATION, duration=0:00:03.630, duration_ms=3630, data={name=tetris_top}
+timestamp=[2024-04-16 22:15:24], mode=BUILD, duration=0:00:01.066, duration_ms=1066, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-16 22:15:27], mode=BUILD, duration=0:00:00.172, duration_ms=172, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-16 22:15:28], mode=BUILD, duration=0:00:00.110, duration_ms=110, data={name=tetris_system, configuration=Debug, clean_build=false}
+timestamp=[2024-04-16 22:25:34], mode=BUILD, duration=0:00:00.190, duration_ms=190, data={name=tetris, configuration=Debug, clean_build=true}
+timestamp=[2024-04-16 22:25:34], mode=BUILD, duration=0:00:00.110, duration_ms=110, data={name=tetris_system, configuration=Debug, clean_build=true}
+timestamp=[2024-04-16 22:25:37], mode=PLATFORM_GENERATION, duration=0:00:02.458, duration_ms=2458, data={name=tetris_top}
+timestamp=[2024-04-16 22:25:52], mode=PLATFORM_GENERATION, duration=0:00:03.531, duration_ms=3531, data={name=tetris_top}
+timestamp=[2024-04-16 22:25:54], mode=BUILD, duration=0:00:01.124, duration_ms=1124, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-16 22:26:01], mode=BUILD, duration=0:00:00.180, duration_ms=180, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-16 22:26:01], mode=BUILD, duration=0:00:00.111, duration_ms=111, data={name=tetris_system, configuration=Debug, clean_build=false}
+timestamp=[2024-04-16 22:35:04], mode=BUILD, duration=0:00:00.180, duration_ms=180, data={name=tetris, configuration=Debug, clean_build=true}
+timestamp=[2024-04-16 22:35:04], mode=BUILD, duration=0:00:00.117, duration_ms=117, data={name=tetris_system, configuration=Debug, clean_build=true}
+timestamp=[2024-04-16 22:35:06], mode=PLATFORM_GENERATION, duration=0:00:02.448, duration_ms=2448, data={name=tetris_top}
+timestamp=[2024-04-16 22:35:24], mode=PLATFORM_GENERATION, duration=0:00:03.478, duration_ms=3478, data={name=tetris_top}
+timestamp=[2024-04-16 22:35:25], mode=BUILD, duration=0:00:01.050, duration_ms=1050, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-16 22:35:28], mode=BUILD, duration=0:00:00.172, duration_ms=172, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-16 22:35:28], mode=BUILD, duration=0:00:00.110, duration_ms=110, data={name=tetris_system, configuration=Debug, clean_build=false}
+timestamp=[2024-04-17 21:02:19], mode=WORKBENCH_START, duration=0:00:14.198, duration_ms=14198, data={}
+timestamp=[2024-04-17 21:02:20], mode=WORKBENCH_UI_INIT, duration=0:00:00.565, duration_ms=565, data={editors_count=3, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,tetris,tetris_system,tetris_top}
+timestamp=[2024-04-17 21:02:20], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.042, duration_ms=42, data={}
+timestamp=[2024-04-17 21:02:44], mode=BUILD, duration=0:00:01.494, duration_ms=1494, data={name=tetris, configuration=Debug, clean_build=true}
+timestamp=[2024-04-17 21:02:44], mode=BUILD, duration=0:00:00.126, duration_ms=126, data={name=tetris_system, configuration=Debug, clean_build=true}
+timestamp=[2024-04-17 21:02:47], mode=PLATFORM_GENERATION, duration=0:00:02.501, duration_ms=2501, data={name=tetris_top}
+timestamp=[2024-04-17 21:02:57], mode=BUILD, duration=0:00:00.184, duration_ms=184, data={name=tetris, configuration=Debug, clean_build=true}
+timestamp=[2024-04-17 21:02:57], mode=BUILD, duration=0:00:00.120, duration_ms=120, data={name=tetris_system, configuration=Debug, clean_build=true}
+timestamp=[2024-04-17 21:02:59], mode=PLATFORM_GENERATION, duration=0:00:02.026, duration_ms=2026, data={name=tetris_top}
+timestamp=[2024-04-17 21:03:13], mode=PLATFORM_GENERATION, duration=0:00:06.528, duration_ms=6528, data={name=tetris_top}
+timestamp=[2024-04-17 21:03:19], mode=BUILD, duration=0:00:02.314, duration_ms=2314, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-17 21:03:19], mode=BUILD, duration=0:00:00.109, duration_ms=109, data={name=tetris_system, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 15:04:09], mode=WORKBENCH_START, duration=0:00:08.389, duration_ms=8389, data={}
+timestamp=[2024-04-18 15:04:10], mode=WORKBENCH_UI_INIT, duration=0:00:00.736, duration_ms=736, data={editors_count=3, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,tetris,tetris_system,tetris_top}
+timestamp=[2024-04-18 15:04:10], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.053, duration_ms=53, data={}
+timestamp=[2024-04-18 15:04:33], mode=BUILD, duration=0:00:00.262, duration_ms=262, data={name=tetris, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 15:04:34], mode=BUILD, duration=0:00:00.197, duration_ms=197, data={name=tetris_system, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 15:04:37], mode=PLATFORM_GENERATION, duration=0:00:02.982, duration_ms=2982, data={name=tetris_top}
+timestamp=[2024-04-18 15:04:44], mode=BUILD, duration=0:00:00.206, duration_ms=206, data={name=tetris, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 15:04:44], mode=BUILD, duration=0:00:00.164, duration_ms=164, data={name=tetris_system, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 15:04:47], mode=PLATFORM_GENERATION, duration=0:00:02.349, duration_ms=2349, data={name=tetris_top}
+timestamp=[2024-04-18 15:06:42], mode=BUILD, duration=0:00:00.221, duration_ms=221, data={name=tetris, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 15:06:42], mode=BUILD, duration=0:00:00.196, duration_ms=196, data={name=tetris_system, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 15:06:45], mode=PLATFORM_GENERATION, duration=0:00:02.510, duration_ms=2510, data={name=tetris_top}
+timestamp=[2024-04-18 15:06:58], mode=PLATFORM_GENERATION, duration=0:00:05.159, duration_ms=5159, data={name=tetris_top}
+timestamp=[2024-04-18 15:07:00], mode=BUILD, duration=0:00:01.744, duration_ms=1744, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 15:07:04], mode=BUILD, duration=0:00:00.244, duration_ms=244, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 15:07:04], mode=BUILD, duration=0:00:00.126, duration_ms=126, data={name=tetris_system, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 15:20:18], mode=BUILD, duration=0:00:00.174, duration_ms=174, data={name=tetris, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 15:20:18], mode=BUILD, duration=0:00:00.104, duration_ms=104, data={name=tetris_system, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 15:20:20], mode=PLATFORM_GENERATION, duration=0:00:02.338, duration_ms=2338, data={name=tetris_top}
+timestamp=[2024-04-18 15:20:49], mode=PLATFORM_GENERATION, duration=0:00:03.319, duration_ms=3319, data={name=tetris_top}
+timestamp=[2024-04-18 15:20:50], mode=BUILD, duration=0:00:00.985, duration_ms=985, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 15:21:00], mode=BUILD, duration=0:00:00.172, duration_ms=172, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 15:21:00], mode=BUILD, duration=0:00:00.109, duration_ms=109, data={name=tetris_system, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 15:32:57], mode=BUILD, duration=0:00:00.169, duration_ms=169, data={name=tetris, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 15:32:57], mode=BUILD, duration=0:00:00.102, duration_ms=102, data={name=tetris_system, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 15:32:59], mode=PLATFORM_GENERATION, duration=0:00:02.330, duration_ms=2330, data={name=tetris_top}
+timestamp=[2024-04-18 15:33:09], mode=PLATFORM_GENERATION, duration=0:00:03.389, duration_ms=3389, data={name=tetris_top}
+timestamp=[2024-04-18 15:33:15], mode=BUILD, duration=0:00:01.172, duration_ms=1172, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 15:33:15], mode=BUILD, duration=0:00:00.109, duration_ms=109, data={name=tetris_system, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 15:44:54], mode=BUILD, duration=0:00:00.159, duration_ms=159, data={name=tetris, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 15:44:54], mode=BUILD, duration=0:00:00.108, duration_ms=108, data={name=tetris_system, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 15:44:57], mode=PLATFORM_GENERATION, duration=0:00:02.384, duration_ms=2384, data={name=tetris_top}
+timestamp=[2024-04-18 15:45:13], mode=BUILD, duration=0:00:00.183, duration_ms=183, data={name=tetris, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 15:45:13], mode=BUILD, duration=0:00:00.105, duration_ms=105, data={name=tetris_system, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 15:45:15], mode=PLATFORM_GENERATION, duration=0:00:01.959, duration_ms=1959, data={name=tetris_top}
+timestamp=[2024-04-18 15:45:30], mode=PLATFORM_GENERATION, duration=0:00:03.283, duration_ms=3283, data={name=tetris_top}
+timestamp=[2024-04-18 15:45:31], mode=BUILD, duration=0:00:01.361, duration_ms=1361, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 15:45:33], mode=BUILD, duration=0:00:00.187, duration_ms=187, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 15:45:34], mode=BUILD, duration=0:00:00.109, duration_ms=109, data={name=tetris_system, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 15:57:26], mode=BUILD, duration=0:00:00.164, duration_ms=164, data={name=tetris, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 15:57:26], mode=BUILD, duration=0:00:00.103, duration_ms=103, data={name=tetris_system, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 15:57:28], mode=PLATFORM_GENERATION, duration=0:00:02.322, duration_ms=2322, data={name=tetris_top}
+timestamp=[2024-04-18 15:57:41], mode=PLATFORM_GENERATION, duration=0:00:03.600, duration_ms=3600, data={name=tetris_top}
+timestamp=[2024-04-18 15:57:42], mode=BUILD, duration=0:00:00.985, duration_ms=985, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 15:57:45], mode=BUILD, duration=0:00:00.169, duration_ms=169, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 15:57:45], mode=BUILD, duration=0:00:00.109, duration_ms=109, data={name=tetris_system, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 17:31:52], mode=BUILD, duration=0:00:00.232, duration_ms=232, data={name=tetris, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 17:31:52], mode=BUILD, duration=0:00:00.125, duration_ms=125, data={name=tetris_system, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 17:31:55], mode=PLATFORM_GENERATION, duration=0:00:02.995, duration_ms=2995, data={name=tetris_top}
+timestamp=[2024-04-18 17:32:10], mode=BUILD, duration=0:00:00.207, duration_ms=207, data={name=tetris, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 17:32:10], mode=BUILD, duration=0:00:00.120, duration_ms=120, data={name=tetris_system, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 17:32:12], mode=PLATFORM_GENERATION, duration=0:00:02.383, duration_ms=2383, data={name=tetris_top}
+timestamp=[2024-04-18 17:32:23], mode=PLATFORM_GENERATION, duration=0:00:04.592, duration_ms=4592, data={name=tetris_top}
+timestamp=[2024-04-18 17:32:28], mode=BUILD, duration=0:00:01.260, duration_ms=1260, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 17:32:28], mode=BUILD, duration=0:00:00.129, duration_ms=129, data={name=tetris_system, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 17:44:06], mode=BUILD, duration=0:00:00.183, duration_ms=183, data={name=tetris, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 17:44:06], mode=BUILD, duration=0:00:00.103, duration_ms=103, data={name=tetris_system, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 17:44:09], mode=PLATFORM_GENERATION, duration=0:00:02.322, duration_ms=2322, data={name=tetris_top}
+timestamp=[2024-04-18 17:44:19], mode=PLATFORM_GENERATION, duration=0:00:03.345, duration_ms=3345, data={name=tetris_top}
+timestamp=[2024-04-18 17:44:23], mode=BUILD, duration=0:00:00.986, duration_ms=986, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 17:44:24], mode=BUILD, duration=0:00:00.110, duration_ms=110, data={name=tetris_system, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 17:45:21], mode=BUILD, duration=0:00:00.163, duration_ms=163, data={name=tetris, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 17:45:22], mode=BUILD, duration=0:00:00.104, duration_ms=104, data={name=tetris_system, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 17:45:24], mode=PLATFORM_GENERATION, duration=0:00:02.319, duration_ms=2319, data={name=tetris_top}
+timestamp=[2024-04-18 17:45:39], mode=PLATFORM_GENERATION, duration=0:00:02.729, duration_ms=2729, data={name=tetris_top}
+timestamp=[2024-04-18 17:45:42], mode=BUILD, duration=0:00:00.922, duration_ms=922, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 17:45:42], mode=BUILD, duration=0:00:00.110, duration_ms=110, data={name=tetris_system, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 17:48:32], mode=BUILD, duration=0:00:00.167, duration_ms=167, data={name=tetris, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 17:48:32], mode=BUILD, duration=0:00:00.104, duration_ms=104, data={name=tetris_system, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 17:48:34], mode=PLATFORM_GENERATION, duration=0:00:02.327, duration_ms=2327, data={name=tetris_top}
+timestamp=[2024-04-18 17:48:44], mode=PLATFORM_GENERATION, duration=0:00:03.945, duration_ms=3945, data={name=tetris_top}
+timestamp=[2024-04-18 17:48:47], mode=BUILD, duration=0:00:00.938, duration_ms=938, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 17:48:48], mode=BUILD, duration=0:00:00.109, duration_ms=109, data={name=tetris_system, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 19:11:17], mode=BUILD, duration=0:00:00.222, duration_ms=222, data={name=tetris, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 19:11:17], mode=BUILD, duration=0:00:00.135, duration_ms=135, data={name=tetris_system, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 19:11:20], mode=PLATFORM_GENERATION, duration=0:00:02.961, duration_ms=2961, data={name=tetris_top}
+timestamp=[2024-04-18 19:11:33], mode=PLATFORM_GENERATION, duration=0:00:04.730, duration_ms=4730, data={name=tetris_top}
+timestamp=[2024-04-18 19:11:41], mode=BUILD, duration=0:00:01.260, duration_ms=1260, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 19:11:42], mode=BUILD, duration=0:00:00.119, duration_ms=119, data={name=tetris_system, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 19:11:46], mode=BUILD, duration=0:00:00.180, duration_ms=180, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 19:11:46], mode=BUILD, duration=0:00:00.160, duration_ms=160, data={name=tetris_system, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 20:45:37], mode=WORKBENCH_START, duration=0:00:07.920, duration_ms=7920, data={}
+timestamp=[2024-04-18 20:45:38], mode=WORKBENCH_UI_INIT, duration=0:00:00.976, duration_ms=976, data={editors_count=3, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,tetris,tetris_system,tetris_top}
+timestamp=[2024-04-18 20:45:39], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.034, duration_ms=34, data={}
+timestamp=[2024-04-18 20:45:59], mode=BUILD, duration=0:00:00.285, duration_ms=285, data={name=tetris, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 20:46:00], mode=BUILD, duration=0:00:00.123, duration_ms=123, data={name=tetris_system, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 20:46:02], mode=PLATFORM_GENERATION, duration=0:00:02.874, duration_ms=2874, data={name=tetris_top}
+timestamp=[2024-04-18 20:46:11], mode=BUILD, duration=0:00:00.206, duration_ms=206, data={name=tetris, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 20:46:11], mode=BUILD, duration=0:00:00.227, duration_ms=227, data={name=tetris_system, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 20:46:13], mode=PLATFORM_GENERATION, duration=0:00:02.493, duration_ms=2493, data={name=tetris_top}
+timestamp=[2024-04-18 20:47:01], mode=PLATFORM_GENERATION, duration=0:00:04.536, duration_ms=4536, data={name=tetris_top}
+timestamp=[2024-04-18 20:47:23], mode=BUILD, duration=0:00:01.416, duration_ms=1416, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 20:47:23], mode=BUILD, duration=0:00:00.125, duration_ms=125, data={name=tetris_system, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 21:01:02], mode=BUILD, duration=0:00:00.227, duration_ms=227, data={name=tetris, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 21:01:02], mode=BUILD, duration=0:00:00.181, duration_ms=181, data={name=tetris_system, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 21:01:05], mode=PLATFORM_GENERATION, duration=0:00:02.938, duration_ms=2938, data={name=tetris_top}
+timestamp=[2024-04-18 21:01:15], mode=PLATFORM_GENERATION, duration=0:00:04.525, duration_ms=4525, data={name=tetris_top}
+timestamp=[2024-04-18 21:01:23], mode=BUILD, duration=0:00:01.410, duration_ms=1410, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 21:01:23], mode=BUILD, duration=0:00:00.126, duration_ms=126, data={name=tetris_system, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 21:01:25], mode=BUILD, duration=0:00:00.220, duration_ms=220, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 21:01:25], mode=BUILD, duration=0:00:00.141, duration_ms=141, data={name=tetris_system, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 21:20:19], mode=BUILD, duration=0:00:00.261, duration_ms=261, data={name=tetris, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 21:20:20], mode=BUILD, duration=0:00:00.211, duration_ms=211, data={name=tetris_system, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 21:20:22], mode=PLATFORM_GENERATION, duration=0:00:02.894, duration_ms=2894, data={name=tetris_top}
+timestamp=[2024-04-18 21:20:32], mode=PLATFORM_GENERATION, duration=0:00:04.689, duration_ms=4689, data={name=tetris_top}
+timestamp=[2024-04-18 21:20:35], mode=BUILD, duration=0:00:01.384, duration_ms=1384, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 21:20:36], mode=BUILD, duration=0:00:00.127, duration_ms=127, data={name=tetris_system, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 22:05:01], mode=BUILD, duration=0:00:00.303, duration_ms=303, data={name=tetris, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 22:05:01], mode=BUILD, duration=0:00:00.196, duration_ms=196, data={name=tetris_system, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 22:05:04], mode=PLATFORM_GENERATION, duration=0:00:02.750, duration_ms=2750, data={name=tetris_top}
+timestamp=[2024-04-18 22:05:11], mode=PLATFORM_GENERATION, duration=0:00:03.773, duration_ms=3773, data={name=tetris_top}
+timestamp=[2024-04-18 22:05:16], mode=BUILD, duration=0:00:01.393, duration_ms=1393, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 22:05:16], mode=BUILD, duration=0:00:00.142, duration_ms=142, data={name=tetris_system, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 22:39:16], mode=BUILD, duration=0:00:00.256, duration_ms=256, data={name=tetris, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 22:39:16], mode=BUILD, duration=0:00:00.152, duration_ms=152, data={name=tetris_system, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 22:39:19], mode=PLATFORM_GENERATION, duration=0:00:02.755, duration_ms=2755, data={name=tetris_top}
+timestamp=[2024-04-18 22:39:28], mode=PLATFORM_GENERATION, duration=0:00:03.885, duration_ms=3885, data={name=tetris_top}
+timestamp=[2024-04-18 22:39:33], mode=BUILD, duration=0:00:01.392, duration_ms=1392, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 22:39:34], mode=BUILD, duration=0:00:00.125, duration_ms=125, data={name=tetris_system, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 22:59:39], mode=BUILD, duration=0:00:00.316, duration_ms=316, data={name=tetris, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 22:59:39], mode=BUILD, duration=0:00:00.178, duration_ms=178, data={name=tetris_system, configuration=Debug, clean_build=true}
+timestamp=[2024-04-18 22:59:42], mode=PLATFORM_GENERATION, duration=0:00:02.666, duration_ms=2666, data={name=tetris_top}
+timestamp=[2024-04-18 22:59:59], mode=PLATFORM_GENERATION, duration=0:00:03.986, duration_ms=3986, data={name=tetris_top}
+timestamp=[2024-04-18 23:00:04], mode=BUILD, duration=0:00:01.390, duration_ms=1390, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-18 23:00:04], mode=BUILD, duration=0:00:00.158, duration_ms=158, data={name=tetris_system, configuration=Debug, clean_build=false}
+timestamp=[2024-04-19 13:15:38], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.028, duration_ms=28, data={}
+timestamp=[2024-04-19 13:15:39], mode=WORKBENCH_START, duration=0:00:08.673, duration_ms=8673, data={}
+timestamp=[2024-04-19 13:15:40], mode=WORKBENCH_UI_INIT, duration=0:00:00.697, duration_ms=697, data={editors_count=3, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,tetris,tetris_system,tetris_top}
+timestamp=[2024-04-19 13:16:18], mode=BUILD, duration=0:00:00.279, duration_ms=279, data={name=tetris, configuration=Debug, clean_build=true}
+timestamp=[2024-04-19 13:16:18], mode=BUILD, duration=0:00:00.126, duration_ms=126, data={name=tetris_system, configuration=Debug, clean_build=true}
+timestamp=[2024-04-19 13:16:21], mode=PLATFORM_GENERATION, duration=0:00:03.043, duration_ms=3043, data={name=tetris_top}
+timestamp=[2024-04-19 13:16:27], mode=BUILD, duration=0:00:00.225, duration_ms=225, data={name=tetris, configuration=Debug, clean_build=true}
+timestamp=[2024-04-19 13:16:27], mode=BUILD, duration=0:00:00.220, duration_ms=220, data={name=tetris_system, configuration=Debug, clean_build=true}
+timestamp=[2024-04-19 13:16:30], mode=PLATFORM_GENERATION, duration=0:00:02.537, duration_ms=2537, data={name=tetris_top}
+timestamp=[2024-04-19 13:16:39], mode=PLATFORM_GENERATION, duration=0:00:04.779, duration_ms=4779, data={name=tetris_top}
+timestamp=[2024-04-19 13:16:44], mode=BUILD, duration=0:00:01.320, duration_ms=1320, data={name=tetris, configuration=Debug, clean_build=false}
+timestamp=[2024-04-19 13:16:44], mode=BUILD, duration=0:00:00.127, duration_ms=127, data={name=tetris_system, configuration=Debug, clean_build=false}
+timestamp=[2024-04-19 13:50:47], mode=WORKBENCH_START, duration=0:00:05.582, duration_ms=5582, data={}
+timestamp=[2024-04-19 13:50:48], mode=WORKBENCH_UI_INIT, duration=0:00:00.588, duration_ms=588, data={editors_count=3, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,tetris,tetris_system,tetris_top}
+timestamp=[2024-04-19 13:50:48], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.019, duration_ms=19, data={}
+timestamp=[2024-04-19 14:34:22], mode=WORKBENCH_START, duration=0:00:07.843, duration_ms=7843, data={}
+timestamp=[2024-04-19 14:34:23], mode=WORKBENCH_UI_INIT, duration=0:00:00.780, duration_ms=780, data={editors_count=3, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,tetris,tetris_system,tetris_top}
+timestamp=[2024-04-19 14:34:24], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.042, duration_ms=42, data={}

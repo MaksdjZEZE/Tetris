@@ -17,3 +17,78 @@ domain create -name {standalone_microblaze_0} -display-name {standalone_microbla
 platform generate -domains 
 platform active {tetris_top}
 platform generate -quick
+platform active {tetris_top}
+platform config -updatehw {D:/ece385sp24/Tetris/tetris_hardware/tetris_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/ece385sp24/Tetris/tetris_hardware/tetris_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/ece385sp24/Tetris/tetris_hardware/tetris_top.xsa}
+platform clean
+platform generate
+platform active {tetris_top}
+platform config -updatehw {D:/ece385sp24/Tetris/tetris_hardware/tetris_top.xsa}
+platform clean
+platform clean
+platform generate
+platform active {tetris_top}
+platform config -updatehw {D:/ece385sp24/Tetris/tetris_hardware/tetris_top.xsa}
+platform clean
+platform clean
+platform clean
+platform generate
+platform config -updatehw {D:/ece385sp24/Tetris/tetris_hardware/tetris_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/ece385sp24/Tetris/tetris_hardware/tetris_top.xsa}
+platform config -updatehw {D:/ece385sp24/Tetris/tetris_hardware/tetris_top.xsa}
+platform clean
+platform generate
+platform clean
+platform config -updatehw {D:/ece385sp24/Tetris/tetris_hardware/tetris_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/ece385sp24/Tetris/tetris_hardware/tetris_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/ece385sp24/Tetris/tetris_hardware/tetris_top.xsa}
+platform clean
+platform clean
+platform generate
+platform config -updatehw {D:/ece385sp24/Tetris/tetris_hardware/tetris_top.xsa}
+platform clean
+platform generate
+platform clean
+platform generate
+platform config -updatehw {D:/ece385sp24/Tetris/tetris_hardware/tetris_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/ece385sp24/Tetris/tetris_hardware/tetris_top.xsa}
+platform clean
+platform generate
+platform active {tetris_top}
+platform config -updatehw {D:/ece385sp24/Tetris/tetris_hardware/tetris_top.xsa}
+platform clean
+platform clean
+platform generate
+platform config -updatehw {D:/ece385sp24/Tetris/tetris_hardware/tetris_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/ece385sp24/Tetris/tetris_hardware/tetris_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/ece385sp24/Tetris/tetris_hardware/tetris_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/ece385sp24/Tetris/tetris_hardware/tetris_top.xsa}
+platform clean
+platform generate
+platform config -updatehw {D:/ece385sp24/Tetris/tetris_hardware/tetris_top.xsa}
+platform clean
+platform generate
+platform active {tetris_top}
+platform config -updatehw {D:/ece385sp24/Tetris/tetris_hardware/tetris_top.xsa}
+platform clean
+platform clean
+platform generate

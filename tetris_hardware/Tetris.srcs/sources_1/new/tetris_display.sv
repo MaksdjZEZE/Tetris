@@ -29,17 +29,13 @@ module tetris_display(
     );
     logic [`TETRIS_COLORS_NUM_WIDTH-1:0] playfield[`PLAYFIELD_ROW][`PLAYFIELD_COL];
     logic draw_left_field_en;
-    always_comb
-      begin
     
-        for( int row = 0; row < `PLAYFIELD_ROW; row++ )
-          begin
-            for( int col = 0; col < `PLAYFIELD_COL; col++ )
-              begin
-                playfield[row][col] = (col % 7) + 1;
-              end
-          end
-      end
+    tetris_game tetris_game_inst(
+        .Reset(Reset),
+        .frame_clk(frame_clk),
+        .keycode(keycode),
+        .playfield(playfield)
+    );
       
     draw_playfield draw_left_playfield(
         .draw_x(DrawX),

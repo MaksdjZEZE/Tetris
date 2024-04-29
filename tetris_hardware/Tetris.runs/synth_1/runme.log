@@ -13,140 +13,147 @@ source mb_usb_hdmi_top.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/ece385sp24/labs/final_project/RD_hdmi_ip2020/hdmi_tx_1.0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/ece385sp24/Vivado/2022.2/data/ip'.
-Command: read_checkpoint -auto_incremental -incremental D:/ece385sp24/labs/final_project/Tetris/Tetris.srcs/utils_1/imports/synth_1/mb_intro_top.dcp
-INFO: [Vivado 12-5825] Read reference checkpoint from D:/ece385sp24/labs/final_project/Tetris/Tetris.srcs/utils_1/imports/synth_1/mb_intro_top.dcp for incremental synthesis
+Command: read_checkpoint -auto_incremental -incremental D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/utils_1/imports/synth_1/mb_intro_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/utils_1/imports/synth_1/mb_intro_top.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
 Command: synth_design -top mb_usb_hdmi_top -part xc7s50csga324-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
 INFO: [Device 21-403] Loading part xc7s50csga324-1
-INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
-INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 10952
+INFO: [Synth 8-7075] Helper process launched with PID 9140
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/ece385sp24/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1216.254 ; gain = 407.676
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1214.938 ; gain = 406.863
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_hdmi_top' [D:/ece385sp24/labs/final_project/Tetris/Tetris.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv:14]
-INFO: [Synth 8-6157] synthesizing module 'hex_driver' [D:/ece385sp24/labs/final_project/Tetris/Tetris.srcs/sources_1/imports/design_source/hex_driver.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [D:/ece385sp24/labs/final_project/Tetris/Tetris.srcs/sources_1/imports/design_source/hex_driver.sv:11]
-INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [D:/ece385sp24/labs/final_project/Tetris/Tetris.srcs/sources_1/imports/design_source/hex_driver.sv:11]
-INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [D:/ece385sp24/labs/final_project/Tetris/Tetris.srcs/sources_1/imports/design_source/hex_driver.sv:11]
-INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [D:/ece385sp24/labs/final_project/Tetris/Tetris.srcs/sources_1/imports/design_source/hex_driver.sv:11]
-INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [D:/ece385sp24/labs/final_project/Tetris/Tetris.srcs/sources_1/imports/design_source/hex_driver.sv:11]
-INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [D:/ece385sp24/labs/final_project/Tetris/Tetris.srcs/sources_1/imports/design_source/hex_driver.sv:11]
-INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [D:/ece385sp24/labs/final_project/Tetris/Tetris.srcs/sources_1/imports/design_source/hex_driver.sv:11]
-INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [D:/ece385sp24/labs/final_project/Tetris/Tetris.srcs/sources_1/imports/design_source/hex_driver.sv:11]
-INFO: [Synth 8-6155] done synthesizing module 'hex_driver' (0#1) [D:/ece385sp24/labs/final_project/Tetris/Tetris.srcs/sources_1/imports/design_source/hex_driver.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'mb_block' [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:936]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_uartlite_0_0' [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_axi_uartlite_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_uartlite_0_0' (0#1) [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_axi_uartlite_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_clk_wiz_1_0' [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_clk_wiz_1_0' (0#1) [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_2' [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_axi_gpio_0_2_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_2' (0#1) [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_axi_gpio_0_2_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_3' [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_axi_gpio_0_3_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_3' (0#1) [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_axi_gpio_0_3_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_1' [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_axi_gpio_0_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_1' (0#1) [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_axi_gpio_0_1_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_mdm_1_0' [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_mdm_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_mdm_1_0' (0#1) [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_mdm_1_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_0' [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_microblaze_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_0' (0#1) [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_microblaze_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_axi_intc_0' [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_microblaze_0_axi_intc_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_axi_intc_0' (0#1) [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_microblaze_0_axi_intc_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_axi_periph_0' [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1602]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1TK4492' [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:12]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1TK4492' (0#1) [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:12]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_UT2LJ' [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:144]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_UT2LJ' (0#1) [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:144]
-INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1ST4AV9' [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:276]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1ST4AV9' (0#1) [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:276]
-INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1VI1NO' [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:408]
-INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1VI1NO' (0#1) [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:408]
-INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_1SCR8U8' [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:540]
-INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_1SCR8U8' (0#1) [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:540]
-INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_2FAMHT' [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:672]
-INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_2FAMHT' (0#1) [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:672]
-INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_1QRRYF7' [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:804]
-INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_1QRRYF7' (0#1) [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:804]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_5YIJ0K' [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:2926]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_5YIJ0K' (0#1) [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:2926]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_xbar_0' [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_xbar_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_xbar_0' (0#1) [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_xbar_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'mb_block_xbar_0' is unconnected for instance 'xbar' [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:2651]
-WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'mb_block_xbar_0' is unconnected for instance 'xbar' [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:2651]
-WARNING: [Synth 8-7023] instance 'xbar' of module 'mb_block_xbar_0' has 40 connections declared, but only 38 given [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:2651]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_axi_periph_0' (0#1) [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1602]
-INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_G5BFEQ' [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:2692]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_dlmb_bram_if_cntlr_0' [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_dlmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_dlmb_bram_if_cntlr_0' (0#1) [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_dlmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_dlmb_v10_0' [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_dlmb_v10_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_dlmb_v10_0' (0#1) [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_dlmb_v10_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'mb_block_dlmb_v10_0' is unconnected for instance 'dlmb_v10' [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:2838]
-WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'mb_block_dlmb_v10_0' has 25 connections declared, but only 24 given [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:2838]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_ilmb_bram_if_cntlr_0' [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_ilmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_ilmb_bram_if_cntlr_0' (0#1) [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_ilmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_ilmb_v10_0' [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_ilmb_v10_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_ilmb_v10_0' (0#1) [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_ilmb_v10_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'mb_block_ilmb_v10_0' is unconnected for instance 'ilmb_v10' [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:2884]
-WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'mb_block_ilmb_v10_0' has 25 connections declared, but only 24 given [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:2884]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_lmb_bram_0' [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_lmb_bram_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_lmb_bram_0' (0#1) [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_lmb_bram_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'rsta_busy' of module 'mb_block_lmb_bram_0' is unconnected for instance 'lmb_bram' [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:2909]
-WARNING: [Synth 8-7071] port 'rstb_busy' of module 'mb_block_lmb_bram_0' is unconnected for instance 'lmb_bram' [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:2909]
-WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'mb_block_lmb_bram_0' has 16 connections declared, but only 14 given [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:2909]
-INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_G5BFEQ' (0#1) [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:2692]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_rst_clk_wiz_1_100M_0' [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_rst_clk_wiz_1_100M_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_rst_clk_wiz_1_100M_0' (0#1) [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_rst_clk_wiz_1_100M_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'mb_block_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1532]
-WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'mb_block_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1532]
-WARNING: [Synth 8-7023] instance 'rst_clk_wiz_1_100M' of module 'mb_block_rst_clk_wiz_1_100M_0' has 10 connections declared, but only 8 given [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1532]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_quad_spi_0_0' [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_axi_quad_spi_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_quad_spi_0_0' (0#1) [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_axi_quad_spi_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'io0_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
-WARNING: [Synth 8-7071] port 'io1_o' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
-WARNING: [Synth 8-7071] port 'io1_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
-WARNING: [Synth 8-7071] port 'sck_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
-WARNING: [Synth 8-7071] port 'ss_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
-WARNING: [Synth 8-7023] instance 'spi_usb' of module 'mb_block_axi_quad_spi_0_0' has 33 connections declared, but only 28 given [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_timer_0_0' [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_axi_timer_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_timer_0_0' (0#1) [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/mb_block_axi_timer_0_0_stub.v:5]
-WARNING: [Synth 8-7071] port 'generateout0' of module 'mb_block_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1570]
-WARNING: [Synth 8-7071] port 'generateout1' of module 'mb_block_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1570]
-WARNING: [Synth 8-7071] port 'pwm0' of module 'mb_block_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1570]
-WARNING: [Synth 8-7023] instance 'timer_usb_axi' of module 'mb_block_axi_timer_0_0' has 26 connections declared, but only 23 given [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1570]
-INFO: [Synth 8-6157] synthesizing module 'mb_block_xlconcat_0_1' [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_xlconcat_0_1/synth/mb_block_xlconcat_0_1.v:53]
-INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block_xlconcat_0_1' (0#1) [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_xlconcat_0_1/synth/mb_block_xlconcat_0_1.v:53]
-INFO: [Synth 8-6155] done synthesizing module 'mb_block' (0#1) [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:936]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'vga_controller' [D:/ece385sp24/labs/final_project/Tetris/Tetris.srcs/sources_1/imports/design_source/VGA_controller.sv:26]
-INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (0#1) [D:/ece385sp24/labs/final_project/Tetris/Tetris.srcs/sources_1/imports/design_source/VGA_controller.sv:26]
-WARNING: [Synth 8-7071] port 'sync' of module 'vga_controller' is unconnected for instance 'vga' [D:/ece385sp24/labs/final_project/Tetris/Tetris.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv:97]
-WARNING: [Synth 8-7023] instance 'vga' of module 'vga_controller' has 8 connections declared, but only 7 given [D:/ece385sp24/labs/final_project/Tetris/Tetris.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv:97]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_0' [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/hdmi_tx_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_0' (0#1) [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/.Xil/Vivado-21152-LAPTOP-U1IB34FN/realtime/hdmi_tx_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'tetris_display' [D:/ece385sp24/labs/final_project/Tetris/Tetris.srcs/sources_1/new/tetris_display.sv:23]
-INFO: [Synth 8-6157] synthesizing module 'draw_playfield' [D:/ece385sp24/labs/final_project/Tetris/Tetris.srcs/sources_1/new/draw_playfield.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'draw_playfield' (0#1) [D:/ece385sp24/labs/final_project/Tetris/Tetris.srcs/sources_1/new/draw_playfield.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'tetris_display' (0#1) [D:/ece385sp24/labs/final_project/Tetris/Tetris.srcs/sources_1/new/tetris_display.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_hdmi_top' (0#1) [D:/ece385sp24/labs/final_project/Tetris/Tetris.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv:14]
-WARNING: [Synth 8-7129] Port Reset in module tetris_display is either unconnected or has no load
-WARNING: [Synth 8-7129] Port frame_clk in module tetris_display is either unconnected or has no load
-WARNING: [Synth 8-7129] Port keycode[7] in module tetris_display is either unconnected or has no load
-WARNING: [Synth 8-7129] Port keycode[6] in module tetris_display is either unconnected or has no load
-WARNING: [Synth 8-7129] Port keycode[5] in module tetris_display is either unconnected or has no load
-WARNING: [Synth 8-7129] Port keycode[4] in module tetris_display is either unconnected or has no load
-WARNING: [Synth 8-7129] Port keycode[3] in module tetris_display is either unconnected or has no load
-WARNING: [Synth 8-7129] Port keycode[2] in module tetris_display is either unconnected or has no load
-WARNING: [Synth 8-7129] Port keycode[1] in module tetris_display is either unconnected or has no load
-WARNING: [Synth 8-7129] Port keycode[0] in module tetris_display is either unconnected or has no load
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_hdmi_top' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv:14]
+INFO: [Synth 8-6157] synthesizing module 'hex_driver' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/imports/design_source/hex_driver.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/imports/design_source/hex_driver.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/imports/design_source/hex_driver.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/imports/design_source/hex_driver.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/imports/design_source/hex_driver.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/imports/design_source/hex_driver.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/imports/design_source/hex_driver.sv:11]
+INFO: [Synth 8-6157] synthesizing module 'nibble_to_hex' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/imports/design_source/hex_driver.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'nibble_to_hex' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/imports/design_source/hex_driver.sv:11]
+INFO: [Synth 8-6155] done synthesizing module 'hex_driver' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/imports/design_source/hex_driver.sv:1]
+INFO: [Synth 8-6157] synthesizing module 'mb_block' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:936]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_uartlite_0_0' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_axi_uartlite_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_uartlite_0_0' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_axi_uartlite_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_clk_wiz_1_0' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_clk_wiz_1_0' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_2' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_axi_gpio_0_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_2' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_axi_gpio_0_2_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_3' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_axi_gpio_0_3_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_3' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_axi_gpio_0_3_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_gpio_0_1' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_axi_gpio_0_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_gpio_0_1' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_axi_gpio_0_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_mdm_1_0' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_mdm_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_mdm_1_0' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_mdm_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_0' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_microblaze_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_0' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_microblaze_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_axi_intc_0' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_microblaze_0_axi_intc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_axi_intc_0' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_microblaze_0_axi_intc_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_microblaze_0_axi_periph_0' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1602]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1TK4492' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:12]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1TK4492' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:12]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_UT2LJ' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:144]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_UT2LJ' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:144]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1ST4AV9' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:276]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1ST4AV9' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:276]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_1VI1NO' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:408]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_1VI1NO' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:408]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_1SCR8U8' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:540]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_1SCR8U8' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:540]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_2FAMHT' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:672]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_2FAMHT' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:672]
+INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_1QRRYF7' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:804]
+INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_1QRRYF7' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:804]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_5YIJ0K' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:2926]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_5YIJ0K' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:2926]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_xbar_0' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_xbar_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_xbar_0' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_xbar_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'mb_block_xbar_0' is unconnected for instance 'xbar' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:2651]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'mb_block_xbar_0' is unconnected for instance 'xbar' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:2651]
+WARNING: [Synth 8-7023] instance 'xbar' of module 'mb_block_xbar_0' has 40 connections declared, but only 38 given [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:2651]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_microblaze_0_axi_periph_0' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1602]
+INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_G5BFEQ' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:2692]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_dlmb_bram_if_cntlr_0' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_dlmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_dlmb_bram_if_cntlr_0' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_dlmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_dlmb_v10_0' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_dlmb_v10_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_dlmb_v10_0' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_dlmb_v10_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'mb_block_dlmb_v10_0' is unconnected for instance 'dlmb_v10' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:2838]
+WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'mb_block_dlmb_v10_0' has 25 connections declared, but only 24 given [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:2838]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_ilmb_bram_if_cntlr_0' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_ilmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_ilmb_bram_if_cntlr_0' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_ilmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_ilmb_v10_0' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_ilmb_v10_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_ilmb_v10_0' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_ilmb_v10_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'mb_block_ilmb_v10_0' is unconnected for instance 'ilmb_v10' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:2884]
+WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'mb_block_ilmb_v10_0' has 25 connections declared, but only 24 given [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:2884]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_lmb_bram_0' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_lmb_bram_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_lmb_bram_0' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_lmb_bram_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'rsta_busy' of module 'mb_block_lmb_bram_0' is unconnected for instance 'lmb_bram' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:2909]
+WARNING: [Synth 8-7071] port 'rstb_busy' of module 'mb_block_lmb_bram_0' is unconnected for instance 'lmb_bram' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:2909]
+WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'mb_block_lmb_bram_0' has 16 connections declared, but only 14 given [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:2909]
+INFO: [Synth 8-6155] done synthesizing module 'microblaze_0_local_memory_imp_G5BFEQ' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:2692]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_rst_clk_wiz_1_100M_0' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_rst_clk_wiz_1_100M_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_rst_clk_wiz_1_100M_0' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_rst_clk_wiz_1_100M_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'mb_block_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1532]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'mb_block_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1532]
+WARNING: [Synth 8-7023] instance 'rst_clk_wiz_1_100M' of module 'mb_block_rst_clk_wiz_1_100M_0' has 10 connections declared, but only 8 given [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1532]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_quad_spi_0_0' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_axi_quad_spi_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_quad_spi_0_0' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_axi_quad_spi_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'io0_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
+WARNING: [Synth 8-7071] port 'io1_o' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
+WARNING: [Synth 8-7071] port 'io1_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
+WARNING: [Synth 8-7071] port 'sck_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
+WARNING: [Synth 8-7071] port 'ss_t' of module 'mb_block_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
+WARNING: [Synth 8-7023] instance 'spi_usb' of module 'mb_block_axi_quad_spi_0_0' has 33 connections declared, but only 28 given [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1541]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_axi_timer_0_0' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_axi_timer_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_axi_timer_0_0' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/mb_block_axi_timer_0_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'generateout0' of module 'mb_block_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1570]
+WARNING: [Synth 8-7071] port 'generateout1' of module 'mb_block_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1570]
+WARNING: [Synth 8-7071] port 'pwm0' of module 'mb_block_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1570]
+WARNING: [Synth 8-7023] instance 'timer_usb_axi' of module 'mb_block_axi_timer_0_0' has 26 connections declared, but only 23 given [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:1570]
+INFO: [Synth 8-6157] synthesizing module 'mb_block_xlconcat_0_1' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_xlconcat_0_1/synth/mb_block_xlconcat_0_1.v:53]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block_xlconcat_0_1' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_xlconcat_0_1/synth/mb_block_xlconcat_0_1.v:53]
+INFO: [Synth 8-6155] done synthesizing module 'mb_block' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/synth/mb_block.v:936]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'vga_controller' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/imports/design_source/VGA_controller.sv:26]
+INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/imports/design_source/VGA_controller.sv:26]
+WARNING: [Synth 8-7071] port 'sync' of module 'vga_controller' is unconnected for instance 'vga' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv:97]
+WARNING: [Synth 8-7023] instance 'vga' of module 'vga_controller' has 8 connections declared, but only 7 given [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv:97]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_0' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/hdmi_tx_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_0' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/.Xil/Vivado-14072-LAPTOP-U1IB34FN/realtime/hdmi_tx_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'tetris_display' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/new/tetris_display.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'tetris_game' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/new/tetris_game.sv:23]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/new/tetris_game.sv:96]
+INFO: [Synth 8-6157] synthesizing module 'generate_blocks' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/new/generate_blocks.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'generate_blocks' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/new/generate_blocks.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'wait_clock' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/new/wait_clock.sv:23]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/new/wait_clock.sv:41]
+INFO: [Synth 8-6155] done synthesizing module 'wait_clock' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/new/wait_clock.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'check_move' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/new/check_move.sv:23]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/new/check_move.sv:73]
+INFO: [Synth 8-6155] done synthesizing module 'check_move' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/new/check_move.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'tetris_game' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/new/tetris_game.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'draw_playfield' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/new/draw_playfield.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'draw_playfield' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/new/draw_playfield.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'tetris_display' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/new/tetris_display.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_hdmi_top' (0#1) [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/imports/design_source/mb_usb_hdmi_top.sv:14]
+WARNING: [Synth 8-6014] Unused sequential element new_block_info_reg[data][2][0] was removed.  [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/new/generate_blocks.sv:182]
+WARNING: [Synth 8-6014] Unused sequential element new_block_info_reg[data][2][3] was removed.  [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/new/generate_blocks.sv:182]
+WARNING: [Synth 8-7137] Register wait_clock_en_reg in module wait_clock has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/new/wait_clock.sv:45]
+WARNING: [Synth 8-87] always_comb on 'move_x_temp_reg' did not result in combinational logic [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/new/check_move.sv:81]
+WARNING: [Synth 8-87] always_comb on 'move_y_temp_reg' did not result in combinational logic [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/new/check_move.sv:82]
+WARNING: [Synth 8-7129] Port curr_block[color][2] in module check_move is either unconnected or has no load
+WARNING: [Synth 8-7129] Port curr_block[color][1] in module check_move is either unconnected or has no load
+WARNING: [Synth 8-7129] Port curr_block[color][0] in module check_move is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In4[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In5[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In6[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
@@ -237,144 +244,151 @@ WARNING: [Synth 8-7129] Port In90[0] in module xlconcat_v2_1_4_xlconcat is eithe
 WARNING: [Synth 8-7129] Port In91[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In92[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In93[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In94[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In95[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In96[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In97[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In98[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In99[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
+WARNING: [Synth 8-7129] Port In100[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1322.488 ; gain = 513.910
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 1586.555 ; gain = 778.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1322.488 ; gain = 513.910
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1586.555 ; gain = 778.480
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1322.488 ; gain = 513.910
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1586.555 ; gain = 778.480
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.036 . Memory (MB): peak = 1322.488 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.469 . Memory (MB): peak = 1586.555 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_0/mb_block_microblaze_0_0/mb_block_microblaze_0_0_in_context.xdc] for cell 'mb_block_i/microblaze_0'
-Finished Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_0/mb_block_microblaze_0_0/mb_block_microblaze_0_0_in_context.xdc] for cell 'mb_block_i/microblaze_0'
-Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_v10_0/mb_block_dlmb_v10_0/mb_block_dlmb_v10_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/dlmb_v10'
-Finished Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_v10_0/mb_block_dlmb_v10_0/mb_block_dlmb_v10_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/dlmb_v10'
-Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_ilmb_v10_0/mb_block_ilmb_v10_0/mb_block_dlmb_v10_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/ilmb_v10'
-Finished Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_ilmb_v10_0/mb_block_ilmb_v10_0/mb_block_dlmb_v10_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/ilmb_v10'
-Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
-Finished Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
-Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_ilmb_bram_if_cntlr_0/mb_block_ilmb_bram_if_cntlr_0/mb_block_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
-Finished Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_ilmb_bram_if_cntlr_0/mb_block_ilmb_bram_if_cntlr_0/mb_block_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
-Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_lmb_bram_0/mb_block_lmb_bram_0/mb_block_lmb_bram_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/lmb_bram'
-Finished Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_lmb_bram_0/mb_block_lmb_bram_0/mb_block_lmb_bram_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/lmb_bram'
-Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_xbar_0/mb_block_xbar_0/mb_block_xbar_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_axi_periph/xbar'
-Finished Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_xbar_0/mb_block_xbar_0/mb_block_xbar_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_axi_periph/xbar'
-Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_axi_intc_0/mb_block_microblaze_0_axi_intc_0/mb_block_microblaze_0_axi_intc_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_axi_intc'
-Finished Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_axi_intc_0/mb_block_microblaze_0_axi_intc_0/mb_block_microblaze_0_axi_intc_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_axi_intc'
-Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_mdm_1_0/mb_block_mdm_1_0/mb_block_mdm_1_0_in_context.xdc] for cell 'mb_block_i/mdm_1'
-Finished Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_mdm_1_0/mb_block_mdm_1_0/mb_block_mdm_1_0_in_context.xdc] for cell 'mb_block_i/mdm_1'
-Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0_in_context.xdc] for cell 'mb_block_i/clk_wiz_1'
-Finished Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0_in_context.xdc] for cell 'mb_block_i/clk_wiz_1'
-Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_rst_clk_wiz_1_100M_0/mb_block_rst_clk_wiz_1_100M_0/mb_block_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'mb_block_i/rst_clk_wiz_1_100M'
-Finished Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_rst_clk_wiz_1_100M_0/mb_block_rst_clk_wiz_1_100M_0/mb_block_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'mb_block_i/rst_clk_wiz_1_100M'
-Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0_in_context.xdc] for cell 'mb_block_i/axi_uartlite_0'
-Finished Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0_in_context.xdc] for cell 'mb_block_i/axi_uartlite_0'
-Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_1/mb_block_axi_gpio_0_1/mb_block_axi_gpio_0_1_in_context.xdc] for cell 'mb_block_i/gpio_usb_rst'
-Finished Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_1/mb_block_axi_gpio_0_1/mb_block_axi_gpio_0_1_in_context.xdc] for cell 'mb_block_i/gpio_usb_rst'
-Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_2/mb_block_axi_gpio_0_2/mb_block_axi_gpio_0_2_in_context.xdc] for cell 'mb_block_i/gpio_usb_int'
-Finished Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_2/mb_block_axi_gpio_0_2/mb_block_axi_gpio_0_2_in_context.xdc] for cell 'mb_block_i/gpio_usb_int'
-Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_in_context.xdc] for cell 'mb_block_i/gpio_usb_keycode'
-Finished Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_in_context.xdc] for cell 'mb_block_i/gpio_usb_keycode'
-Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_timer_0_0/mb_block_axi_timer_0_0/mb_block_axi_timer_0_0_in_context.xdc] for cell 'mb_block_i/timer_usb_axi'
-Finished Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_timer_0_0/mb_block_axi_timer_0_0/mb_block_axi_timer_0_0_in_context.xdc] for cell 'mb_block_i/timer_usb_axi'
-Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_quad_spi_0_0/mb_block_axi_quad_spi_0_0/mb_block_axi_quad_spi_0_0_in_context.xdc] for cell 'mb_block_i/spi_usb'
-Finished Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_quad_spi_0_0/mb_block_axi_quad_spi_0_0/mb_block_axi_quad_spi_0_0_in_context.xdc] for cell 'mb_block_i/spi_usb'
-Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc] for cell 'vga_to_hdmi'
-Finished Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc] for cell 'vga_to_hdmi'
-Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_wiz'
-WARNING: [Constraints 18-619] A clock with name 'Clk' already exists, overwriting the previous clock with the same name. [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc:1]
-Finished Parsing XDC File [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_wiz'
-Parsing XDC File [D:/ece385sp24/labs/final_project/Tetris/Tetris.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc]
+Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_0/mb_block_microblaze_0_0/mb_block_microblaze_0_0_in_context.xdc] for cell 'mb_block_i/microblaze_0'
+Finished Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_0/mb_block_microblaze_0_0/mb_block_microblaze_0_0_in_context.xdc] for cell 'mb_block_i/microblaze_0'
+Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_v10_0/mb_block_dlmb_v10_0/mb_block_dlmb_v10_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/dlmb_v10'
+Finished Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_v10_0/mb_block_dlmb_v10_0/mb_block_dlmb_v10_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/dlmb_v10'
+Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_ilmb_v10_0/mb_block_ilmb_v10_0/mb_block_dlmb_v10_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/ilmb_v10'
+Finished Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_ilmb_v10_0/mb_block_ilmb_v10_0/mb_block_dlmb_v10_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/ilmb_v10'
+Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Finished Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/dlmb_bram_if_cntlr'
+Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_ilmb_bram_if_cntlr_0/mb_block_ilmb_bram_if_cntlr_0/mb_block_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Finished Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_ilmb_bram_if_cntlr_0/mb_block_ilmb_bram_if_cntlr_0/mb_block_ilmb_bram_if_cntlr_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/ilmb_bram_if_cntlr'
+Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_lmb_bram_0/mb_block_lmb_bram_0/mb_block_lmb_bram_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/lmb_bram'
+Finished Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_lmb_bram_0/mb_block_lmb_bram_0/mb_block_lmb_bram_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_local_memory/lmb_bram'
+Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_xbar_0/mb_block_xbar_0/mb_block_xbar_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_axi_periph/xbar'
+Finished Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_xbar_0/mb_block_xbar_0/mb_block_xbar_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_axi_periph/xbar'
+Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_axi_intc_0/mb_block_microblaze_0_axi_intc_0/mb_block_microblaze_0_axi_intc_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_axi_intc'
+Finished Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_microblaze_0_axi_intc_0/mb_block_microblaze_0_axi_intc_0/mb_block_microblaze_0_axi_intc_0_in_context.xdc] for cell 'mb_block_i/microblaze_0_axi_intc'
+Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_mdm_1_0/mb_block_mdm_1_0/mb_block_mdm_1_0_in_context.xdc] for cell 'mb_block_i/mdm_1'
+Finished Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_mdm_1_0/mb_block_mdm_1_0/mb_block_mdm_1_0_in_context.xdc] for cell 'mb_block_i/mdm_1'
+Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0_in_context.xdc] for cell 'mb_block_i/clk_wiz_1'
+Finished Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0_in_context.xdc] for cell 'mb_block_i/clk_wiz_1'
+Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_rst_clk_wiz_1_100M_0/mb_block_rst_clk_wiz_1_100M_0/mb_block_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'mb_block_i/rst_clk_wiz_1_100M'
+Finished Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_rst_clk_wiz_1_100M_0/mb_block_rst_clk_wiz_1_100M_0/mb_block_rst_clk_wiz_1_100M_0_in_context.xdc] for cell 'mb_block_i/rst_clk_wiz_1_100M'
+Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0_in_context.xdc] for cell 'mb_block_i/axi_uartlite_0'
+Finished Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0_in_context.xdc] for cell 'mb_block_i/axi_uartlite_0'
+Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_1/mb_block_axi_gpio_0_1/mb_block_axi_gpio_0_1_in_context.xdc] for cell 'mb_block_i/gpio_usb_rst'
+Finished Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_1/mb_block_axi_gpio_0_1/mb_block_axi_gpio_0_1_in_context.xdc] for cell 'mb_block_i/gpio_usb_rst'
+Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_2/mb_block_axi_gpio_0_2/mb_block_axi_gpio_0_2_in_context.xdc] for cell 'mb_block_i/gpio_usb_int'
+Finished Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_2/mb_block_axi_gpio_0_2/mb_block_axi_gpio_0_2_in_context.xdc] for cell 'mb_block_i/gpio_usb_int'
+Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_in_context.xdc] for cell 'mb_block_i/gpio_usb_keycode'
+Finished Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_in_context.xdc] for cell 'mb_block_i/gpio_usb_keycode'
+Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_timer_0_0/mb_block_axi_timer_0_0/mb_block_axi_timer_0_0_in_context.xdc] for cell 'mb_block_i/timer_usb_axi'
+Finished Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_timer_0_0/mb_block_axi_timer_0_0/mb_block_axi_timer_0_0_in_context.xdc] for cell 'mb_block_i/timer_usb_axi'
+Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_quad_spi_0_0/mb_block_axi_quad_spi_0_0/mb_block_axi_quad_spi_0_0_in_context.xdc] for cell 'mb_block_i/spi_usb'
+Finished Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_quad_spi_0_0/mb_block_axi_quad_spi_0_0/mb_block_axi_quad_spi_0_0_in_context.xdc] for cell 'mb_block_i/spi_usb'
+Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc] for cell 'vga_to_hdmi'
+Finished Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc] for cell 'vga_to_hdmi'
+Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_wiz'
+WARNING: [Constraints 18-619] A clock with name 'Clk' already exists, overwriting the previous clock with the same name. [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc:1]
+Finished Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_wiz'
+Parsing XDC File [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc]
 CRITICAL WARNING: [Constraints 18-1056] Clock 'clk_100' completely overrides clock 'Clk'.
-New: create_clock -period 10.000 -name clk_100 -waveform {0.000 5.000} [get_ports Clk], [D:/ece385sp24/labs/final_project/Tetris/Tetris.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:1]
-Previous: create_clock -period 10.000 [get_ports Clk], [d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc:1]
+New: create_clock -period 10.000 -name clk_100 -waveform {0.000 5.000} [get_ports Clk], [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:1]
+Previous: create_clock -period 10.000 [get_ports Clk], [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc:1]
 Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
-Finished Parsing XDC File [D:/ece385sp24/labs/final_project/Tetris/Tetris.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/ece385sp24/labs/final_project/Tetris/Tetris.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/mb_usb_hdmi_top_propImpl.xdc].
+Finished Parsing XDC File [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/mb_usb_hdmi_top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/mb_usb_hdmi_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Parsing XDC File [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/dont_touch.xdc]
-Finished Parsing XDC File [D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/dont_touch.xdc]
+Parsing XDC File [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1431.434 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1682.250 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1431.434 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.070 . Memory (MB): peak = 1682.250 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mb_block_i/spi_usb' at clock pin 'ext_spi_clk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mb_block_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
-INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
-INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/ece385sp24/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1431.434 ; gain = 622.855
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1682.250 ; gain = 874.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1431.434 ; gain = 622.855
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 1682.250 ; gain = 874.176
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-6702] IncrSynth : Over 50% of partitions are impacted by design changes. Reverting to default synthesis
+WARNING: [Synth 8-6702] IncrSynth : Reverting to default synthesis
+mb_usb_hdmi_top__GC0---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:20 ; elapsed = 00:00:31 . Memory (MB): peak = 1682.250 ; gain = 874.176
 ---------------------------------------------------------------------------------
-Start Applying 'set_property' XDC Constraints
+INFO: [Synth 8-802] inferred FSM for state register 'wait_state_reg' in module 'wait_clock'
+INFO: [Synth 8-802] inferred FSM for state register 'check_state_reg' in module 'check_move'
+INFO: [Synth 8-802] inferred FSM for state register 'game_state_reg' in module 'tetris_game'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+               WAIT_IDLE |                              001 |                               00
+              WAIT_COUNT |                              010 |                               01
+                WAIT_END |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'wait_state_reg' using encoding 'one-hot' in module 'wait_clock'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+              CHECK_IDLE |                              001 |                               00
+                CHECKING |                              010 |                               01
+              CHECK_DONE |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'check_state_reg' using encoding 'one-hot' in module 'check_move'
+WARNING: [Synth 8-327] inferring latch for variable 'move_y_temp_reg' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/new/check_move.sv:82]
+WARNING: [Synth 8-327] inferring latch for variable 'move_x_temp_reg' [D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/new/check_move.sv:81]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  IDLE_S |                          0000010 |                              000
+         GEN_NEW_BLOCK_S |                          0001000 |                              001
+            CHECK_MOVE_S |                          1000000 |                              011
+             MAKE_MOVE_S |                          0010000 |                              100
+          APPEND_BLOCK_S |                          0000100 |                              110
+             GAME_OVER_S |                          0000001 |                              101
+            WAIT_INPUT_S |                          0100000 |                              010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'game_state_reg' using encoding 'one-hot' in module 'tetris_game'
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_clk_n. (constraint file  d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 1).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_clk_n. (constraint file  d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 2).
-Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_clk_p. (constraint file  d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_clk_p. (constraint file  d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 4).
-Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_n[0]. (constraint file  d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 5).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_n[0]. (constraint file  d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 6).
-Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_n[1]. (constraint file  d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 7).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_n[1]. (constraint file  d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 8).
-Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_n[2]. (constraint file  d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 9).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_n[2]. (constraint file  d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 10).
-Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_p[0]. (constraint file  d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 11).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_p[0]. (constraint file  d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 12).
-Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_p[1]. (constraint file  d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 13).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_p[1]. (constraint file  d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 14).
-Applied set_property IO_BUFFER_TYPE = NONE for hdmi_tmds_data_p[2]. (constraint file  d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 15).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for hdmi_tmds_data_p[2]. (constraint file  d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0/hdmi_tx_0_in_context.xdc, line 16).
-Applied set_property IO_BUFFER_TYPE = NONE for Clk. (constraint file  d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 4).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for Clk. (constraint file  d:/ece385sp24/labs/final_project/Tetris/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0/clk_wiz_0_in_context.xdc, line 5).
-Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/microblaze_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/microblaze_0_local_memory/dlmb_v10. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/microblaze_0_local_memory/ilmb_v10. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/microblaze_0_local_memory/dlmb_bram_if_cntlr. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/microblaze_0_local_memory/ilmb_bram_if_cntlr. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/microblaze_0_local_memory/lmb_bram. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/microblaze_0_axi_periph/xbar. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/microblaze_0_axi_periph. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/microblaze_0_axi_intc. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/mdm_1. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/clk_wiz_1. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/rst_clk_wiz_1_100M. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/axi_uartlite_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/gpio_usb_rst. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/gpio_usb_int. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/gpio_usb_keycode. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/timer_usb_axi. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/spi_usb. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for mb_block_i/xlconcat_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for vga_to_hdmi. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for clk_wiz. (constraint file  auto generated constraint).
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:45 ; elapsed = 00:01:06 . Memory (MB): peak = 1682.250 ; gain = 874.176
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1431.434 ; gain = 622.855
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1431.434 ; gain = 622.855
----------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : Change is too high
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -382,15 +396,50 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input   11 Bit       Adders := 2     
 	   2 Input   10 Bit       Adders := 4     
+	   2 Input    7 Bit       Adders := 3     
+	   2 Input    6 Bit       Adders := 5     
+	   3 Input    6 Bit       Adders := 3     
+	   2 Input    5 Bit       Adders := 3     
+	   3 Input    5 Bit       Adders := 3     
+	   2 Input    3 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
 +---Registers : 
+	               32 Bit    Registers := 1     
+	               15 Bit    Registers := 1     
 	               10 Bit    Registers := 2     
-	                1 Bit    Registers := 2     
+	                8 Bit    Registers := 1     
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 24    
+	                3 Bit    Registers := 207   
+	                2 Bit    Registers := 5     
+	                1 Bit    Registers := 5     
 +---Muxes : 
-	   8 Input   12 Bit        Muxes := 1     
+	   3 Input   32 Bit        Muxes := 1     
 	   4 Input    8 Bit        Muxes := 2     
 	   2 Input    8 Bit        Muxes := 2     
+	   7 Input    7 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 6     
+	   2 Input    6 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 1     
+	   3 Input    5 Bit        Muxes := 1     
+	   7 Input    4 Bit        Muxes := 7     
+	   4 Input    4 Bit        Muxes := 8     
+	   2 Input    4 Bit        Muxes := 1     
+	   3 Input    4 Bit        Muxes := 1     
 	   5 Input    4 Bit        Muxes := 2     
-	   2 Input    3 Bit        Muxes := 2     
+	   7 Input    3 Bit        Muxes := 8     
+	   2 Input    3 Bit        Muxes := 8768  
+	   4 Input    3 Bit        Muxes := 9     
+	   3 Input    3 Bit        Muxes := 2     
+	   7 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 10    
+	   2 Input    2 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 62    
+	   4 Input    1 Bit        Muxes := 10    
+	   3 Input    1 Bit        Muxes := 9     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -406,30 +455,112 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
-WARNING: [Synth 8-3917] design mb_usb_hdmi_top has port hex_segA[7] driven by constant 1
-WARNING: [Synth 8-3917] design mb_usb_hdmi_top has port hex_segB[7] driven by constant 1
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[data][3][3][2]' (FD) to 'generate_blocks_inst/new_block_info_reg[x][4]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[data][0][3][2]' (FD) to 'generate_blocks_inst/new_block_info_reg[x][4]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[data][0][0][3]' (FD) to 'generate_blocks_inst/new_block_info_reg[x][4]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[data][1][0][3]' (FD) to 'generate_blocks_inst/new_block_info_reg[x][4]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[data][3][0][3]' (FD) to 'generate_blocks_inst/new_block_info_reg[x][4]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[data][1][1][3]' (FD) to 'generate_blocks_inst/new_block_info_reg[x][4]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[data][2][1][3]' (FD) to 'generate_blocks_inst/new_block_info_reg[x][4]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[data][3][1][3]' (FD) to 'generate_blocks_inst/new_block_info_reg[x][4]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[data][0][3][1]' (FD) to 'generate_blocks_inst/new_block_info_reg[x][4]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[data][0][3][0]' (FD) to 'generate_blocks_inst/new_block_info_reg[x][4]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[data][0][2][3]' (FD) to 'generate_blocks_inst/new_block_info_reg[x][4]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[data][1][2][3]' (FD) to 'generate_blocks_inst/new_block_info_reg[x][4]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[data][3][2][3]' (FD) to 'generate_blocks_inst/new_block_info_reg[x][4]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[data][1][3][3]' (FD) to 'generate_blocks_inst/new_block_info_reg[x][4]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[data][0][3][3]' (FD) to 'generate_blocks_inst/new_block_info_reg[x][4]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[data][3][3][3]' (FD) to 'generate_blocks_inst/new_block_info_reg[x][4]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[data][0][2][2]' (FD) to 'generate_blocks_inst/new_block_info_reg[data][0][2][1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (check_move_inst/\move_y_temp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][0][3][2]' (FDE) to 'curr_block_reg[data][2][3][2]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][2][3][2]' (FDE) to 'curr_block_reg[data][2][0][2]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][2][0][1]' (FDE) to 'curr_block_reg[data][0][3][1]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][1][0][0]' (FDE) to 'curr_block_reg[data][1][2][0]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][2][0][0]' (FDE) to 'curr_block_reg[data][0][3][0]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][2][0][3]' (FDE) to 'curr_block_reg[data][0][3][3]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][1][1][0]' (FDE) to 'curr_block_reg[data][1][2][0]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][0][3][1]' (FDE) to 'curr_block_reg[data][2][3][1]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][1][3][1]' (FDE) to 'curr_block_reg[data][1][2][0]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][0][3][0]' (FDE) to 'curr_block_reg[data][2][3][0]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][1][3][0]' (FDE) to 'curr_block_reg[data][1][2][0]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][3][3][0]' (FDE) to 'curr_block_reg[data][1][2][0]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][0][3][3]' (FDE) to 'curr_block_reg[data][2][3][3]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][0][2][0]' (FDE) to 'curr_block_reg[data][1][2][0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\curr_block_reg[data][1][2][0] )
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[y][0]' (FD) to 'generate_blocks_inst/new_block_info_reg[x][4]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[y][1]' (FD) to 'generate_blocks_inst/new_block_info_reg[x][4]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[y][2]' (FD) to 'generate_blocks_inst/new_block_info_reg[x][4]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[y][3]' (FD) to 'generate_blocks_inst/new_block_info_reg[x][4]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[y][4]' (FD) to 'generate_blocks_inst/new_block_info_reg[x][4]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[y][5]' (FD) to 'generate_blocks_inst/new_block_info_reg[x][4]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[x][0]' (FD) to 'generate_blocks_inst/new_block_info_reg[x][1]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (generate_blocks_inst/\new_block_info_reg[x][1] )
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[x][2]' (FD) to 'generate_blocks_inst/new_block_info_reg[x][4]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[x][3]' (FD) to 'generate_blocks_inst/new_block_info_reg[x][4]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[x][4]' (FD) to 'generate_blocks_inst/new_block_info_reg[point][0]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[point][0]' (FD) to 'generate_blocks_inst/new_block_info_reg[point][1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (generate_blocks_inst/\new_block_info_reg[point][1] )
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][3][3][2]' (FDE) to 'curr_block_reg[data][1][2][3]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][1][2][0]' (FDE) to 'curr_block_reg[data][1][2][3]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][2][0][2]' (FDE) to 'curr_block_reg[data][1][2][3]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][0][0][3]' (FDE) to 'curr_block_reg[data][1][2][3]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][1][0][3]' (FDE) to 'curr_block_reg[data][1][2][3]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][3][0][3]' (FDE) to 'curr_block_reg[data][1][2][3]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][1][1][3]' (FDE) to 'curr_block_reg[data][1][2][3]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][2][1][3]' (FDE) to 'curr_block_reg[data][1][2][3]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][3][1][3]' (FDE) to 'curr_block_reg[data][1][2][3]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][2][3][1]' (FDE) to 'curr_block_reg[data][1][2][3]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][2][3][0]' (FDE) to 'curr_block_reg[data][1][2][3]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][0][2][3]' (FDE) to 'curr_block_reg[data][1][2][3]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][1][2][3]' (FDE) to 'curr_block_reg[data][3][2][3]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][3][2][3]' (FDE) to 'curr_block_reg[data][1][3][3]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][1][3][3]' (FDE) to 'curr_block_reg[data][3][3][3]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][2][3][3]' (FDE) to 'curr_block_reg[data][3][3][3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\curr_block_reg[data][3][3][3] )
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][0][2][2]' (FDE) to 'curr_block_reg[data][0][2][1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (check_move_inst/\move_y_reg[1] )
+WARNING: [Synth 8-3332] Sequential element (move_y_temp_reg[1]) is unused and will be removed from module check_move.
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[data][1][3][2]' (FD) to 'generate_blocks_inst/new_block_info_reg[data][0][1][3]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[data][0][0][1]' (FD) to 'generate_blocks_inst/new_block_info_reg[data][3][1][0]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[data][0][0][0]' (FD) to 'generate_blocks_inst/new_block_info_reg[data][3][2][0]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[data][1][1][1]' (FD) to 'generate_blocks_inst/new_block_info_reg[data][2][1][1]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[data][1][1][2]' (FD) to 'generate_blocks_inst/new_block_info_reg[data][2][2][1]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[data][3][1][2]' (FD) to 'generate_blocks_inst/new_block_info_reg[data][3][2][2]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[data][0][1][3]' (FD) to 'generate_blocks_inst/new_block_info_reg[data][3][3][1]'
+INFO: [Synth 8-3886] merging instance 'generate_blocks_inst/new_block_info_reg[data][3][3][1]' (FD) to 'generate_blocks_inst/new_block_info_reg[data][2][2][3]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][1][3][2]' (FDE) to 'curr_block_reg[data][0][1][3]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][0][0][1]' (FDE) to 'curr_block_reg[data][3][1][0]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][0][0][0]' (FDE) to 'curr_block_reg[data][3][2][0]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][1][1][1]' (FDE) to 'curr_block_reg[data][2][1][1]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][1][1][2]' (FDE) to 'curr_block_reg[data][2][2][1]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][3][1][2]' (FDE) to 'curr_block_reg[data][3][2][2]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][0][1][3]' (FDE) to 'curr_block_reg[data][3][3][1]'
+INFO: [Synth 8-3886] merging instance 'curr_block_reg[data][3][3][1]' (FDE) to 'curr_block_reg[data][2][2][3]'
+INFO: [Synth 8-5546] ROM "attempt_move_next" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "attempt_move_next" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1431.434 ; gain = 622.855
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:34 ; elapsed = 00:03:27 . Memory (MB): peak = 1682.250 ; gain = 874.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-565] redefining clock 'Clk'
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1431.434 ; gain = 622.855
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:38 ; elapsed = 00:03:32 . Memory (MB): peak = 1682.250 ; gain = 874.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1431.434 ; gain = 622.855
+Finished Timing Optimization : Time (s): cpu = 00:02:39 ; elapsed = 00:03:34 . Memory (MB): peak = 1682.250 ; gain = 874.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1431.434 ; gain = 622.855
+Finished Technology Mapping : Time (s): cpu = 00:02:43 ; elapsed = 00:03:39 . Memory (MB): peak = 1998.410 ; gain = 1190.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -447,37 +578,51 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1431.434 ; gain = 622.855
+Finished IO Insertion : Time (s): cpu = 00:02:46 ; elapsed = 00:03:43 . Memory (MB): peak = 1998.410 ; gain = 1190.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1431.434 ; gain = 622.855
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:46 ; elapsed = 00:03:43 . Memory (MB): peak = 1998.410 ; gain = 1190.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1431.434 ; gain = 622.855
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:47 ; elapsed = 00:03:44 . Memory (MB): peak = 1998.410 ; gain = 1190.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1431.434 ; gain = 622.855
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:47 ; elapsed = 00:03:44 . Memory (MB): peak = 1998.410 ; gain = 1190.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1431.434 ; gain = 622.855
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:47 ; elapsed = 00:03:44 . Memory (MB): peak = 1998.410 ; gain = 1190.336
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1431.434 ; gain = 622.855
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:47 ; elapsed = 00:03:44 . Memory (MB): peak = 1998.410 ; gain = 1190.336
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++----------------+-------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name     | RTL Name                                                                      | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++----------------+-------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|mb_usb_hdmi_top | tetris_display_instance/tetris_game_inst/generate_blocks_inst/prbs_15_reg[13] | 6      | 1     | NO           | NO                 | YES               | 1      | 0       | 
++----------------+-------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -529,41 +674,48 @@ Report Cell Usage:
 |17    |mb_block_microblaze_0_axi_intc |     1|
 |18    |mb_block_rst_clk_wiz_1_100M    |     1|
 |19    |mb_block_xbar                  |     1|
-|20    |CARRY4                         |     5|
-|21    |LUT1                           |     3|
-|22    |LUT2                           |     6|
-|23    |LUT3                           |    11|
-|24    |LUT4                           |    10|
-|25    |LUT5                           |    25|
-|26    |LUT6                           |    80|
-|27    |FDCE                           |    22|
-|28    |FDRE                           |    17|
-|29    |IBUF                           |     4|
-|30    |OBUF                           |    29|
+|20    |BUFG                           |     1|
+|21    |CARRY4                         |     9|
+|22    |LUT1                           |     6|
+|23    |LUT2                           |   176|
+|24    |LUT3                           |   355|
+|25    |LUT4                           |   499|
+|26    |LUT5                           |  1120|
+|27    |LUT6                           |  4635|
+|28    |MUXF7                          |   231|
+|29    |MUXF8                          |    11|
+|30    |SRL16E                         |     1|
+|31    |FDCE                           |    56|
+|32    |FDPE                           |     3|
+|33    |FDRE                           |   755|
+|34    |LD                             |     3|
+|35    |IBUF                           |     4|
+|36    |OBUF                           |    29|
 +------+-------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1431.434 ; gain = 622.855
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:47 ; elapsed = 00:03:45 . Memory (MB): peak = 1998.410 ; gain = 1190.336
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 20 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 1431.434 ; gain = 513.910
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1431.434 ; gain = 622.855
+Synthesis finished with 0 errors, 0 critical warnings and 10 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:35 ; elapsed = 00:03:40 . Memory (MB): peak = 1998.410 ; gain = 1094.641
+Synthesis Optimization Complete : Time (s): cpu = 00:02:47 ; elapsed = 00:03:45 . Memory (MB): peak = 1998.410 ; gain = 1190.336
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1431.434 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.108 . Memory (MB): peak = 1998.410 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 254 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1431.434 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1998.410 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 3 instances were transformed.
+  LD => LDCE: 3 instances
 
-Synth Design complete, checksum: 7db69c7
+Synth Design complete, checksum: 3ca14e31
 INFO: [Common 17-83] Releasing license: Synthesis
-110 Infos, 132 Warnings, 1 Critical Warnings and 0 Errors encountered.
+207 Infos, 140 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1431.434 ; gain = 998.316
+synth_design: Time (s): cpu = 00:02:51 ; elapsed = 00:03:51 . Memory (MB): peak = 1998.410 ; gain = 1566.184
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-INFO: [Common 17-1381] The checkpoint 'D:/ece385sp24/labs/final_project/Tetris/Tetris.runs/synth_1/mb_usb_hdmi_top.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/synth_1/mb_usb_hdmi_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file mb_usb_hdmi_top_utilization_synth.rpt -pb mb_usb_hdmi_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Apr 11 20:56:02 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri Apr 19 13:11:48 2024...
