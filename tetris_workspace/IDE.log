@@ -1287,3 +1287,264 @@ con
 ----------------End of Script----------------
 
 14:34:31 INFO  : Disconnected from the channel tcfchan#1.
+21:52:58 DEBUG : Logs will be stored at 'D:/ece385sp24/Tetris/tetris_workspace/IDE.log'.
+21:52:59 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\ece385sp24\Tetris\tetris_workspace\temp_xsdb_launch_script.tcl
+21:53:02 INFO  : Platform repository initialization has completed.
+21:53:02 INFO  : Registering command handlers for Vitis TCF services
+21:53:06 INFO  : XSCT server has started successfully.
+21:53:08 INFO  : Successfully done setting XSCT server connection channel  
+21:53:08 INFO  : plnx-install-location is set to ''
+21:53:08 INFO  : Successfully done query RDI_DATADIR 
+21:53:08 INFO  : Successfully done setting workspace for the tool. 
+21:53:14 INFO  : Hardware specification for platform project 'tetris_top' is updated.
+21:53:24 INFO  : Result from executing command 'removePlatformRepo': 
+21:53:36 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+21:53:50 INFO  : Result from executing command 'getProjects': tetris_top
+21:53:50 INFO  : Result from executing command 'getPlatforms': 
+21:53:53 INFO  : Checking for BSP changes to sync application flags for project 'tetris'...
+21:53:57 INFO  : The hardware specification used by project 'tetris' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+21:53:57 INFO  : The file 'D:\ece385sp24\Tetris\tetris_workspace\tetris\_ide\bitstream\tetris_top.bit' stored in project is removed.
+21:53:57 INFO  : The file 'D:\ece385sp24\Tetris\tetris_workspace\tetris\_ide\bitstream\tetris_top.mmi' stored in project is removed.
+21:53:57 INFO  : The updated bitstream files are copied from platform to folder 'D:\ece385sp24\Tetris\tetris_workspace\tetris\_ide\bitstream' in project 'tetris'.
+21:54:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:54:23 INFO  : Jtag cable 'RealDigital Boo 8874292301F7A' is selected.
+21:54:23 INFO  : 'jtag frequency' command is executed.
+21:54:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301F7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+21:54:24 INFO  : Device configured successfully with "D:/ece385sp24/Tetris/tetris_workspace/tetris/_ide/bitstream/tetris_top.bit"
+21:54:24 INFO  : Context for processor 'microblaze_0' is selected.
+21:54:24 INFO  : Hardware design and registers information is loaded from 'D:/ece385sp24/Tetris/tetris_workspace/tetris_top/export/tetris_top/hw/tetris_top.xsa'.
+21:54:24 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+21:54:24 INFO  : Context for processor 'microblaze_0' is selected.
+21:54:24 INFO  : System reset is completed.
+21:54:27 INFO  : 'after 3000' command is executed.
+21:54:27 INFO  : Context for processor 'microblaze_0' is selected.
+21:54:27 INFO  : The application 'D:/ece385sp24/Tetris/tetris_workspace/tetris/Debug/tetris.elf' is downloaded to processor 'microblaze_0'.
+21:54:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301F7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file D:/ece385sp24/Tetris/tetris_workspace/tetris/_ide/bitstream/tetris_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw D:/ece385sp24/Tetris/tetris_workspace/tetris_top/export/tetris_top/hw/tetris_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow D:/ece385sp24/Tetris/tetris_workspace/tetris/Debug/tetris.elf
+----------------End of Script----------------
+
+21:54:27 INFO  : Context for processor 'microblaze_0' is selected.
+21:54:27 INFO  : 'con' command is executed.
+21:54:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+21:54:27 INFO  : Disconnected from the channel tcfchan#4.
+22:07:13 DEBUG : Logs will be stored at 'D:/ece385sp24/Tetris/tetris_workspace/IDE.log'.
+22:07:13 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\ece385sp24\Tetris\tetris_workspace\temp_xsdb_launch_script.tcl
+22:07:15 INFO  : XSCT server has started successfully.
+22:07:15 INFO  : Successfully done setting XSCT server connection channel  
+22:07:15 INFO  : plnx-install-location is set to ''
+22:07:15 INFO  : Successfully done setting workspace for the tool. 
+22:07:16 INFO  : Platform repository initialization has completed.
+22:07:16 INFO  : Successfully done query RDI_DATADIR 
+22:07:16 INFO  : Registering command handlers for Vitis TCF services
+22:08:04 INFO  : Hardware specification for platform project 'tetris_top' is updated.
+22:08:18 INFO  : Result from executing command 'removePlatformRepo': 
+22:08:31 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+22:08:42 INFO  : Result from executing command 'getProjects': tetris_top
+22:08:42 INFO  : Result from executing command 'getPlatforms': 
+22:08:49 INFO  : Checking for BSP changes to sync application flags for project 'tetris'...
+22:08:51 INFO  : The hardware specification used by project 'tetris' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+22:08:51 INFO  : The file 'D:\ece385sp24\Tetris\tetris_workspace\tetris\_ide\bitstream\tetris_top.bit' stored in project is removed.
+22:08:51 INFO  : The file 'D:\ece385sp24\Tetris\tetris_workspace\tetris\_ide\bitstream\tetris_top.mmi' stored in project is removed.
+22:08:51 INFO  : The updated bitstream files are copied from platform to folder 'D:\ece385sp24\Tetris\tetris_workspace\tetris\_ide\bitstream' in project 'tetris'.
+22:09:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:09:12 INFO  : Jtag cable 'RealDigital Boo 8874292301F7A' is selected.
+22:09:12 INFO  : 'jtag frequency' command is executed.
+22:09:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301F7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:09:13 INFO  : Device configured successfully with "D:/ece385sp24/Tetris/tetris_workspace/tetris/_ide/bitstream/tetris_top.bit"
+22:09:13 INFO  : Context for processor 'microblaze_0' is selected.
+22:09:13 INFO  : Hardware design and registers information is loaded from 'D:/ece385sp24/Tetris/tetris_workspace/tetris_top/export/tetris_top/hw/tetris_top.xsa'.
+22:09:13 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:09:13 INFO  : Context for processor 'microblaze_0' is selected.
+22:09:13 INFO  : System reset is completed.
+22:09:16 INFO  : 'after 3000' command is executed.
+22:09:16 INFO  : Context for processor 'microblaze_0' is selected.
+22:09:16 INFO  : The application 'D:/ece385sp24/Tetris/tetris_workspace/tetris/Debug/tetris.elf' is downloaded to processor 'microblaze_0'.
+22:09:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301F7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file D:/ece385sp24/Tetris/tetris_workspace/tetris/_ide/bitstream/tetris_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw D:/ece385sp24/Tetris/tetris_workspace/tetris_top/export/tetris_top/hw/tetris_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow D:/ece385sp24/Tetris/tetris_workspace/tetris/Debug/tetris.elf
+----------------End of Script----------------
+
+22:09:16 INFO  : Context for processor 'microblaze_0' is selected.
+22:09:16 INFO  : 'con' command is executed.
+22:09:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:09:16 INFO  : Disconnected from the channel tcfchan#4.
+16:23:19 DEBUG : Logs will be stored at 'D:/ece385sp24/Tetris/tetris_workspace/IDE.log'.
+16:23:20 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\ece385sp24\Tetris\tetris_workspace\temp_xsdb_launch_script.tcl
+16:23:23 INFO  : Platform repository initialization has completed.
+16:23:23 INFO  : Registering command handlers for Vitis TCF services
+16:23:23 INFO  : XSCT server has started successfully.
+16:23:23 INFO  : plnx-install-location is set to ''
+16:23:25 INFO  : Successfully done setting XSCT server connection channel  
+16:23:25 INFO  : Successfully done query RDI_DATADIR 
+16:23:25 INFO  : Successfully done setting workspace for the tool. 
+16:23:45 INFO  : Hardware specification for platform project 'tetris_top' is updated.
+16:23:56 INFO  : Result from executing command 'removePlatformRepo': 
+16:24:09 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+16:24:21 INFO  : Result from executing command 'getProjects': tetris_top
+16:24:21 INFO  : Result from executing command 'getPlatforms': 
+16:24:24 INFO  : Checking for BSP changes to sync application flags for project 'tetris'...
+16:24:26 INFO  : The hardware specification used by project 'tetris' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+16:24:26 INFO  : The file 'D:\ece385sp24\Tetris\tetris_workspace\tetris\_ide\bitstream\tetris_top.bit' stored in project is removed.
+16:24:26 INFO  : The file 'D:\ece385sp24\Tetris\tetris_workspace\tetris\_ide\bitstream\tetris_top.mmi' stored in project is removed.
+16:24:26 INFO  : The updated bitstream files are copied from platform to folder 'D:\ece385sp24\Tetris\tetris_workspace\tetris\_ide\bitstream' in project 'tetris'.
+16:25:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:25:04 INFO  : Jtag cable 'RealDigital Boo 8874292301F7A' is selected.
+16:25:04 INFO  : 'jtag frequency' command is executed.
+16:25:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301F7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+16:25:05 INFO  : Device configured successfully with "D:/ece385sp24/Tetris/tetris_workspace/tetris/_ide/bitstream/tetris_top.bit"
+16:25:05 INFO  : Context for processor 'microblaze_0' is selected.
+16:25:05 INFO  : Hardware design and registers information is loaded from 'D:/ece385sp24/Tetris/tetris_workspace/tetris_top/export/tetris_top/hw/tetris_top.xsa'.
+16:25:05 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:25:05 INFO  : Context for processor 'microblaze_0' is selected.
+16:25:05 INFO  : System reset is completed.
+16:25:08 INFO  : 'after 3000' command is executed.
+16:25:09 INFO  : Context for processor 'microblaze_0' is selected.
+16:25:09 INFO  : The application 'D:/ece385sp24/Tetris/tetris_workspace/tetris/Debug/tetris.elf' is downloaded to processor 'microblaze_0'.
+16:25:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301F7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file D:/ece385sp24/Tetris/tetris_workspace/tetris/_ide/bitstream/tetris_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw D:/ece385sp24/Tetris/tetris_workspace/tetris_top/export/tetris_top/hw/tetris_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow D:/ece385sp24/Tetris/tetris_workspace/tetris/Debug/tetris.elf
+----------------End of Script----------------
+
+16:25:09 INFO  : Context for processor 'microblaze_0' is selected.
+16:25:09 INFO  : 'con' command is executed.
+16:25:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+16:25:09 INFO  : Disconnected from the channel tcfchan#4.
+22:15:41 DEBUG : Logs will be stored at 'D:/ece385sp24/Tetris/tetris_workspace/IDE.log'.
+22:15:41 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\ece385sp24\Tetris\tetris_workspace\temp_xsdb_launch_script.tcl
+22:15:43 INFO  : XSCT server has started successfully.
+22:15:43 INFO  : plnx-install-location is set to ''
+22:15:43 INFO  : Successfully done setting XSCT server connection channel  
+22:15:43 INFO  : Successfully done setting workspace for the tool. 
+22:15:44 INFO  : Platform repository initialization has completed.
+22:15:44 INFO  : Successfully done query RDI_DATADIR 
+22:15:44 INFO  : Registering command handlers for Vitis TCF services
+22:17:33 INFO  : Hardware specification for platform project 'tetris_top' is updated.
+22:17:46 INFO  : Result from executing command 'removePlatformRepo': 
+22:17:55 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+22:18:06 INFO  : Result from executing command 'getProjects': tetris_top
+22:18:06 INFO  : Result from executing command 'getPlatforms': 
+22:18:10 INFO  : Checking for BSP changes to sync application flags for project 'tetris'...
+22:18:12 INFO  : The hardware specification used by project 'tetris' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+22:18:12 INFO  : The file 'D:\ece385sp24\Tetris\tetris_workspace\tetris\_ide\bitstream\tetris_top.bit' stored in project is removed.
+22:18:12 INFO  : The file 'D:\ece385sp24\Tetris\tetris_workspace\tetris\_ide\bitstream\tetris_top.mmi' stored in project is removed.
+22:18:12 INFO  : The updated bitstream files are copied from platform to folder 'D:\ece385sp24\Tetris\tetris_workspace\tetris\_ide\bitstream' in project 'tetris'.
+22:18:15 INFO  : Checking for BSP changes to sync application flags for project 'tetris'...
+22:18:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:18:25 INFO  : Jtag cable 'RealDigital Boo 8874292301F7A' is selected.
+22:18:25 INFO  : 'jtag frequency' command is executed.
+22:18:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301F7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:18:26 INFO  : Device configured successfully with "D:/ece385sp24/Tetris/tetris_workspace/tetris/_ide/bitstream/tetris_top.bit"
+22:18:27 INFO  : Context for processor 'microblaze_0' is selected.
+22:18:27 INFO  : Hardware design and registers information is loaded from 'D:/ece385sp24/Tetris/tetris_workspace/tetris_top/export/tetris_top/hw/tetris_top.xsa'.
+22:18:27 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:18:27 INFO  : Context for processor 'microblaze_0' is selected.
+22:18:27 INFO  : System reset is completed.
+22:18:30 INFO  : 'after 3000' command is executed.
+22:18:30 INFO  : Context for processor 'microblaze_0' is selected.
+22:18:30 INFO  : The application 'D:/ece385sp24/Tetris/tetris_workspace/tetris/Debug/tetris.elf' is downloaded to processor 'microblaze_0'.
+22:18:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301F7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file D:/ece385sp24/Tetris/tetris_workspace/tetris/_ide/bitstream/tetris_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw D:/ece385sp24/Tetris/tetris_workspace/tetris_top/export/tetris_top/hw/tetris_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow D:/ece385sp24/Tetris/tetris_workspace/tetris/Debug/tetris.elf
+----------------End of Script----------------
+
+22:18:30 INFO  : Context for processor 'microblaze_0' is selected.
+22:18:30 INFO  : 'con' command is executed.
+22:18:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:18:30 INFO  : Disconnected from the channel tcfchan#4.
+22:56:17 INFO  : Hardware specification for platform project 'tetris_top' is updated.
+22:56:29 INFO  : Result from executing command 'removePlatformRepo': 
+22:56:41 INFO  : Result from executing command 'getProjects': tetris_top
+22:56:41 INFO  : Result from executing command 'getPlatforms': 
+22:56:44 INFO  : Checking for BSP changes to sync application flags for project 'tetris'...
+22:56:46 INFO  : The hardware specification used by project 'tetris' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+22:56:46 INFO  : The file 'D:\ece385sp24\Tetris\tetris_workspace\tetris\_ide\bitstream\tetris_top.bit' stored in project is removed.
+22:56:46 INFO  : The file 'D:\ece385sp24\Tetris\tetris_workspace\tetris\_ide\bitstream\tetris_top.mmi' stored in project is removed.
+22:56:46 INFO  : The updated bitstream files are copied from platform to folder 'D:\ece385sp24\Tetris\tetris_workspace\tetris\_ide\bitstream' in project 'tetris'.
+22:56:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:56:51 INFO  : Jtag cable 'RealDigital Boo 8874292301F7A' is selected.
+22:56:51 INFO  : 'jtag frequency' command is executed.
+22:56:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301F7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:56:52 INFO  : Device configured successfully with "D:/ece385sp24/Tetris/tetris_workspace/tetris/_ide/bitstream/tetris_top.bit"
+22:56:52 INFO  : Context for processor 'microblaze_0' is selected.
+22:56:52 INFO  : Hardware design and registers information is loaded from 'D:/ece385sp24/Tetris/tetris_workspace/tetris_top/export/tetris_top/hw/tetris_top.xsa'.
+22:56:52 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:56:52 INFO  : Context for processor 'microblaze_0' is selected.
+22:56:52 INFO  : System reset is completed.
+22:56:55 INFO  : 'after 3000' command is executed.
+22:56:55 INFO  : Context for processor 'microblaze_0' is selected.
+22:56:55 INFO  : The application 'D:/ece385sp24/Tetris/tetris_workspace/tetris/Debug/tetris.elf' is downloaded to processor 'microblaze_0'.
+22:56:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301F7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file D:/ece385sp24/Tetris/tetris_workspace/tetris/_ide/bitstream/tetris_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw D:/ece385sp24/Tetris/tetris_workspace/tetris_top/export/tetris_top/hw/tetris_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow D:/ece385sp24/Tetris/tetris_workspace/tetris/Debug/tetris.elf
+----------------End of Script----------------
+
+22:56:55 INFO  : Context for processor 'microblaze_0' is selected.
+22:56:55 INFO  : 'con' command is executed.
+22:56:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:56:55 INFO  : Disconnected from the channel tcfchan#7.

@@ -49,6 +49,7 @@ module mb_usb_hdmi_top(
     logic [3:0] red, green, blue;
     logic reset_ah;
     
+    logic [15:0] score1, score2;
     assign reset_ah = reset_rtl_0;
     
     
@@ -56,7 +57,8 @@ module mb_usb_hdmi_top(
     hex_driver HexA (
         .clk(Clk),
         .reset(reset_ah),
-        .in({keycode0_gpio[31:28], keycode0_gpio[27:24], keycode0_gpio[23:20], keycode0_gpio[19:16]}),
+//        .in({keycode0_gpio[31:28], keycode0_gpio[27:24], keycode0_gpio[23:20], keycode0_gpio[19:16]}),
+        .in({score1[15:12], score1[11:8], score1[7:4], score1[3:0]}),
         .hex_seg(hex_segA),
         .hex_grid(hex_gridA)
     );
@@ -64,7 +66,8 @@ module mb_usb_hdmi_top(
     hex_driver HexB (
         .clk(Clk),
         .reset(reset_ah),
-        .in({keycode0_gpio[15:12], keycode0_gpio[11:8], keycode0_gpio[7:4], keycode0_gpio[3:0]}),
+//        .in({keycode0_gpio[15:12], keycode0_gpio[11:8], keycode0_gpio[7:4], keycode0_gpio[3:0]}),
+        .in({score2[15:12], score2[11:8], score2[7:4], score2[3:0]}),
         .hex_seg(hex_segB),
         .hex_grid(hex_gridB)
     );
@@ -136,12 +139,14 @@ module mb_usb_hdmi_top(
     tetris_display tetris_display_instance(
         .Reset(reset_ah), 
         .frame_clk(vsync),
-        .keycode(keycode0_gpio[7:0]),
+        .keycode(keycode0_gpio[15:0]),
         .DrawX(drawX), 
         .DrawY(drawY),
         .Red(red),
         .Green(green),
-        .Blue(blue)
+        .Blue(blue),
+        .score_player1(score1),
+        .score_player2(score2)
     );
 
     

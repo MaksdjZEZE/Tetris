@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Fri Apr 19 13:13:50 2024
+| Date             : Tue Apr 30 22:50:03 2024
 | Host             : LAPTOP-U1IB34FN running 64-bit major release  (build 9200)
 | Command          : report_power -file mb_usb_hdmi_top_power_routed.rpt -pb mb_usb_hdmi_top_power_summary_routed.pb -rpx mb_usb_hdmi_top_power_routed.rpx
 | Design           : mb_usb_hdmi_top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.487        |
+| Total On-Chip Power (W)  | 0.491        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.412        |
+| Dynamic (W)              | 0.416        |
 | Device Static (W)        | 0.075        |
 | Effective TJA (C/W)      | 4.9          |
 | Max Ambient (C)          | 82.6         |
@@ -52,23 +52,23 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.013 |       12 |       --- |             --- |
-| Slice Logic              |     0.020 |    14466 |       --- |             --- |
-|   LUT as Logic           |     0.018 |     8529 |     32600 |           26.16 |
+| Clocks                   |     0.012 |       12 |       --- |             --- |
+| Slice Logic              |     0.021 |    32400 |       --- |             --- |
+|   LUT as Logic           |     0.019 |    21567 |     32600 |           66.16 |
 |   LUT as Distributed RAM |    <0.001 |      172 |      9600 |            1.79 |
-|   Register               |    <0.001 |     3346 |     65200 |            5.13 |
-|   CARRY4                 |    <0.001 |       85 |      8150 |            1.04 |
-|   F7/F8 Muxes            |    <0.001 |      278 |     32600 |            0.85 |
-|   LUT as Shift Register  |    <0.001 |      113 |      9600 |            1.18 |
+|   CARRY4                 |    <0.001 |      129 |      8150 |            1.58 |
+|   Register               |    <0.001 |     4080 |     65200 |            6.26 |
+|   F7/F8 Muxes            |    <0.001 |      661 |     32600 |            2.03 |
+|   LUT as Shift Register  |    <0.001 |      114 |      9600 |            1.19 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
-|   Others                 |     0.000 |      782 |       --- |             --- |
-| Signals                  |     0.025 |    11712 |       --- |             --- |
+|   Others                 |     0.000 |      792 |       --- |             --- |
+| Signals                  |     0.025 |    27782 |       --- |             --- |
 | Block RAM                |    <0.001 |        8 |        75 |           10.67 |
 | MMCM                     |     0.212 |        2 |         5 |           40.00 |
 | DSPs                     |     0.002 |        3 |       120 |            2.50 |
-| I/O                      |     0.139 |       42 |       210 |           20.00 |
+| I/O                      |     0.144 |       42 |       210 |           20.00 |
 | Static Power             |     0.075 |          |           |                 |
-| Total                    |     0.487 |          |           |                 |
+| Total                    |     0.491 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,10 +78,10 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.072 |       0.062 |      0.010 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.073 |       0.062 |      0.010 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.130 |       0.118 |      0.013 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.042 |       0.041 |      0.001 |       NA    | Unspecified | NA         |
-| Vcco25    |       2.500 |     0.003 |       0.002 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.041 |       0.040 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco25    |       2.500 |     0.004 |       0.003 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -99,7 +99,7 @@ Table of Contents
 | User Input Data             | Confidence | Details                                                | Action                                                                                                             |
 +-----------------------------+------------+--------------------------------------------------------+--------------------------------------------------------------------------------------------------------------------+
 | Design implementation state | High       | Design is routed                                       |                                                                                                                    |
-| Clock nodes activity        | Medium     | More than 5% of clocks are missing user specification  | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
+| Clock nodes activity        | Low        | User specified less than 75% of clocks                 | Provide missing clock activity with a constraint file, simulation results or by editing the "By Clock Domain" view |
 | I/O nodes activity          | Low        | More than 75% of inputs are missing user specification | Provide missing input activity with simulation results or by editing the "By Resource Type -> I/Os" view           |
 | Internal nodes activity     | Medium     | User specified less than 25% of internal nodes         | Provide missing internal nodes activity with simulation results or by editing the "By Resource Type" views         |
 | Device models               | High       | Device models are Production                           |                                                                                                                    |
@@ -153,7 +153,7 @@ Table of Contents
 +-----------------------------+-----------+
 | Name                        | Power (W) |
 +-----------------------------+-----------+
-| mb_usb_hdmi_top             |     0.412 |
+| mb_usb_hdmi_top             |     0.416 |
 |   clk_wiz                   |     0.106 |
 |     inst                    |     0.106 |
 |   mb_block_i                |     0.131 |
@@ -169,11 +169,13 @@ Table of Contents
 |       U0                    |     0.004 |
 |     timer_usb_axi           |     0.002 |
 |       U0                    |     0.002 |
-|   tetris_display_instance   |     0.032 |
-|     tetris_game_inst        |     0.032 |
+|   tetris_display_instance   |     0.033 |
+|     tetris_game_player1     |     0.016 |
+|       check_move_inst       |     0.002 |
+|     tetris_game_player2     |     0.018 |
 |       check_move_inst       |     0.003 |
-|   vga_to_hdmi               |     0.134 |
-|     inst                    |     0.134 |
+|   vga_to_hdmi               |     0.133 |
+|     inst                    |     0.133 |
 +-----------------------------+-----------+
 
 

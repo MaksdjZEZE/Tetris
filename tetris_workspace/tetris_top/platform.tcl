@@ -92,3 +92,26 @@ platform config -updatehw {D:/ece385sp24/Tetris/tetris_hardware/tetris_top.xsa}
 platform clean
 platform clean
 platform generate
+platform active {tetris_top}
+platform config -updatehw {D:/ece385sp24/Tetris/tetris_hardware/tetris_top.xsa}
+platform clean
+platform clean
+platform generate
+platform active {tetris_top}
+platform config -updatehw {D:/ece385sp24/Tetris/tetris_hardware/tetris_top.xsa}
+platform clean
+platform clean
+platform generate
+platform active {tetris_top}
+platform config -updatehw {D:/ece385sp24/Tetris/tetris_hardware/tetris_top.xsa}
+platform clean
+platform clean
+platform generate
+platform active {tetris_top}
+platform config -updatehw {D:/ece385sp24/Tetris/tetris_hardware/tetris_top.xsa}
+platform clean
+platform clean
+platform generate
+platform config -updatehw {D:/ece385sp24/Tetris/tetris_hardware/tetris_top.xsa}
+platform clean
+platform generate

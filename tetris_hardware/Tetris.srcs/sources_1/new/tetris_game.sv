@@ -20,11 +20,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 `include "tetris_define.vh"
-module tetris_game(
+module tetris_game #(parameter [7:0] KEY_MOVE_LEFT = `MOVE_LEFT_1,
+                     parameter [7:0] KEY_MOVE_RIGHT = `MOVE_RIGHT_1,
+                     parameter [7:0] KEY_MOVE_ROTATE = `MOVE_ROTATE_1)(
     input  logic        Reset, 
     input  logic        frame_clk,
     input  logic [7:0]  keycode,
-    output logic [`TETRIS_COLORS_NUM_WIDTH-1:0] playfield[`PLAYFIELD_ROW][`PLAYFIELD_COL]
+    output logic [`TETRIS_COLORS_NUM_WIDTH-1:0] playfield[`PLAYFIELD_ROW][`PLAYFIELD_COL],
+    output logic [15:0] score
     );
     // This module should update the playfield according to user input
     enum logic [2:0] {
@@ -34,13 +37,16 @@ module tetris_game(
         CHECK_MOVE_S,
         MAKE_MOVE_S,
         GAME_OVER_S,
-        APPEND_BLOCK_S
+        APPEND_BLOCK_S,
+        CLEAN_LINE_S
     } game_state, game_state_next;
     
     logic [7:0] keycode_prev;
     logic [`TETRIS_COLORS_NUM_WIDTH-1:0] background_playfield[`PLAYFIELD_ROW][`PLAYFIELD_COL];
+    logic [`TETRIS_COLORS_NUM_WIDTH-1:0] line_cleaned_playfield[`PLAYFIELD_ROW][`PLAYFIELD_COL];
     block_info_t generated_block, curr_block;
 //    logic draw_block_en_next;
+    logic  [`PLAYFIELD_ROW-1:0] full_row;
     logic draw_block_en;
     logic wait_input_end; // This clock wait for 4 clocks
     logic wait_input_start;
@@ -54,6 +60,9 @@ module tetris_game(
     logic signed [1:0] move_y;
     logic user_has_input;
     logic gen_next_block_en;
+    
+//    logic [15:0] score;
+    logic [`PLAYFIELD_ROW_WIDTH-1:0] full_row_num;
     always_ff @(posedge frame_clk or posedge Reset)
         begin
             if(Reset)
@@ -67,6 +76,7 @@ module tetris_game(
         begin
             if(game_state == IDLE_S)
             begin
+                score <= 'd0;
                 for( int row = 0; row < `PLAYFIELD_ROW; row++ )
                       begin
                         for( int col = 0; col < `PLAYFIELD_COL; col++ )
@@ -75,18 +85,34 @@ module tetris_game(
                           end
                       end
             end
-            else
+            else if (game_state == APPEND_BLOCK_S)
             begin
-                if (game_state == APPEND_BLOCK_S)
-                begin
-                    for( int row = 0; row < `PLAYFIELD_ROW; row++ )
+                score <= score + 20;
+                for( int row = 0; row < `PLAYFIELD_ROW; row++ )
+                  begin
+                    for( int col = 0; col < `PLAYFIELD_COL; col++ )
                       begin
-                        for( int col = 0; col < `PLAYFIELD_COL; col++ )
-                          begin
-                            background_playfield[row][col] <= playfield[row][col];
-                          end
+                        background_playfield[row][col] <= playfield[row][col];
                       end
-                end
+                  end
+            end
+            else if (game_state == CLEAN_LINE_S)
+            begin
+                case (full_row_num)
+                  1: score <= score + 100;
+                  2: score <= score + 300;
+                  3: score <= score + 700;
+                  4: score <= score + 1500;
+                  default: score <= score; 
+                endcase
+                
+                for( int row = 0; row < `PLAYFIELD_ROW; row++ )
+                  begin
+                    for( int col = 0; col < `PLAYFIELD_COL; col++ )
+                      begin
+                        background_playfield[row][col] <= line_cleaned_playfield[row][col];
+                      end
+                  end
             end
         end
     always_comb
@@ -96,15 +122,6 @@ module tetris_game(
             case (game_state)
                 IDLE_S:
                 begin
-//                    updating_background = 1;
-//                    for( int row = 0; row < `PLAYFIELD_ROW; row++ )
-//                      begin
-//                        for( int col = 0; col < `PLAYFIELD_COL; col++ )
-//                          begin
-//                            background_playfield[row][col] = 'd0;
-//                          end
-//                      end
-//                    updating_background = 0;
                     if (keycode == `NEW_GAME_1)
                         game_state_next = GEN_NEW_BLOCK_S;
                 end
@@ -126,16 +143,18 @@ module tetris_game(
                         if (attempt_move == MOVE_APPEAR && move_valid == 'd0)  
                             game_state_next = GAME_OVER_S;
                         else
-//                            game_state_next = GAME_OVER_S;
                             game_state_next = WAIT_INPUT_S;
                     end
                 end
                 APPEND_BLOCK_S:
                 begin
-//                    game_state_next = GAME_OVER_S;
-//                    updating_background = 1;
-//                    updating_background = 0;
-                    game_state_next = GEN_NEW_BLOCK_S; 
+//                    game_state_next = GEN_NEW_BLOCK_S;
+                    game_state_next = CLEAN_LINE_S;
+                end
+                CLEAN_LINE_S:
+                begin
+                    if (full_row == 0)
+                        game_state_next = GEN_NEW_BLOCK_S;
                 end
                 GAME_OVER_S:
                 begin
@@ -147,45 +166,7 @@ module tetris_game(
         end
     
 
-//    always_comb
-//        begin
-//            updating_background = 0;
-//            case(game_state)
-//                IDLE_S: begin
-//                    updating_background = 1;
-//                    for( int row = 0; row < `PLAYFIELD_ROW; row++ )
-//                      begin
-//                        for( int col = 0; col < `PLAYFIELD_COL; col++ )
-//                          begin
-//                            background_playfield[row][col] = 'd0;
-//                          end
-//                      end
-//                      updating_background = 0;
-//                end
-                
-//                APPEND_BLOCK_S:
-//                begin
-//                    updating_background = 1;
-//                    for( int row = 0; row < 4; row++ )
-//                      begin
-//                        for( int col = 0; col < 4; col++ )
-//                          begin
-//                            if(curr_block.data[curr_block.point][row][col] == 1'd1)
-//                                background_playfield[curr_block.y + row][curr_block.x + col] = curr_block.color;
-//                          end
-//                      end
-//                    for( int row = 0; row < `PLAYFIELD_ROW; row++ )
-//                      begin
-//                        for( int col = 0; col < `PLAYFIELD_COL; col++ )
-//                          begin
-//                            background_playfield[row][col] = playfield[row][col];
-//                          end
-//                      end
-//                      updating_background = 0;
 
-//                end
-//            endcase
-//        end
     
     always_comb
         begin
@@ -263,19 +244,19 @@ module tetris_game(
             begin
                 if (game_state == WAIT_INPUT_S)
                 begin
-                    if (keycode != keycode_prev) begin
+                    if (keycode != KEY_MOVE_ROTATE || keycode != keycode_prev) begin
                         case (keycode)
-                            `MOVE_RIGHT_1:
+                            KEY_MOVE_RIGHT:
                             begin
                                 user_has_input = 1;
                                 attempt_move_next = MOVE_RIGHT;
                             end
-                            `MOVE_LEFT_1:
+                            KEY_MOVE_LEFT:
                             begin
                                 user_has_input = 1;
                                 attempt_move_next = MOVE_LEFT;
                             end
-                            `MOVE_ROTATE_1:
+                            KEY_MOVE_ROTATE:
                             begin
                                 user_has_input = 1;
                                 attempt_move_next = MOVE_ROTATE;
@@ -327,11 +308,53 @@ module tetris_game(
                     draw_block_en <= 1;
                 else
                 begin
-                    if ((game_state == IDLE_S) || (game_state == GEN_NEW_BLOCK_S))
+                    if ((game_state == IDLE_S) || (game_state == GEN_NEW_BLOCK_S) || ((game_state == CLEAN_LINE_S) && (full_row != 0)))
                         draw_block_en <= 0;
                 end
             end
         end    
     
     //  || (game_state == APPEND_BLOCK_S)
+    logic  [`PLAYFIELD_ROW_WIDTH-1:0] row_cnt;
+    always_comb
+        begin
+            full_row = 'd0;
+            full_row_num = 'd0;
+            for( int row = 0; row < `PLAYFIELD_ROW ; row++ )
+            begin
+                full_row[row] = 1'b1;
+                full_row_num = full_row_num + 1;
+                for( int col = 0; col < `PLAYFIELD_COL; col++ )
+                begin
+                    if (background_playfield[row][col]==0)
+                    begin
+                        full_row[row] = 1'b0;
+                        full_row_num = full_row_num - 1;
+                        break;
+                    end
+                end
+            end
+            
+            for( int row = 0; row < `PLAYFIELD_ROW ; row++ )
+            begin
+                for( int col = 0; col < `PLAYFIELD_COL; col++ )
+                begin
+                    line_cleaned_playfield[row][col] = 'd0;
+                end
+            end
+
+            row_cnt = `PLAYFIELD_ROW-1;
+            for (int row = `PLAYFIELD_ROW-1; row >= 0; row--)
+                if (full_row[row] == 0)
+                begin
+                    for( int col = 0; col < `PLAYFIELD_COL; col++ )
+                    begin
+                        line_cleaned_playfield[row_cnt][col] = background_playfield[row][col];
+                    end
+                    row_cnt = row_cnt - 1;
+                end
+
+        end
+        
+
 endmodule

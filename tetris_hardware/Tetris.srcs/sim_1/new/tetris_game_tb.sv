@@ -20,6 +20,9 @@ module tetris_game_tb(); //even though the testbench doesn't create any hardware
 	logic [1:0] check_state;
 	logic draw_block_en;
 	block_move_t attempt_move;
+	
+	logic  [`PLAYFIELD_ROW-1:0] full_row;
+	logic [15:0] score;
 	// Instantiating the DUT (Device Under Test)
 	// Make sure the module and signal names match with those in your design
 	// Note that if you called the 8-bit version something besides 'Processor'
@@ -57,6 +60,8 @@ module tetris_game_tb(); //even though the testbench doesn't create any hardware
     assign attempt_move = tetris_game_test.attempt_move;
 //    assign draw_block_en_next = tetris_game_test.draw_block_en_next;
     assign draw_block_en = tetris_game_test.draw_block_en;
+    assign full_row = tetris_game_test.full_row;
+    assign score = tetris_game_test.score;
 	// Testing begins here
 	// The initial block is not synthesizable on an FPGA
 	// Everything happens sequentially inside an initial block
@@ -76,7 +81,66 @@ module tetris_game_tb(); //even though the testbench doesn't create any hardware
 		reset <= 0;
 		repeat (4) @(posedge clk);
 		// ----------- Test 1 ------------
+		keycode <= `NEW_GAME_1;
 		repeat (20) @(posedge clk);
+		keycode <= 0;
+		repeat (5) @(posedge clk);
+		// move first block to 0
+		keycode <= `MOVE_LEFT_1;
+		repeat (4) @(posedge clk);
+		keycode <= 0;
+		repeat (1) @(posedge clk);
+		keycode <= `MOVE_LEFT_1;
+		repeat (4) @(posedge clk);
+		keycode <= 0;
+		repeat (1) @(posedge clk);
+		keycode <= `MOVE_LEFT_1;
+		repeat (4) @(posedge clk);
+		keycode <= 0;
+		repeat (1) @(posedge clk);
+		keycode <= `MOVE_LEFT_1;
+		repeat (4) @(posedge clk);
+		keycode <= 0;
+		repeat (270) @(posedge clk);
+		// move second block to 2
+		keycode <= `MOVE_LEFT_1;
+		repeat (4) @(posedge clk);
+		keycode <= 0;
+		repeat (1) @(posedge clk);
+		keycode <= `MOVE_LEFT_1;
+		repeat (4) @(posedge clk);
+		keycode <= 0;
+		repeat (1) @(posedge clk);
+		repeat (600) @(posedge clk);
+		// third block is already at 4
+		// move fourth block to 6
+		keycode <= `MOVE_RIGHT_1;
+		repeat (4) @(posedge clk);
+		keycode <= 0;
+		repeat (1) @(posedge clk);
+		keycode <= `MOVE_RIGHT_1;
+		repeat (4) @(posedge clk);
+		keycode <= 0;
+		repeat (1) @(posedge clk);
+		repeat (280) @(posedge clk);
+		
+		// move fifth block to 8
+		keycode <= `MOVE_RIGHT_1;
+		repeat (4) @(posedge clk);
+		keycode <= 0;
+		repeat (1) @(posedge clk);
+		keycode <= `MOVE_RIGHT_1;
+		repeat (4) @(posedge clk);
+		keycode <= 0;
+		repeat (1) @(posedge clk);
+        keycode <= `MOVE_RIGHT_1;
+		repeat (4) @(posedge clk);
+		keycode <= 0;
+		repeat (1) @(posedge clk);
+		keycode <= `MOVE_RIGHT_1;
+		repeat (4) @(posedge clk);
+		keycode <= 0;
+		repeat (1) @(posedge clk);
 		$finish(); //this task will end the simulation if the Vivado settings are properly configured
 
 

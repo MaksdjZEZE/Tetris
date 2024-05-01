@@ -14,6 +14,11 @@ typedef enum { MOVE_DOWN,
 `define MOVE_ROTATE_1    8'h1A // W
 `define MOVE_RIGHT_1 8'h07 // D
 `define MOVE_DOWN_1  8'h16 // S
+
+`define MOVE_LEFT_2  8'h50 // left
+`define MOVE_ROTATE_2    8'h52 // up
+`define MOVE_RIGHT_2 8'h4f // right
+`define MOVE_DOWN_2  8'h51 // S=down
 `define NEW_GAME_1 8'h28 // ENTER
 `define BLOCK_I 0
 `define BLOCK_O 1

@@ -37,6 +37,7 @@ module generate_blocks(
     always_ff @( posedge frame_clk )
       begin
         new_block_type <= prbs_15[7:0] % `BLOCK_NUM;
+//        new_block_type <= `BLOCK_O;
       end
     assign blocks_table[`BLOCK_I ] = { 4'b0000,
                                        4'b1111,
