@@ -24,6 +24,7 @@ module draw_playfield #(parameter [9:0] PLAYFIELD_X_ = 80,
                         parameter [9:0] PLAYFIELD_Y_ = 120)(
     input  logic [9:0] draw_x, 
     input logic [9:0] draw_y,
+    input logic [15:0] score,
     input  logic [`TETRIS_COLORS_NUM_WIDTH-1:0] playfield[`PLAYFIELD_ROW][`PLAYFIELD_COL],
     output logic draw_field_en,
     output logic [3:0]  red, green, blue
@@ -49,10 +50,25 @@ module draw_playfield #(parameter [9:0] PLAYFIELD_X_ = 80,
     logic [9:0] field_x, field_y;
     logic [`BLOCK_SIZE_WIDTH-1:0] block_x, block_y;
     logic [`TETRIS_COLORS_NUM_WIDTH:0] color_picker;
+    
+    logic [9:0] card_x, card_y;
+    logic [`TETRIS_COLORS_NUM_WIDTH:0] temp_color_picker;
+    print_text print_text_inst(.draw_x(draw_x),.draw_y(draw_y),.card_x(card_x),.card_y(card_y),.score(score),.mode(1'b0),.color_picker(temp_color_picker));
+
+    always_comb begin
+        card_x = PLAYFIELD_X_ + 8;
+        card_y = 64;
+    end
+    
     always_comb begin
         color_picker = 0;
         draw_field_en = 1'b0;
-        if ((draw_x >= PLAYFIELD_X_-1) && (draw_x <= PLAYFIELD_X_ + PLAYFIELD_WIDTH_) && (draw_y >= PLAYFIELD_Y_-1) && (draw_y <= PLAYFIELD_Y_ + PLAYFIELD_HEIGHT_))
+        if ((draw_x >= card_x ) && (draw_x < card_x + 10*8) && (draw_y >= card_y) && (draw_y < card_y + 16))
+        begin
+            draw_field_en = 1'b1;
+            color_picker = temp_color_picker;
+        end
+        else if ((draw_x >= PLAYFIELD_X_-1) && (draw_x <= PLAYFIELD_X_ + PLAYFIELD_WIDTH_) && (draw_y >= PLAYFIELD_Y_-1) && (draw_y <= PLAYFIELD_Y_ + PLAYFIELD_HEIGHT_))
         begin
             // If draw_x, draw_y inside the field:
             draw_field_en = 1'b1;

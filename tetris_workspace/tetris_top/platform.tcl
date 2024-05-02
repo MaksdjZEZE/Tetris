@@ -152,3 +152,64 @@ platform config -updatehw {D:/ece385sp24/Tetris/tetris_hardware/tetris_top.xsa}
 platform clean
 platform clean
 platform generate
+platform clean
+platform active {tetris_top}
+platform config -updatehw {C:/Users/29360/Desktop/ECE385/Tetris_4/Tetris/tetris_hardware/mb_usb_hdmi_top.xsa}
+platform clean
+platform config -updatehw {C:/Users/29360/Desktop/ECE385/Tetris_4/Tetris/tetris_hardware/mb_usb_hdmi_top.xsa}
+platform config -updatehw {C:/Users/29360/Desktop/ECE385/Tetris_4/Tetris/tetris_hardware/mb_usb_hdmi_top.xsa}
+platform clean
+platform generate
+platform clean
+platform clean
+platform generate
+platform config -updatehw {C:/Users/29360/Desktop/ECE385/Tetris_4/Tetris/tetris_hardware/mb_usb_hdmi_top.xsa}
+platform clean
+bsp reload
+catch {bsp regenerate}
+platform clean
+platform generate
+platform config -updatehw {C:/Users/29360/Desktop/ECE385/Tetris_4/Tetris/tetris_hardware/LALA.xsa}
+bsp reload
+catch {bsp regenerate}
+platform clean
+platform generate
+platform config -updatehw {C:/Users/29360/Desktop/ECE385/Tetris_4/Tetris/tetris_hardware/tetris_top.xsa}
+bsp reload
+catch {bsp regenerate}
+platform clean
+platform generate
+platform active {tetris_top}
+platform config -updatehw {C:/Users/29360/Desktop/ECE385/Tetris_4/Tetris/tetris_hardware/tetris_top.xsa}
+platform config -updatehw {C:/Users/29360/Desktop/ECE385/Tetris_4/Tetris/tetris_hardware/tetris_top.xsa}
+bsp reload
+catch {bsp regenerate}
+platform clean
+platform generate
+platform config -updatehw {C:/Users/29360/Desktop/ECE385/Tetris_4/Tetris/tetris_hardware/tetris_top.xsa}
+bsp reload
+catch {bsp regenerate}
+platform clean
+platform generate
+platform config -updatehw {C:/Users/29360/Desktop/ECE385/Tetris_4/Tetris/tetris_hardware/tetris_top.xsa}
+bsp reload
+catch {bsp regenerate}
+platform generate
+platform clean
+platform clean
+platform generate
+platform config -updatehw {C:/Users/29360/Desktop/ECE385/Tetris_4/Tetris/tetris_hardware/tetris_top.xsa}
+bsp reload
+catch {bsp regenerate}
+platform clean
+platform generate
+platform config -updatehw {C:/Users/29360/Desktop/ECE385/Tetris_4/Tetris/tetris_hardware/tetris_top.xsa}
+bsp reload
+catch {bsp regenerate}
+platform clean
+platform generate
+platform config -updatehw {C:/Users/29360/Desktop/ECE385/Tetris_4/Tetris/tetris_hardware/tetris_top.xsa}
+bsp reload
+catch {bsp regenerate}
+platform clean
+platform generate

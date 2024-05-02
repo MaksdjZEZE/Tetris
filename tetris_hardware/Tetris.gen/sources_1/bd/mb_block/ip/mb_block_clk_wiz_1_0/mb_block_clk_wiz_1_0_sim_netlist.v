@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Thu Mar  7 16:28:21 2024
-// Host        : LAPTOP-U1IB34FN running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ip/mb_block_clk_wiz_1_0/mb_block_clk_wiz_1_0_sim_netlist.v
+// Date        : Thu May  2 05:51:15 2024
+// Host        : LAPTOP-79KENFT8 running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode funcsim -rename_top mb_block_clk_wiz_1_0 -prefix
+//               mb_block_clk_wiz_1_0_ mb_block_clk_wiz_1_0_sim_netlist.v
 // Design      : mb_block_clk_wiz_1_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -28,14 +28,14 @@ module mb_block_clk_wiz_1_0
   wire locked;
   wire reset;
 
-  mb_block_clk_wiz_1_0_clk_wiz inst
+  mb_block_clk_wiz_1_0_mb_block_clk_wiz_1_0_clk_wiz inst
        (.clk_in1(clk_in1),
         .clk_out1(clk_out1),
         .locked(locked),
         .reset(reset));
 endmodule
 
-module mb_block_clk_wiz_1_0_clk_wiz
+module mb_block_clk_wiz_1_0_mb_block_clk_wiz_1_0_clk_wiz
    (clk_out1,
     reset,
     locked,

@@ -22,12 +22,15 @@
 `include "tetris_define.vh"
 module tetris_display(
     input  logic        Reset, 
+    input logic clk,
     input  logic        frame_clk,
     input  logic [15:0]  keycode,
     input  logic [9:0] DrawX, DrawY,
     output logic [3:0]  Red, Green, Blue,
     output logic [15:0] score_player1,
-    output logic [15:0] score_player2
+    output logic [15:0] score_player2,
+    output logic pwm_out1,
+    output logic pwm_out2
     );
     logic [`TETRIS_COLORS_NUM_WIDTH-1:0] playfield_player1[`PLAYFIELD_ROW][`PLAYFIELD_COL];
     logic [`TETRIS_COLORS_NUM_WIDTH-1:0] playfield_player2[`PLAYFIELD_ROW][`PLAYFIELD_COL];
@@ -42,6 +45,8 @@ module tetris_display(
     logic game_restart_player1, game_restart_player2;
     logic game_over_player1, game_over_player2;
     logic [1:0] player_mode;
+    logic btn;
+
     enum logic [2:0] {
         MODE_SWITCH_S,
         SINGLE_PLAYER_S,
@@ -166,6 +171,7 @@ module tetris_display(
     draw_playfield draw_playfield_player1(
         .draw_x(DrawX),
         .draw_y(DrawY),
+        .score(score_player1),
         .playfield(playfield_player1),
         .draw_field_en(draw_field_player1_en),
         .red(r1),
@@ -194,6 +200,7 @@ module tetris_display(
     ) draw_playfield_player2(
         .draw_x(DrawX),
         .draw_y(DrawY),
+        .score(score_player2),
         .playfield(playfield_player2),
         .draw_field_en(draw_field_player2_en),
         .red(r2),
@@ -217,6 +224,20 @@ module tetris_display(
         .green(go),
         .blue(bo)
     );
+    
+    always_comb
+    begin
+        if (display_state == GAME_S)
+        begin
+            btn = 1'b1;
+        end
+        else
+        begin
+            btn = 1'b0;
+        end
+    end
+    
+    MP3(.btn_pressed(1'b0),.sys_clk(clk),.sys_rst_n(1'b0),.pwm_out1(pwm_out1),.pwm_out2(pwm_out2));
     always_comb
         begin
             Red = 4'hf;

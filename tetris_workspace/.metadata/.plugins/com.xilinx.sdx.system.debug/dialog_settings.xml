@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="tetris_system-imgFile" value=""/>
+	<item key="tetris_system-offSet" value=""/>
+	<item key="tetris_system-initFile" value=""/>
+	<item key="tetris_system-flashType" value="is25lp016d-spi-x1_x2_x4"/>
+	<item key="tetris_system-verifyFlash" value="false"/>
+	<item key="tetris_system-blankCheck" value="false"/>
+	<item key="tetris_system-device" value="Auto Detect"/>
+	<item key="tetris_system-target" value="Local"/>
+	<item key="programflash.hwplatform" value="tetris_system"/>
+</section>

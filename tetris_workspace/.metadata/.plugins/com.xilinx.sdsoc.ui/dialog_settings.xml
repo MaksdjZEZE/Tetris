@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
-	<item key="sdx.custom.platform.repository.locations" value="D:\ece385sp24\Tetris\tetris_workspace\tetris_top\export\tetris_top"/>
-	<item key="sdx.custom.platform.repository.last.directory.dialog.location" value="D:\ece385sp24\Tetris\tetris_workspace\tetris_top\export\tetris_top"/>
+	<item key="sdx.custom.platform.repository.locations" value="D:\ece385sp24\Tetris\tetris_workspace\tetris_top\export\tetris_top;C:\Users\29360\Desktop\ECE385\Tetris_4\Tetris\tetris_workspace;C:\Users\29360\Desktop\ECE385\Tetris_4\Tetris\tetris_workspace\tetris_top;C:\Users\29360\Desktop\ECE385\Tetris_4\Tetris\tetris_workspace\tetris_top\export\tetris_top"/>
+	<item key="sdx.custom.platform.repository.last.directory.dialog.location" value="C:\Users\29360\Desktop\ECE385\Tetris_4\Tetris\tetris_workspace\tetris_top\export\tetris_top"/>
 </section>
