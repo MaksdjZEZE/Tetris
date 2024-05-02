@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed May  1 23:39:39 2024
+# Process ID: 20940
+# Current directory: C:/Users/29360/Desktop/ECE385/Tetris_1/Tetris/tetris_hardware
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4376 C:\Users\29360\Desktop\ECE385\Tetris_1\Tetris\tetris_hardware\Tetris.xpr
+# Log file: C:/Users/29360/Desktop/ECE385/Tetris_1/Tetris/tetris_hardware/vivado.log
+# Journal file: C:/Users/29360/Desktop/ECE385/Tetris_1/Tetris/tetris_hardware\vivado.jou
+# Running On: LAPTOP-79KENFT8, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 16, Host memory: 16559 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/29360/Desktop/ECE385/Tetris_1/Tetris/tetris_hardware/Tetris.xpr

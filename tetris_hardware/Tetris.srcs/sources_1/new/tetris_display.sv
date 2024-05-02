@@ -69,6 +69,7 @@ module tetris_display(
     draw_playfield draw_playfield_player1(
         .draw_x(DrawX),
         .draw_y(DrawY),
+        .score(score_player1),
         .playfield(playfield_player1),
         .draw_field_en(draw_field_player1_en),
         .red(r1),
@@ -94,6 +95,7 @@ module tetris_display(
     ) draw_playfield_player2(
         .draw_x(DrawX),
         .draw_y(DrawY),
+        .score(score_player2),
         .playfield(playfield_player2),
         .draw_field_en(draw_field_player2_en),
         .red(r2),
