@@ -52,28 +52,27 @@ module draw_playfield #(parameter [9:0] PLAYFIELD_X_ = 80,
     always_comb begin
         color_picker = 0;
         draw_field_en = 1'b0;
-        if ((draw_x >= PLAYFIELD_X_) && (draw_x < PLAYFIELD_X_ + PLAYFIELD_WIDTH_) && (draw_y >= PLAYFIELD_Y_) && (draw_y < PLAYFIELD_Y_ + PLAYFIELD_HEIGHT_))
+        if ((draw_x >= PLAYFIELD_X_-1) && (draw_x <= PLAYFIELD_X_ + PLAYFIELD_WIDTH_) && (draw_y >= PLAYFIELD_Y_-1) && (draw_y <= PLAYFIELD_Y_ + PLAYFIELD_HEIGHT_))
         begin
             // If draw_x, draw_y inside the field:
             draw_field_en = 1'b1;
-            // caculate the col and row in the field
-            field_x = draw_x - PLAYFIELD_X_;
-            field_y = draw_y - PLAYFIELD_Y_;
-            col = field_x[9:4];
-            row = field_y[9:4];
-            block_x = field_x - (col<<4);
-            block_y = field_y - (row<<4);
-            
-            if (block_x == 0 || block_y == 0 || block_x == BLOCK_SIZE_ - 1 || block_y == BLOCK_SIZE_ - 1)
-                color_picker = 0;
-            else
-                color_picker = playfield[row][col];
-              
-        end
-        else
-        begin
-            if ((draw_x == PLAYFIELD_X_-1) || (draw_x == PLAYFIELD_X_ + PLAYFIELD_WIDTH_) || (draw_y == PLAYFIELD_Y_-1) || (draw_y == PLAYFIELD_Y_ + PLAYFIELD_HEIGHT_))
-                color_picker = 8;
+            color_picker = 8;
+            if ((draw_x >= PLAYFIELD_X_) && (draw_x < PLAYFIELD_X_ + PLAYFIELD_WIDTH_) && (draw_y >= PLAYFIELD_Y_) && (draw_y < PLAYFIELD_Y_ + PLAYFIELD_HEIGHT_))
+            begin        
+                // caculate the col and row in the field
+                field_x = draw_x - PLAYFIELD_X_;
+                field_y = draw_y - PLAYFIELD_Y_;
+                col = field_x[9:4];
+                row = field_y[9:4];
+                block_x = field_x - (col<<4);
+                block_y = field_y - (row<<4);
+                
+                if (block_x == 0 || block_y == 0 || block_x == BLOCK_SIZE_ - 1 || block_y == BLOCK_SIZE_ - 1)
+                    color_picker = 0;
+                else
+                    color_picker = playfield[row][col];
+                  
+            end
         end
 
         red = TETRIS_COLOR[color_picker][11:8];

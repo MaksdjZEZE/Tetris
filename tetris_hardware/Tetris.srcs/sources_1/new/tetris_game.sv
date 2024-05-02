@@ -26,8 +26,11 @@ module tetris_game #(parameter [7:0] KEY_MOVE_LEFT = `MOVE_LEFT_1,
     input  logic        Reset, 
     input  logic        frame_clk,
     input  logic [7:0]  keycode,
+    input logic game_start,
+    input logic game_restart,
     output logic [`TETRIS_COLORS_NUM_WIDTH-1:0] playfield[`PLAYFIELD_ROW][`PLAYFIELD_COL],
-    output logic [15:0] score
+    output logic [15:0] score,
+    output logic game_over
     );
     // This module should update the playfield according to user input
     enum logic [2:0] {
@@ -69,6 +72,21 @@ module tetris_game #(parameter [7:0] KEY_MOVE_LEFT = `MOVE_LEFT_1,
                 game_state <= IDLE_S;
             else
                 game_state <= game_state_next;
+        end
+        
+    always_ff @(posedge frame_clk or posedge Reset)
+        begin
+            if(Reset)
+                game_over <= 'd0;
+            else
+            begin
+                if (game_state == GAME_OVER_S)
+                    game_over <= 'd1;
+                else if (game_state == IDLE_S)
+                    game_over <= 'd0;
+                else
+                    game_over <= game_over;
+            end
         end
     logic updating_background;
     
@@ -119,10 +137,11 @@ module tetris_game #(parameter [7:0] KEY_MOVE_LEFT = `MOVE_LEFT_1,
         begin
             updating_background = 0;
             game_state_next = game_state;
+//            game_over = 'd0;
             case (game_state)
                 IDLE_S:
                 begin
-                    if (keycode == `NEW_GAME_1)
+                    if (game_start == 1)
                         game_state_next = GEN_NEW_BLOCK_S;
                 end
                 GEN_NEW_BLOCK_S:
@@ -158,7 +177,8 @@ module tetris_game #(parameter [7:0] KEY_MOVE_LEFT = `MOVE_LEFT_1,
                 end
                 GAME_OVER_S:
                 begin
-                    if (keycode == `NEW_GAME_1)
+//                    game_over = 'd1;
+                    if (game_restart == 1)
                         game_state_next = IDLE_S;
                 end
           

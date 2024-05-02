@@ -35,16 +35,110 @@ module tetris_display(
     logic draw_field_player2_en;
     logic [3:0]  r1, g1, b1;
     logic [3:0]  r2, g2, b2;
+    logic [3:0]  rs, gs, bs;
+    logic [3:0]  ro, go, bo;
     logic [7:0]  keycode_player1, keycode_player2;
+    logic game_start_player1, game_start_player2;
+    logic game_restart_player1, game_restart_player2;
+    logic game_over_player1, game_over_player2;
+    logic [1:0] player_mode;
+    enum logic [2:0] {
+        MODE_SWITCH_S,
+        SINGLE_PLAYER_S,
+        TWO_PLAYER_S,
+        WAITING_START_S,
+        GAME_S,
+        GAME_OVER_S
+    } display_state, display_state_next;
+    
+    always_ff @(posedge frame_clk or posedge Reset)
+        begin
+            if(Reset)
+                display_state <= MODE_SWITCH_S;
+            else
+                display_state <= display_state_next;
+        end
+        
+    always_ff @(posedge frame_clk or posedge Reset)
+        begin
+            if(Reset)
+                player_mode <= 'd0;
+            else
+            begin
+                if (display_state == MODE_SWITCH_S)
+                    player_mode <= 'd0;  
+                else if (display_state == SINGLE_PLAYER_S)
+                    player_mode <= 'd1;
+                else if (display_state == TWO_PLAYER_S)
+                    player_mode <= 'd2;
+                else
+                    player_mode <= player_mode;
+            end
+        end
+        
+    always_comb
+        begin
+            display_state_next = display_state;
+            case (display_state)
+                MODE_SWITCH_S:
+                begin
+//                    player_mode = 'd0;
+                    if (keycode[7:0] == `MOVE_ROTATE_2)
+                        display_state_next = SINGLE_PLAYER_S;
+                    else if (keycode[7:0] == `MOVE_DOWN_2)
+                        display_state_next = TWO_PLAYER_S;
+                end
+                SINGLE_PLAYER_S:
+                begin
+//                    player_mode = 'd1;
+                    if (keycode[7:0] == `NEW_GAME_1)
+                        display_state_next = WAITING_START_S;
+                    else if (keycode[7:0] == `MOVE_DOWN_2)
+                        display_state_next = TWO_PLAYER_S;
+                end
+                TWO_PLAYER_S:
+                begin
+//                    player_mode = 'd2;
+                    if (keycode[7:0] == `NEW_GAME_1)
+                        display_state_next = WAITING_START_S;
+                    else if (keycode[7:0] == `MOVE_ROTATE_2)
+                        display_state_next = SINGLE_PLAYER_S;
+                end
+                WAITING_START_S:
+                begin
+                    if (keycode[7:0] == `NEW_GAME_1)
+                        display_state_next = GAME_S;
+                end
+                GAME_S:
+                begin
+                    if (player_mode == 'd1)
+                    begin
+                        if (game_over_player1 == 'd1)
+                        begin
+                            display_state_next = GAME_OVER_S;
+                        end
+                    end
+                    else if (player_mode == 'd2)
+                    begin
+                        if ((game_over_player1 == 'd1) && (game_over_player2 == 'd1))
+                        begin
+                            display_state_next = GAME_OVER_S;
+                        end
+                    end
+                end
+                GAME_OVER_S:
+                    if (keycode[7:0] == `NEW_GAME_1)
+                        display_state_next = MODE_SWITCH_S;
+            endcase
+        end
+    assign game_start_player1 = (display_state != GAME_S) && (display_state_next == GAME_S);
+    assign game_start_player2 = (display_state != GAME_S) && (display_state_next == GAME_S) && (player_mode == 'd2);
+    assign game_restart_player1 = (display_state == GAME_OVER_S) && (display_state_next == MODE_SWITCH_S);
+    assign game_restart_player2 = (display_state == GAME_OVER_S) && (display_state_next == MODE_SWITCH_S) && (player_mode == 'd2);
     always_comb
         begin
             keycode_player1 = 'd0;
             keycode_player2 = 'd0;
-            if (keycode[15:8] == `NEW_GAME_1 || keycode[7:0] == `NEW_GAME_1)
-            begin 
-                keycode_player1 = `NEW_GAME_1;
-                keycode_player2 = `NEW_GAME_1;
-            end
             if (keycode[15:8] == `MOVE_LEFT_1 || keycode[15:8] == `MOVE_RIGHT_1 || keycode[15:8] == `MOVE_ROTATE_1)
                 keycode_player1 = keycode[15:8];
             if (keycode[7:0] == `MOVE_LEFT_1 || keycode[7:0] == `MOVE_RIGHT_1 || keycode[7:0] == `MOVE_ROTATE_1)
@@ -62,8 +156,11 @@ module tetris_display(
         .Reset(Reset),
         .frame_clk(frame_clk),
         .keycode(keycode_player1),
+        .game_start(game_start_player1),
+        .game_restart(game_restart_player1),
         .playfield(playfield_player1),
-        .score(score_player1)
+        .score(score_player1),
+        .game_over(game_over_player1)
     );
       
     draw_playfield draw_playfield_player1(
@@ -84,8 +181,11 @@ module tetris_display(
         .Reset(Reset),
         .frame_clk(frame_clk),
         .keycode(keycode_player2),
+        .game_start(game_start_player2),
+        .game_restart(game_restart_player2),
         .playfield(playfield_player2),
-        .score(score_player2)
+        .score(score_player2),
+        .game_over(game_over_player2)
     );
       
     draw_playfield #(
@@ -101,20 +201,57 @@ module tetris_display(
         .blue(b2)
     );
     
+    draw_mode_switch draw_mode_switch_inst(
+        .draw_x(DrawX),
+        .draw_y(DrawY),
+        .player_mode(player_mode),
+        .red(rs),
+        .green(gs),
+        .blue(bs)
+    );
+    
+    draw_game_over draw_game_over_s(
+        .draw_x(DrawX),
+        .draw_y(DrawY),
+        .red(ro),
+        .green(go),
+        .blue(bo)
+    );
     always_comb
         begin
-            if (draw_field_player1_en)
-            begin
-                Red = r1;
-                Green = g1;
-                Blue = b1;
-            end
-            else
-            begin
-                Red = r2;
-                Green = g2;
-                Blue = b2;
-            end
+            Red = 4'hf;
+            Green = 4'hf;
+            Blue = 4'hf;
+            case (display_state)
+                MODE_SWITCH_S, SINGLE_PLAYER_S, TWO_PLAYER_S:
+                begin
+                    Red = rs;
+                    Green = gs;
+                    Blue = bs;
+                end
+                WAITING_START_S, GAME_S:
+                begin
+                    if (draw_field_player1_en)
+                    begin
+                        Red = r1;
+                        Green = g1;
+                        Blue = b1;
+                    end
+                    else if (player_mode == 'd2)
+                    begin
+                        Red = r2;
+                        Green = g2;
+                        Blue = b2;
+                    end
+                end
+                GAME_OVER_S:
+                begin
+                    Red = ro;
+                    Green = go;
+                    Blue = bo;
+                end
+            endcase
+            
         end
 endmodule
 

@@ -70,6 +70,8 @@ module check_move(
             check_move_done_temp = 0;
             move_valid_temp = move_valid;
             attempt_point = curr_block.point;
+//            move_x_temp = 0;
+//            move_y_temp = 0;
             case (check_state)
                 CHECK_IDLE:
                 begin
