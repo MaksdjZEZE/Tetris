@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Fri May  3 00:19:47 2024
+| Date             : Fri May  3 03:27:26 2024
 | Host             : LAPTOP-U1IB34FN running 64-bit major release  (build 9200)
 | Command          : report_power -file mb_usb_hdmi_top_power_routed.rpt -pb mb_usb_hdmi_top_power_summary_routed.pb -rpx mb_usb_hdmi_top_power_routed.rpx
 | Design           : mb_usb_hdmi_top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.179        |
+| Total On-Chip Power (W)  | 1.174        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.102        |
+| Dynamic (W)              | 1.097        |
 | Device Static (W)        | 0.077        |
 | Effective TJA (C/W)      | 4.9          |
 | Max Ambient (C)          | 79.2         |
@@ -52,23 +52,23 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.012 |       12 |       --- |             --- |
-| Slice Logic              |     0.312 |    36679 |       --- |             --- |
-|   LUT as Logic           |     0.308 |    25771 |     32600 |           79.05 |
-|   Register               |     0.001 |     4147 |     65200 |            6.36 |
+| Clocks                   |     0.013 |       12 |       --- |             --- |
+| Slice Logic              |     0.310 |    39333 |       --- |             --- |
+|   LUT as Logic           |     0.306 |    27723 |     32600 |           85.04 |
+|   Register               |     0.001 |     4214 |     65200 |            6.46 |
 |   LUT as Distributed RAM |    <0.001 |      172 |      9600 |            1.79 |
-|   F7/F8 Muxes            |    <0.001 |      691 |     32600 |            2.12 |
-|   CARRY4                 |    <0.001 |      134 |      8150 |            1.64 |
+|   F7/F8 Muxes            |    <0.001 |     1199 |     32600 |            3.68 |
+|   CARRY4                 |    <0.001 |      178 |      8150 |            2.18 |
 |   LUT as Shift Register  |    <0.001 |      114 |      9600 |            1.19 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
-|   Others                 |     0.000 |      791 |       --- |             --- |
-| Signals                  |     0.415 |    31914 |       --- |             --- |
+|   Others                 |     0.000 |      808 |       --- |             --- |
+| Signals                  |     0.411 |    33375 |       --- |             --- |
 | Block RAM                |    <0.001 |        8 |        75 |           10.67 |
 | MMCM                     |     0.212 |        2 |         5 |           40.00 |
 | DSPs                     |     0.002 |        3 |       120 |            2.50 |
 | I/O                      |     0.149 |       42 |       210 |           20.00 |
 | Static Power             |     0.077 |          |           |                 |
-| Total                    |     1.179 |          |           |                 |
+| Total                    |     1.174 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,7 +78,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.755 |       0.743 |      0.012 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.749 |       0.737 |      0.012 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.131 |       0.118 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.041 |       0.040 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.007 |       0.006 |      0.001 |       NA    | Unspecified | NA         |
@@ -153,8 +153,7 @@ Table of Contents
 +-----------------------------+-----------+
 | Name                        | Power (W) |
 +-----------------------------+-----------+
-| mb_usb_hdmi_top             |     1.102 |
-|   HexB                      |     0.001 |
+| mb_usb_hdmi_top             |     1.097 |
 |   clk_wiz                   |     0.106 |
 |     inst                    |     0.106 |
 |   mb_block_i                |     0.131 |
@@ -170,13 +169,17 @@ Table of Contents
 |       U0                    |     0.004 |
 |     timer_usb_axi           |     0.002 |
 |       U0                    |     0.002 |
-|   tetris_display_instance   |     0.713 |
-|     draw_playfield_player1  |     0.001 |
-|     draw_playfield_player2  |     0.001 |
-|     tetris_game_player1     |     0.350 |
+|   tetris_display_instance   |     0.707 |
+|     draw_playfield_player1  |     0.006 |
+|       print_text_inst       |     0.003 |
+|       print_text_inst1      |     0.002 |
+|     draw_playfield_player2  |     0.008 |
+|       print_text_inst       |     0.004 |
+|       print_text_inst1      |     0.003 |
+|     tetris_game_player1     |     0.345 |
 |       check_move_inst       |     0.013 |
-|     tetris_game_player2     |     0.360 |
-|       check_move_inst       |     0.013 |
+|     tetris_game_player2     |     0.347 |
+|       check_move_inst       |     0.012 |
 |   vga_to_hdmi               |     0.132 |
 |     inst                    |     0.132 |
 +-----------------------------+-----------+

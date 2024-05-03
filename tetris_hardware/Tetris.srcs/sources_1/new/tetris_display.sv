@@ -49,6 +49,9 @@ module tetris_display(
     logic garbage_output_valid_player1, garbage_output_valid_player2;
     
     block_info_t generated_block_player1, generated_block_player2;
+    
+    logic [15:0] highest_score;
+    logic draw_game_over_en;
     enum logic [2:0] {
         MODE_SWITCH_S,
         SINGLE_PLAYER_S,
@@ -82,7 +85,22 @@ module tetris_display(
                     player_mode <= player_mode;
             end
         end
-        
+    
+    always_ff @(posedge frame_clk or posedge Reset)
+        begin
+            if(Reset)
+                highest_score <= 'd0;
+            else
+            begin
+                if (display_state_next == GAME_OVER_S)
+                begin
+                    if (score_player1 > highest_score)
+                        highest_score <= score_player1;
+                    if (score_player2 > highest_score)
+                        highest_score <= score_player2;
+                end
+            end
+        end
     always_comb
         begin
             display_state_next = display_state;
@@ -206,12 +224,14 @@ module tetris_display(
     draw_playfield draw_playfield_player1(
         .draw_x(DrawX),
         .draw_y(DrawY),
+        .score(score_player1),
         .generated_block(generated_block_player1),
         .playfield(playfield_player1),
         .draw_field_en(draw_field_player1_en),
         .red(r1),
         .green(g1),
-        .blue(b1)
+        .blue(b1),
+        .highest_score(highest_score)
     );
     
     tetris_game #(
@@ -241,12 +261,14 @@ module tetris_display(
     ) draw_playfield_player2(
         .draw_x(DrawX),
         .draw_y(DrawY),
+        .score(score_player2),
         .generated_block(generated_block_player2),
         .playfield(playfield_player2),
         .draw_field_en(draw_field_player2_en),
         .red(r2),
         .green(g2),
-        .blue(b2)
+        .blue(b2),
+        .highest_score(highest_score)
     );
     
     draw_mode_switch draw_mode_switch_inst(
@@ -263,7 +285,8 @@ module tetris_display(
         .draw_y(DrawY),
         .red(ro),
         .green(go),
-        .blue(bo)
+        .blue(bo),
+        .draw_game_over_en(draw_game_over_en)
     );
     always_comb
         begin
@@ -294,9 +317,24 @@ module tetris_display(
                 end
                 GAME_OVER_S:
                 begin
-                    Red = ro;
-                    Green = go;
-                    Blue = bo;
+                    if (draw_field_player1_en)
+                    begin
+                        Red = r1;
+                        Green = g1;
+                        Blue = b1;
+                    end
+                    else if (player_mode == 'd2)
+                    begin
+                        Red = r2;
+                        Green = g2;
+                        Blue = b2;
+                    end
+                    if (draw_game_over_en)
+                    begin
+                        Red = ro;
+                        Green = go;
+                        Blue = bo;
+                    end
                 end
             endcase
             

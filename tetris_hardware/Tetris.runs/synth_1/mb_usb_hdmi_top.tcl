@@ -105,6 +105,9 @@ read_verilog -library xil_defaultlib -sv {
   D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/new/check_move.sv
   D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/new/draw_mode_switch.sv
   D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/new/draw_game_over.sv
+  D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/new/print_text.sv
+  D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/new/font_rom.sv
+  D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/new/ScoreToAscii.sv
 }
 read_verilog -library xil_defaultlib D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/imports/mb_block_wrapper.v
 add_files D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/bd/mb_block/mb_block.bd

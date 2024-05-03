@@ -20,7 +20,7 @@ module print_text #(parameter [3:0] text_length = 10)(
     logic [11:0] ascii_address;
     logic [1:0] selector;
     logic [10:0] text_score[6] = '{11'h53, 11'h63, 11'h6F, 11'h72, 11'h65, 11'h3A}; // ascii for string 'Score:'
-    
+    logic [10:0] text_high[14] = '{11'h48, 11'h69, 11'h67, 11'h68, 11'h65, 11'h73, 11'h74,11'h20, 11'h53, 11'h63, 11'h6F, 11'h72, 11'h65, 11'h3A};
     localparam MODE0_TEXT_LENGTH = 48;  //length of "Score:"   
     localparam MODE0_TOTAL_LENGTH = 80;
     
@@ -48,14 +48,22 @@ module print_text #(parameter [3:0] text_length = 10)(
                 end
             end
             
-//            1'b1:
-//            begin
-//            // mode = 1  ==> print(text[0:n-1]) on the screen and don't care variable score.
-//                if (draw_x >= card_x  && draw_x < card_x + text_length*8 && draw_y >= card_y && draw_y < card_y+16)
-//                begin
-//                    font_addr = 16*printed_text[(draw_x-card_x) >> 3]+draw_y[3:0];
-//                end 
-//            end   
+            1'b1:
+            begin
+                if (draw_x >= (card_x) && draw_x < card_x + 144) 
+                begin
+                   if (draw_x < card_x + 112)
+                   begin
+                        // print "Score"
+                        font_addr = 16*text_high[(draw_x-card_x) >> 3 ]+draw_y[3:0];
+                   end 
+                   else begin
+                        // print score
+                        selector = (draw_x - card_x - 112 ) >>3;
+                        font_addr = 16 * ascii_address + draw_y[3:0];  
+                   end
+                end
+            end 
             default: 
             begin
                 if (draw_x >= (card_x) && draw_x < card_x + MODE0_TOTAL_LENGTH) 
