@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 4
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50csga324-1
 
@@ -169,12 +171,10 @@ set_property used_in_implementation false [get_files D:/ece385sp24/Tetris/tetris
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
-
-read_checkpoint -auto_incremental -incremental D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/utils_1/imports/synth_1/mb_usb_hdmi_top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }
-synth_design -top mb_usb_hdmi_top -part xc7s50csga324-1
+synth_design -top mb_usb_hdmi_top -part xc7s50csga324-1 -flatten_hierarchy none -incremental_mode off
 OPTRACE "synth_design" END { }
 if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
  send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"

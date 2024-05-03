@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-// Date        : Wed Mar 20 22:53:17 2024
+// Date        : Thu May  2 21:23:16 2024
 // Host        : LAPTOP-U1IB34FN running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.v
+//               d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_sim_netlist.v
 // Design      : clk_wiz_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.

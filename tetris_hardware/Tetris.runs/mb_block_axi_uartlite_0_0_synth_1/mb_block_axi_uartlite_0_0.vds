@@ -2,15 +2,19 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Thu Mar  7 16:27:09 2024
-# Process ID: 4724
-# Current directory: D:/ece385sp24/labs/lab6/lab6tt/lab6tt.runs/mb_block_axi_uartlite_0_0_synth_1
+# Start of session at: Thu May  2 21:15:26 2024
+# Process ID: 3772
+# Current directory: D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/mb_block_axi_uartlite_0_0_synth_1
 # Command line: vivado.exe -log mb_block_axi_uartlite_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mb_block_axi_uartlite_0_0.tcl
-# Log file: D:/ece385sp24/labs/lab6/lab6tt/lab6tt.runs/mb_block_axi_uartlite_0_0_synth_1/mb_block_axi_uartlite_0_0.vds
-# Journal file: D:/ece385sp24/labs/lab6/lab6tt/lab6tt.runs/mb_block_axi_uartlite_0_0_synth_1\vivado.jou
+# Log file: D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/mb_block_axi_uartlite_0_0_synth_1/mb_block_axi_uartlite_0_0.vds
+# Journal file: D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/mb_block_axi_uartlite_0_0_synth_1\vivado.jou
 # Running On: LAPTOP-U1IB34FN, OS: Windows, CPU Frequency: 2304 MHz, CPU Physical cores: 8, Host memory: 34132 MB
 #-----------------------------------------------------------
 source mb_block_axi_uartlite_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 372.520 ; gain = 68.363
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/ece385sp24/labs/final_project/RD_hdmi_ip2020/hdmi_tx_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/ece385sp24/Vivado/2022.2/data/ip'.
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: mb_block_axi_uartlite_0_0
 Command: synth_design -top mb_block_axi_uartlite_0_0 -part xc7s50csga324-1 -incremental_mode off -mode out_of_context
 Starting synth_design
@@ -19,12 +23,12 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
 INFO: [Device 21-403] Loading part xc7s50csga324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 28988
+INFO: [Synth 8-7075] Helper process launched with PID 17400
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/ece385sp24/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1185.043 ; gain = 408.270
+Starting RTL Elaboration : Time (s): cpu = 00:00:29 ; elapsed = 00:00:35 . Memory (MB): peak = 1183.902 ; gain = 407.246
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'mb_block_axi_uartlite_0_0' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/synth/mb_block_axi_uartlite_0_0.vhd:86]
+INFO: [Synth 8-638] synthesizing module 'mb_block_axi_uartlite_0_0' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/synth/mb_block_axi_uartlite_0_0.vhd:86]
 	Parameter C_FAMILY bound to: spartan7 - type: string 
 	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 100000000 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
@@ -33,57 +37,57 @@ INFO: [Synth 8-638] synthesizing module 'mb_block_axi_uartlite_0_0' [d:/ece385sp
 	Parameter C_DATA_BITS bound to: 8 - type: integer 
 	Parameter C_USE_PARITY bound to: 0 - type: integer 
 	Parameter C_ODD_PARITY bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'axi_uartlite' declared at 'd:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:2128' bound to instance 'U0' of component 'axi_uartlite' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/synth/mb_block_axi_uartlite_0_0.vhd:162]
-INFO: [Synth 8-638] synthesizing module 'axi_uartlite' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:2190]
-INFO: [Synth 8-638] synthesizing module 'uartlite_core' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1650]
-INFO: [Synth 8-638] synthesizing module 'baudrate' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1453]
-INFO: [Synth 8-256] done synthesizing module 'baudrate' (0#1) [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1453]
-INFO: [Synth 8-638] synthesizing module 'uartlite_rx' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:927]
-INFO: [Synth 8-638] synthesizing module 'cdc_sync' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-3491] module 'axi_uartlite' declared at 'd:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:2128' bound to instance 'U0' of component 'axi_uartlite' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/synth/mb_block_axi_uartlite_0_0.vhd:162]
+INFO: [Synth 8-638] synthesizing module 'axi_uartlite' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:2190]
+INFO: [Synth 8-638] synthesizing module 'uartlite_core' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1650]
+INFO: [Synth 8-638] synthesizing module 'baudrate' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1453]
+INFO: [Synth 8-256] done synthesizing module 'baudrate' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1453]
+INFO: [Synth 8-638] synthesizing module 'uartlite_rx' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:927]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (0#1) [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_f' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
-INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f' (0#1) [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
-INFO: [Synth 8-638] synthesizing module 'dynshreg_f' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'dynshreg_f' (0#1) [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f' (0#1) [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f' (0#1) [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-256] done synthesizing module 'uartlite_rx' (0#1) [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:927]
-INFO: [Synth 8-638] synthesizing module 'uartlite_tx' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:408]
-INFO: [Synth 8-256] done synthesizing module 'uartlite_tx' (0#1) [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:408]
-INFO: [Synth 8-256] done synthesizing module 'uartlite_core' (0#1) [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1650]
-INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
-INFO: [Synth 8-638] synthesizing module 'slave_attachment' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
-INFO: [Synth 8-638] synthesizing module 'address_decoder' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
-INFO: [Synth 8-638] synthesizing module 'pselect_f' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'pselect_f' (0#1) [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (0#1) [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (0#1) [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (0#1) [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
-INFO: [Synth 8-256] done synthesizing module 'address_decoder' (0#1) [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
-INFO: [Synth 8-226] default block is never used [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
-INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (0#1) [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
-INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (0#1) [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
-INFO: [Synth 8-256] done synthesizing module 'axi_uartlite' (0#1) [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:2190]
-INFO: [Synth 8-256] done synthesizing module 'mb_block_axi_uartlite_0_0' (0#1) [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/synth/mb_block_axi_uartlite_0_0.vhd:86]
-WARNING: [Synth 8-6014] Unused sequential element is_read_reg was removed.  [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2447]
-WARNING: [Synth 8-6014] Unused sequential element is_write_reg was removed.  [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2448]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'uartlite_rx' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:927]
+INFO: [Synth 8-638] synthesizing module 'uartlite_tx' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:408]
+INFO: [Synth 8-256] done synthesizing module 'uartlite_tx' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:408]
+INFO: [Synth 8-256] done synthesizing module 'uartlite_core' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:1650]
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-226] default block is never used [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-256] done synthesizing module 'axi_uartlite' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/67a1/hdl/axi_uartlite_v2_0_vh_rfs.vhd:2190]
+INFO: [Synth 8-256] done synthesizing module 'mb_block_axi_uartlite_0_0' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/synth/mb_block_axi_uartlite_0_0.vhd:86]
+WARNING: [Synth 8-6014] Unused sequential element is_read_reg was removed.  [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2447]
+WARNING: [Synth 8-6014] Unused sequential element is_write_reg was removed.  [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2448]
 WARNING: [Synth 8-7129] Port Address_In_Erly[2] in module address_decoder is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Address_In_Erly[3] in module address_decoder is either unconnected or has no load
 WARNING: [Synth 8-7129] Port Bus_RNW in module address_decoder is either unconnected or has no load
@@ -128,58 +132,58 @@ WARNING: [Synth 8-7129] Port prmry_vect_in[0] in module cdc_sync is either uncon
 WARNING: [Synth 8-7129] Port scndry_resetn in module cdc_sync is either unconnected or has no load
 WARNING: [Synth 8-7129] Port bus2ip_cs in module uartlite_core is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1289.855 ; gain = 513.082
+Finished RTL Elaboration : Time (s): cpu = 00:00:41 ; elapsed = 00:00:50 . Memory (MB): peak = 1290.965 ; gain = 514.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1289.855 ; gain = 513.082
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 1290.965 ; gain = 514.309
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1289.855 ; gain = 513.082
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:42 ; elapsed = 00:00:51 . Memory (MB): peak = 1290.965 ; gain = 514.309
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1289.855 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.083 . Memory (MB): peak = 1290.965 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 6 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0_ooc.xdc] for cell 'U0'
-Parsing XDC File [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0_board.xdc] for cell 'U0'
-Finished Parsing XDC File [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0_board.xdc] for cell 'U0'
-Parsing XDC File [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0.xdc] for cell 'U0'
-Finished Parsing XDC File [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0.xdc] for cell 'U0'
-Parsing XDC File [D:/ece385sp24/labs/lab6/lab6tt/lab6tt.runs/mb_block_axi_uartlite_0_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [D:/ece385sp24/labs/lab6/lab6tt/lab6tt.runs/mb_block_axi_uartlite_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0_board.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0_board.xdc] for cell 'U0'
+Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_uartlite_0_0/mb_block_axi_uartlite_0_0.xdc] for cell 'U0'
+Parsing XDC File [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/mb_block_axi_uartlite_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/mb_block_axi_uartlite_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1348.277 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1356.828 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 6 instances were transformed.
   FDR => FDRE: 6 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1350.578 ; gain = 2.301
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.142 . Memory (MB): peak = 1358.324 ; gain = 1.496
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/ece385sp24/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1350.578 ; gain = 573.805
+Finished Constraint Validation : Time (s): cpu = 00:01:22 ; elapsed = 00:01:34 . Memory (MB): peak = 1358.324 ; gain = 581.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1350.578 ; gain = 573.805
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:22 ; elapsed = 00:01:34 . Memory (MB): peak = 1358.324 ; gain = 581.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  D:/ece385sp24/labs/lab6/lab6tt/lab6tt.runs/mb_block_axi_uartlite_0_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/mb_block_axi_uartlite_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1350.578 ; gain = 573.805
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:22 ; elapsed = 00:01:34 . Memory (MB): peak = 1358.324 ; gain = 581.668
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
 ---------------------------------------------------------------------------------------------------
@@ -192,7 +196,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'slave_attachment'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1350.578 ; gain = 573.805
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:25 ; elapsed = 00:01:37 . Memory (MB): peak = 1358.324 ; gain = 581.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -266,25 +270,25 @@ WARNING: [Synth 8-7129] Port s_axi_wstrb[0] in module axi_uartlite is either unc
 INFO: [Synth 8-3332] Sequential element (UARTLITE_CORE_I/UARTLITE_RX_I/INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_uartlite.
 INFO: [Synth 8-3332] Sequential element (UARTLITE_CORE_I/UARTLITE_RX_I/INPUT_DOUBLE_REGS3/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_uartlite.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1350.578 ; gain = 573.805
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:36 ; elapsed = 00:01:49 . Memory (MB): peak = 1358.324 ; gain = 581.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1350.578 ; gain = 573.805
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:04 ; elapsed = 00:02:18 . Memory (MB): peak = 1358.324 ; gain = 581.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1350.578 ; gain = 573.805
+Finished Timing Optimization : Time (s): cpu = 00:02:06 ; elapsed = 00:02:20 . Memory (MB): peak = 1358.324 ; gain = 581.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1350.578 ; gain = 573.805
+Finished Technology Mapping : Time (s): cpu = 00:02:06 ; elapsed = 00:02:20 . Memory (MB): peak = 1358.324 ; gain = 581.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -302,37 +306,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:27 . Memory (MB): peak = 1350.578 ; gain = 573.805
+Finished IO Insertion : Time (s): cpu = 00:02:33 ; elapsed = 00:02:49 . Memory (MB): peak = 1358.324 ; gain = 581.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1350.578 ; gain = 573.805
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:33 ; elapsed = 00:02:50 . Memory (MB): peak = 1358.324 ; gain = 581.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1350.578 ; gain = 573.805
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:34 ; elapsed = 00:02:50 . Memory (MB): peak = 1358.324 ; gain = 581.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1350.578 ; gain = 573.805
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:34 ; elapsed = 00:02:50 . Memory (MB): peak = 1358.324 ; gain = 581.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1350.578 ; gain = 573.805
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:34 ; elapsed = 00:02:50 . Memory (MB): peak = 1358.324 ; gain = 581.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1350.578 ; gain = 573.805
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:34 ; elapsed = 00:02:50 . Memory (MB): peak = 1358.324 ; gain = 581.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -384,30 +388,30 @@ Report Cell Usage:
 |11    |FDSE   |    18|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1350.578 ; gain = 573.805
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:34 ; elapsed = 00:02:50 . Memory (MB): peak = 1358.324 ; gain = 581.668
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 29 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:26 . Memory (MB): peak = 1350.578 ; gain = 513.082
-Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1350.578 ; gain = 573.805
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:40 ; elapsed = 00:02:37 . Memory (MB): peak = 1358.324 ; gain = 514.309
+Synthesis Optimization Complete : Time (s): cpu = 00:02:34 ; elapsed = 00:02:50 . Memory (MB): peak = 1358.324 ; gain = 581.668
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1350.578 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1358.324 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 5 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1350.578 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1358.324 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 4 instances were transformed.
   FDR => FDRE: 4 instances
 
 Synth Design complete, checksum: b24f2a1f
 INFO: [Common 17-83] Releasing license: Synthesis
-68 Infos, 74 Warnings, 0 Critical Warnings and 0 Errors encountered.
+71 Infos, 74 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:32 . Memory (MB): peak = 1350.578 ; gain = 947.875
-INFO: [Common 17-1381] The checkpoint 'D:/ece385sp24/labs/lab6/lab6tt/lab6tt.runs/mb_block_axi_uartlite_0_0_synth_1/mb_block_axi_uartlite_0_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:02:48 ; elapsed = 00:03:13 . Memory (MB): peak = 1358.324 ; gain = 954.969
+INFO: [Common 17-1381] The checkpoint 'D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/mb_block_axi_uartlite_0_0_synth_1/mb_block_axi_uartlite_0_0.dcp' has been generated.
 INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP mb_block_axi_uartlite_0_0, cache-ID = 24d175409b8b38ad
 INFO: [Coretcl 2-1174] Renamed 19 cell refs.
-INFO: [Common 17-1381] The checkpoint 'D:/ece385sp24/labs/lab6/lab6tt/lab6tt.runs/mb_block_axi_uartlite_0_0_synth_1/mb_block_axi_uartlite_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/mb_block_axi_uartlite_0_0_synth_1/mb_block_axi_uartlite_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file mb_block_axi_uartlite_0_0_utilization_synth.rpt -pb mb_block_axi_uartlite_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Mar  7 16:28:23 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu May  2 21:19:22 2024...

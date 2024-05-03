@@ -43,8 +43,8 @@ module draw_mode_switch(
                     end
                     else
                     begin
-                        red = 4'hf;
-                        green = 4'h0;
+                        red = 4'h0;
+                        green = 4'hf;
                         blue = 4'h0;
                     end
                 end
@@ -58,8 +58,8 @@ module draw_mode_switch(
                     end
                     else
                     begin
-                        red = 4'hf;
-                        green = 4'h0;
+                        red = 4'h0;
+                        green = 4'hf;
                         blue = 4'h0;
                     end
                 end

@@ -42,6 +42,13 @@ module tetris_display(
     logic game_restart_player1, game_restart_player2;
     logic game_over_player1, game_over_player2;
     logic [1:0] player_mode;
+    
+    logic [2:0] garbage_input_player1, garbage_input_player2;
+    logic [2:0] garbage_output_player1, garbage_output_player2;
+    logic garbage_added_player1, garbage_added_player2;
+    logic garbage_output_valid_player1, garbage_output_valid_player2;
+    
+    block_info_t generated_block_player1, generated_block_player2;
     enum logic [2:0] {
         MODE_SWITCH_S,
         SINGLE_PLAYER_S,
@@ -139,33 +146,67 @@ module tetris_display(
         begin
             keycode_player1 = 'd0;
             keycode_player2 = 'd0;
-            if (keycode[15:8] == `MOVE_LEFT_1 || keycode[15:8] == `MOVE_RIGHT_1 || keycode[15:8] == `MOVE_ROTATE_1)
+            if (keycode[15:8] == `MOVE_LEFT_1 || keycode[15:8] == `MOVE_RIGHT_1 || keycode[15:8] == `MOVE_ROTATE_1 || keycode[15:8] == `MOVE_DOWN_1)
                 keycode_player1 = keycode[15:8];
-            if (keycode[7:0] == `MOVE_LEFT_1 || keycode[7:0] == `MOVE_RIGHT_1 || keycode[7:0] == `MOVE_ROTATE_1)
+            if (keycode[7:0] == `MOVE_LEFT_1 || keycode[7:0] == `MOVE_RIGHT_1 || keycode[7:0] == `MOVE_ROTATE_1 || keycode[7:0] == `MOVE_DOWN_1)
                 keycode_player1 = keycode[7:0];
-            if (keycode[15:8] == `MOVE_LEFT_2 || keycode[15:8] == `MOVE_RIGHT_2 || keycode[15:8] == `MOVE_ROTATE_2)
+            if (keycode[15:8] == `MOVE_LEFT_2 || keycode[15:8] == `MOVE_RIGHT_2 || keycode[15:8] == `MOVE_ROTATE_2 || keycode[15:8] == `MOVE_DOWN_2)
                 keycode_player2 = keycode[15:8];
-            if (keycode[7:0] == `MOVE_LEFT_2 || keycode[7:0] == `MOVE_RIGHT_2 || keycode[7:0] == `MOVE_ROTATE_2)
+            if (keycode[7:0] == `MOVE_LEFT_2 || keycode[7:0] == `MOVE_RIGHT_2 || keycode[7:0] == `MOVE_ROTATE_2 || keycode[7:0] == `MOVE_DOWN_2)
                 keycode_player2 = keycode[7:0];
         end
+    
+    always_ff @(posedge frame_clk or posedge Reset)
+        begin
+            if(Reset)
+                garbage_input_player1 <= 0;
+            else
+            begin
+                if (garbage_output_valid_player2 == 1)
+                    garbage_input_player1 <= garbage_output_player2;
+                else if (garbage_added_player1 == 1)
+                    garbage_input_player1 <= 0;
+            end
+        end
+        
+    always_ff @(posedge frame_clk or posedge Reset)
+        begin
+            if(Reset)
+                garbage_input_player2 <= 0;
+            else
+            begin
+                if (garbage_output_valid_player1 == 1)
+                    garbage_input_player2 <= garbage_output_player1;
+                else if (garbage_added_player2 == 1)
+                    garbage_input_player2 <= 0;
+            end
+        end
+        
     tetris_game #(
         .KEY_MOVE_LEFT(`MOVE_LEFT_1),
         .KEY_MOVE_RIGHT(`MOVE_RIGHT_1),
-        .KEY_MOVE_ROTATE(`MOVE_ROTATE_1)
+        .KEY_MOVE_ROTATE(`MOVE_ROTATE_1),
+        .KEY_MOVE_DOWN(`MOVE_DOWN_1)
     ) tetris_game_player1(
         .Reset(Reset),
         .frame_clk(frame_clk),
         .keycode(keycode_player1),
         .game_start(game_start_player1),
         .game_restart(game_restart_player1),
+        .garbage_input(garbage_input_player1),
+        .garbage_added(garbage_added_player1),
         .playfield(playfield_player1),
         .score(score_player1),
-        .game_over(game_over_player1)
+        .game_over(game_over_player1),
+        .garbage_output_valid(garbage_output_valid_player1),
+        .garbage_output(garbage_output_player1),
+        .generated_block(generated_block_player1)
     );
       
     draw_playfield draw_playfield_player1(
         .draw_x(DrawX),
         .draw_y(DrawY),
+        .generated_block(generated_block_player1),
         .playfield(playfield_player1),
         .draw_field_en(draw_field_player1_en),
         .red(r1),
@@ -176,16 +217,22 @@ module tetris_display(
     tetris_game #(
         .KEY_MOVE_LEFT(`MOVE_LEFT_2),
         .KEY_MOVE_RIGHT(`MOVE_RIGHT_2),
-        .KEY_MOVE_ROTATE(`MOVE_ROTATE_2)
+        .KEY_MOVE_ROTATE(`MOVE_ROTATE_2),
+        .KEY_MOVE_DOWN(`MOVE_DOWN_2)
     ) tetris_game_player2(
         .Reset(Reset),
         .frame_clk(frame_clk),
         .keycode(keycode_player2),
         .game_start(game_start_player2),
         .game_restart(game_restart_player2),
+        .garbage_input(garbage_input_player2),
+        .garbage_added(garbage_added_player2),
         .playfield(playfield_player2),
         .score(score_player2),
-        .game_over(game_over_player2)
+        .game_over(game_over_player2),
+        .garbage_output_valid(garbage_output_valid_player2),
+        .garbage_output(garbage_output_player2),
+        .generated_block(generated_block_player2)
     );
       
     draw_playfield #(
@@ -194,6 +241,7 @@ module tetris_display(
     ) draw_playfield_player2(
         .draw_x(DrawX),
         .draw_y(DrawY),
+        .generated_block(generated_block_player2),
         .playfield(playfield_player2),
         .draw_field_en(draw_field_player2_en),
         .red(r2),

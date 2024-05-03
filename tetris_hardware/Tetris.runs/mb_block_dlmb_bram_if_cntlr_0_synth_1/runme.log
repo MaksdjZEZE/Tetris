@@ -10,6 +10,10 @@
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
 source mb_block_dlmb_bram_if_cntlr_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 372.582 ; gain = 51.941
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/ece385sp24/labs/final_project/RD_hdmi_ip2020/hdmi_tx_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/ece385sp24/Vivado/2022.2/data/ip'.
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: mb_block_dlmb_bram_if_cntlr_0
 Command: synth_design -top mb_block_dlmb_bram_if_cntlr_0 -part xc7s50csga324-1 -incremental_mode off -mode out_of_context
 Starting synth_design
@@ -18,12 +22,12 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
 INFO: [Device 21-403] Loading part xc7s50csga324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 30616
+INFO: [Synth 8-7075] Helper process launched with PID 7304
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/ece385sp24/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1186.547 ; gain = 408.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:29 ; elapsed = 00:00:32 . Memory (MB): peak = 1184.441 ; gain = 406.852
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'mb_block_dlmb_bram_if_cntlr_0' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_bram_if_cntlr_0/synth/mb_block_dlmb_bram_if_cntlr_0.vhd:84]
+INFO: [Synth 8-638] synthesizing module 'mb_block_dlmb_bram_if_cntlr_0' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_bram_if_cntlr_0/synth/mb_block_dlmb_bram_if_cntlr_0.vhd:84]
 	Parameter C_FAMILY bound to: spartan7 - type: string 
 	Parameter C_HIGHADDR bound to: 64'b0000000000000000000000000000000000000000000000000111111111111111 
 	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
@@ -48,8 +52,8 @@ INFO: [Synth 8-638] synthesizing module 'mb_block_dlmb_bram_if_cntlr_0' [d:/ece3
 	Parameter C_BRAM_AWIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_CTRL_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_CTRL_DATA_WIDTH bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'lmb_bram_if_cntlr' declared at 'd:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/a177/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:4514' bound to instance 'U0' of component 'lmb_bram_if_cntlr' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_bram_if_cntlr_0/synth/mb_block_dlmb_bram_if_cntlr_0.vhd:226]
-INFO: [Synth 8-638] synthesizing module 'lmb_bram_if_cntlr' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/a177/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:4639]
+INFO: [Synth 8-3491] module 'lmb_bram_if_cntlr' declared at 'd:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/a177/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:4514' bound to instance 'U0' of component 'lmb_bram_if_cntlr' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_bram_if_cntlr_0/synth/mb_block_dlmb_bram_if_cntlr_0.vhd:226]
+INFO: [Synth 8-638] synthesizing module 'lmb_bram_if_cntlr' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/a177/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:4639]
 	Parameter C_TARGET bound to: 9 - type: integer 
 	Parameter C_BASEADDR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
 	Parameter C_MASK bound to: 64'b0000000000000000000000000000000001000000000000000000000000000000 
@@ -62,17 +66,17 @@ INFO: [Synth 8-638] synthesizing module 'lmb_bram_if_cntlr' [d:/ece385sp24/labs/
 	Parameter C_ECC bound to: 0 - type: integer 
 	Parameter C_NUM_LMB bound to: 1 - type: integer 
 	Parameter C_LMB_PROTOCOL bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'lmb_mux' declared at 'd:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/a177/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3893' bound to instance 'lmb_mux_I' of component 'lmb_mux' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/a177/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:4908]
-INFO: [Synth 8-638] synthesizing module 'lmb_mux' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/a177/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3981]
+INFO: [Synth 8-3491] module 'lmb_mux' declared at 'd:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/a177/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3893' bound to instance 'lmb_mux_I' of component 'lmb_mux' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/a177/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:4908]
+INFO: [Synth 8-638] synthesizing module 'lmb_mux' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/a177/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3981]
 	Parameter C_AW bound to: 32 - type: integer 
 	Parameter C_BAR bound to: 64'b0000000000000000000000000000000000000000000000000000000000000000 
 	Parameter C_MASK bound to: 64'b0000000000000000000000000000000001000000000000000000000000000000 
-INFO: [Synth 8-3491] module 'pselect_mask' declared at 'd:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/a177/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3476' bound to instance 'pselect_mask_lmb' of component 'pselect_mask' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/a177/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:4052]
-INFO: [Synth 8-638] synthesizing module 'pselect_mask' [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/a177/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3491]
-INFO: [Synth 8-256] done synthesizing module 'pselect_mask' (0#1) [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/a177/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3491]
-INFO: [Synth 8-256] done synthesizing module 'lmb_mux' (0#1) [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/a177/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3981]
-INFO: [Synth 8-256] done synthesizing module 'lmb_bram_if_cntlr' (0#1) [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ipshared/a177/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:4639]
-INFO: [Synth 8-256] done synthesizing module 'mb_block_dlmb_bram_if_cntlr_0' (0#1) [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_bram_if_cntlr_0/synth/mb_block_dlmb_bram_if_cntlr_0.vhd:84]
+INFO: [Synth 8-3491] module 'pselect_mask' declared at 'd:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/a177/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3476' bound to instance 'pselect_mask_lmb' of component 'pselect_mask' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/a177/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:4052]
+INFO: [Synth 8-638] synthesizing module 'pselect_mask' [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/a177/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3491]
+INFO: [Synth 8-256] done synthesizing module 'pselect_mask' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/a177/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3491]
+INFO: [Synth 8-256] done synthesizing module 'lmb_mux' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/a177/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:3981]
+INFO: [Synth 8-256] done synthesizing module 'lmb_bram_if_cntlr' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ipshared/a177/hdl/lmb_bram_if_cntlr_v4_0_vh_rfs.vhd:4639]
+INFO: [Synth 8-256] done synthesizing module 'mb_block_dlmb_bram_if_cntlr_0' (0#1) [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_bram_if_cntlr_0/synth/mb_block_dlmb_bram_if_cntlr_0.vhd:84]
 WARNING: [Synth 8-7129] Port A[0] in module pselect_mask is either unconnected or has no load
 WARNING: [Synth 8-7129] Port A[2] in module pselect_mask is either unconnected or has no load
 WARNING: [Synth 8-7129] Port A[3] in module pselect_mask is either unconnected or has no load
@@ -175,54 +179,54 @@ WARNING: [Synth 8-7129] Port LMB1_ReadStrobe in module lmb_mux is either unconne
 WARNING: [Synth 8-7129] Port LMB1_WriteStrobe in module lmb_mux is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1282.523 ; gain = 503.977
+Finished RTL Elaboration : Time (s): cpu = 00:00:39 ; elapsed = 00:00:47 . Memory (MB): peak = 1284.340 ; gain = 506.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1282.523 ; gain = 503.977
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:48 . Memory (MB): peak = 1284.340 ; gain = 506.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1282.523 ; gain = 503.977
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:39 ; elapsed = 00:00:48 . Memory (MB): peak = 1284.340 ; gain = 506.750
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1282.523 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1284.340 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [d:/ece385sp24/labs/lab6/lab6tt/lab6tt.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0_ooc.xdc] for cell 'U0'
-Parsing XDC File [D:/ece385sp24/labs/lab6/lab6tt/lab6tt.runs/mb_block_dlmb_bram_if_cntlr_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [D:/ece385sp24/labs/lab6/lab6tt/lab6tt.runs/mb_block_dlmb_bram_if_cntlr_0_synth_1/dont_touch.xdc]
+Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_dlmb_bram_if_cntlr_0/mb_block_dlmb_bram_if_cntlr_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/mb_block_dlmb_bram_if_cntlr_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/mb_block_dlmb_bram_if_cntlr_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1357.184 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1301.781 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1357.184 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.137 . Memory (MB): peak = 1306.031 ; gain = 4.250
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [D:/ece385sp24/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1357.184 ; gain = 578.637
+Finished Constraint Validation : Time (s): cpu = 00:01:21 ; elapsed = 00:01:34 . Memory (MB): peak = 1306.031 ; gain = 528.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1357.184 ; gain = 578.637
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:21 ; elapsed = 00:01:34 . Memory (MB): peak = 1306.031 ; gain = 528.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  D:/ece385sp24/labs/lab6/lab6tt/lab6tt.runs/mb_block_dlmb_bram_if_cntlr_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/mb_block_dlmb_bram_if_cntlr_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1357.184 ; gain = 578.637
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:21 ; elapsed = 00:01:34 . Memory (MB): peak = 1306.031 ; gain = 528.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:14 . Memory (MB): peak = 1357.184 ; gain = 578.637
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:22 ; elapsed = 00:01:36 . Memory (MB): peak = 1306.031 ; gain = 528.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -247,25 +251,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1357.184 ; gain = 578.637
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:32 ; elapsed = 00:01:47 . Memory (MB): peak = 1306.031 ; gain = 528.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1357.184 ; gain = 578.637
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:02 ; elapsed = 00:02:19 . Memory (MB): peak = 1306.031 ; gain = 528.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1357.184 ; gain = 578.637
+Finished Timing Optimization : Time (s): cpu = 00:02:02 ; elapsed = 00:02:19 . Memory (MB): peak = 1306.031 ; gain = 528.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1357.184 ; gain = 578.637
+Finished Technology Mapping : Time (s): cpu = 00:02:03 ; elapsed = 00:02:19 . Memory (MB): peak = 1306.031 ; gain = 528.441
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -283,37 +287,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1357.184 ; gain = 578.637
+Finished IO Insertion : Time (s): cpu = 00:02:23 ; elapsed = 00:02:41 . Memory (MB): peak = 1306.777 ; gain = 529.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1357.184 ; gain = 578.637
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:24 ; elapsed = 00:02:41 . Memory (MB): peak = 1306.777 ; gain = 529.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1357.184 ; gain = 578.637
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:24 ; elapsed = 00:02:41 . Memory (MB): peak = 1306.777 ; gain = 529.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1357.184 ; gain = 578.637
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:24 ; elapsed = 00:02:41 . Memory (MB): peak = 1306.777 ; gain = 529.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1357.184 ; gain = 578.637
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:24 ; elapsed = 00:02:41 . Memory (MB): peak = 1306.777 ; gain = 529.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1357.184 ; gain = 578.637
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:24 ; elapsed = 00:02:41 . Memory (MB): peak = 1306.777 ; gain = 529.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -334,26 +338,26 @@ Report Cell Usage:
 |3     |FDRE |     2|
 +------+-----+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1357.184 ; gain = 578.637
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:24 ; elapsed = 00:02:41 . Memory (MB): peak = 1306.777 ; gain = 529.188
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 322 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:22 . Memory (MB): peak = 1357.184 ; gain = 503.977
-Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1357.184 ; gain = 578.637
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:34 ; elapsed = 00:02:30 . Memory (MB): peak = 1306.777 ; gain = 507.496
+Synthesis Optimization Complete : Time (s): cpu = 00:02:24 ; elapsed = 00:02:42 . Memory (MB): peak = 1306.777 ; gain = 529.188
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1357.184 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1318.828 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1357.184 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1325.500 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 Synth Design complete, checksum: 1c468d17
 INFO: [Common 17-83] Releasing license: Synthesis
-28 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+31 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:27 . Memory (MB): peak = 1357.184 ; gain = 953.504
-INFO: [Common 17-1381] The checkpoint 'D:/ece385sp24/labs/lab6/lab6tt/lab6tt.runs/mb_block_dlmb_bram_if_cntlr_0_synth_1/mb_block_dlmb_bram_if_cntlr_0.dcp' has been generated.
+synth_design: Time (s): cpu = 00:02:43 ; elapsed = 00:03:08 . Memory (MB): peak = 1325.500 ; gain = 922.062
+INFO: [Common 17-1381] The checkpoint 'D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/mb_block_dlmb_bram_if_cntlr_0_synth_1/mb_block_dlmb_bram_if_cntlr_0.dcp' has been generated.
 INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP mb_block_dlmb_bram_if_cntlr_0, cache-ID = 707ce32141e7b4be
-INFO: [Common 17-1381] The checkpoint 'D:/ece385sp24/labs/lab6/lab6tt/lab6tt.runs/mb_block_dlmb_bram_if_cntlr_0_synth_1/mb_block_dlmb_bram_if_cntlr_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/mb_block_dlmb_bram_if_cntlr_0_synth_1/mb_block_dlmb_bram_if_cntlr_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file mb_block_dlmb_bram_if_cntlr_0_utilization_synth.rpt -pb mb_block_dlmb_bram_if_cntlr_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Mar  7 16:28:59 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu May  2 21:23:15 2024...

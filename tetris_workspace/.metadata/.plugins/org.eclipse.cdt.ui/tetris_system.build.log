@@ -1,6 +1,6 @@
-01:38:37 **** Build of configuration Debug for project tetris_system ****
+00:22:25 **** Build of configuration Debug for project tetris_system ****
 make all 
 Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
 
-01:38:37 Build Finished (took 109ms)
+00:22:25 Build Finished (took 188ms)
 

@@ -22,19 +22,26 @@
 `include "tetris_define.vh"
 module tetris_game #(parameter [7:0] KEY_MOVE_LEFT = `MOVE_LEFT_1,
                      parameter [7:0] KEY_MOVE_RIGHT = `MOVE_RIGHT_1,
-                     parameter [7:0] KEY_MOVE_ROTATE = `MOVE_ROTATE_1)(
+                     parameter [7:0] KEY_MOVE_ROTATE = `MOVE_ROTATE_1,
+                     parameter [7:0] KEY_MOVE_DOWN = `MOVE_DOWN_1)(
     input  logic        Reset, 
     input  logic        frame_clk,
     input  logic [7:0]  keycode,
     input logic game_start,
     input logic game_restart,
+    input logic [2:0] garbage_input,
+    output logic garbage_added,
     output logic [`TETRIS_COLORS_NUM_WIDTH-1:0] playfield[`PLAYFIELD_ROW][`PLAYFIELD_COL],
     output logic [15:0] score,
-    output logic game_over
+    output logic game_over,
+    output logic garbage_output_valid,
+    output logic [2:0] garbage_output,
+    output block_info_t generated_block
     );
     // This module should update the playfield according to user input
-    enum logic [2:0] {
+    enum logic [3:0] {
         IDLE_S,
+        ADD_GARBAGE_S,
         GEN_NEW_BLOCK_S,
         WAIT_INPUT_S,
         CHECK_MOVE_S,
@@ -47,7 +54,9 @@ module tetris_game #(parameter [7:0] KEY_MOVE_LEFT = `MOVE_LEFT_1,
     logic [7:0] keycode_prev;
     logic [`TETRIS_COLORS_NUM_WIDTH-1:0] background_playfield[`PLAYFIELD_ROW][`PLAYFIELD_COL];
     logic [`TETRIS_COLORS_NUM_WIDTH-1:0] line_cleaned_playfield[`PLAYFIELD_ROW][`PLAYFIELD_COL];
-    block_info_t generated_block, curr_block;
+    logic [`TETRIS_COLORS_NUM_WIDTH-1:0] garbage_playfield[`PLAYFIELD_ROW][`PLAYFIELD_COL];
+//    block_info_t generated_block, curr_block;
+    block_info_t curr_block;
 //    logic draw_block_en_next;
     logic  [`PLAYFIELD_ROW-1:0] full_row;
     logic draw_block_en;
@@ -77,6 +86,16 @@ module tetris_game #(parameter [7:0] KEY_MOVE_LEFT = `MOVE_LEFT_1,
     always_ff @(posedge frame_clk or posedge Reset)
         begin
             if(Reset)
+                garbage_output_valid <= 0;
+            else if (game_state == CLEAN_LINE_S && garbage_output_valid != 1)
+                garbage_output_valid <= 1;
+            else
+                garbage_output_valid <= 0;
+        end
+        
+    always_ff @(posedge frame_clk or posedge Reset)
+        begin
+            if(Reset)
                 game_over <= 'd0;
             else
             begin
@@ -95,6 +114,7 @@ module tetris_game #(parameter [7:0] KEY_MOVE_LEFT = `MOVE_LEFT_1,
             if(game_state == IDLE_S)
             begin
                 score <= 'd0;
+                garbage_output <= 'd0;
                 for( int row = 0; row < `PLAYFIELD_ROW; row++ )
                       begin
                         for( int col = 0; col < `PLAYFIELD_COL; col++ )
@@ -117,11 +137,31 @@ module tetris_game #(parameter [7:0] KEY_MOVE_LEFT = `MOVE_LEFT_1,
             else if (game_state == CLEAN_LINE_S)
             begin
                 case (full_row_num)
-                  1: score <= score + 100;
-                  2: score <= score + 300;
-                  3: score <= score + 700;
-                  4: score <= score + 1500;
-                  default: score <= score; 
+                  1: 
+                  begin
+                    score <= score + 100;
+                    garbage_output <= 0;
+                  end
+                  2: 
+                  begin
+                    score <= score + 300;
+                    garbage_output <= 1;
+                  end
+                  3: 
+                  begin
+                    score <= score + 700;
+                    garbage_output <= 2;
+                  end
+                  4: 
+                  begin
+                    score <= score + 1500;
+                    garbage_output <= 4;
+                  end
+                  default: 
+                  begin
+                    score <= score; 
+                    garbage_output <= 0;
+                  end
                 endcase
                 
                 for( int row = 0; row < `PLAYFIELD_ROW; row++ )
@@ -132,7 +172,18 @@ module tetris_game #(parameter [7:0] KEY_MOVE_LEFT = `MOVE_LEFT_1,
                       end
                   end
             end
+            else if (game_state == ADD_GARBAGE_S)
+            begin
+                for( int row = 0; row < `PLAYFIELD_ROW; row++ )
+                  begin
+                    for( int col = 0; col < `PLAYFIELD_COL; col++ )
+                      begin
+                        background_playfield[row][col] <= garbage_playfield[row][col];
+                      end
+                  end
+            end
         end
+    assign garbage_added = (game_state == ADD_GARBAGE_S) && (game_state_next != ADD_GARBAGE_S);
     always_comb
         begin
             updating_background = 0;
@@ -145,11 +196,15 @@ module tetris_game #(parameter [7:0] KEY_MOVE_LEFT = `MOVE_LEFT_1,
                         game_state_next = GEN_NEW_BLOCK_S;
                 end
                 GEN_NEW_BLOCK_S:
-                    game_state_next = CHECK_MOVE_S;
+//                    game_state_next = CHECK_MOVE_S;
+                    game_state_next = ADD_GARBAGE_S;
                 WAIT_INPUT_S:
 //                    game_state_next = CHECK_MOVE_S;
                     if (user_has_input == 'd1 || wait_input_end == 'd1)
-                        game_state_next = CHECK_MOVE_S;
+                        game_state_next = ADD_GARBAGE_S;
+//                        game_state_next = CHECK_MOVE_S;
+                ADD_GARBAGE_S:
+                    game_state_next = CHECK_MOVE_S;
                 CHECK_MOVE_S:
                     if (check_move_done == 'd1)
                         game_state_next = MAKE_MOVE_S;
@@ -281,6 +336,11 @@ module tetris_game #(parameter [7:0] KEY_MOVE_LEFT = `MOVE_LEFT_1,
                                 user_has_input = 1;
                                 attempt_move_next = MOVE_ROTATE;
                             end
+                            KEY_MOVE_DOWN:
+                            begin
+                                user_has_input = 1;
+                                attempt_move_next = MOVE_DOWN;
+                            end
                             default:
                                 attempt_move_next = MOVE_DOWN;
                         endcase
@@ -297,8 +357,10 @@ module tetris_game #(parameter [7:0] KEY_MOVE_LEFT = `MOVE_LEFT_1,
             if(Reset)
                 attempt_move <= MOVE_DOWN;
             else
-                if( ( game_state_next == CHECK_MOVE_S ) && ( game_state != CHECK_MOVE_S ) )
+                if( ( game_state_next == ADD_GARBAGE_S ) && ( game_state != ADD_GARBAGE_S ) )
                     attempt_move <= attempt_move_next;
+//                if( ( game_state_next == CHECK_MOVE_S ) && ( game_state != CHECK_MOVE_S ) )
+//                    attempt_move <= attempt_move_next;
         end
 
     assign check_start = (game_state != CHECK_MOVE_S) && (game_state_next == CHECK_MOVE_S);
@@ -374,6 +436,43 @@ module tetris_game #(parameter [7:0] KEY_MOVE_LEFT = `MOVE_LEFT_1,
                     row_cnt = row_cnt - 1;
                 end
 
+        end
+        
+    // garbage field update
+    always_comb
+        begin
+            for( int row = 0; row < garbage_input ; row++ )
+            begin
+                for( int col = 0; col < `PLAYFIELD_COL; col++ )
+                begin
+                    if (col != 5)
+                        garbage_playfield[row][col] = 'd1;
+                    else
+                        garbage_playfield[row][col] = 'd0;
+                end
+            end
+            
+            for (int row = `PLAYFIELD_ROW - 1; row >= 0; row--)
+            begin
+                if (row >= `PLAYFIELD_ROW - garbage_input)
+                begin
+                    for( int col = 0; col < `PLAYFIELD_COL; col++ )
+                    begin
+                        if (col != 5)
+                            garbage_playfield[row][col] = 'd1;
+                        else
+                            garbage_playfield[row][col] = 'd0;
+                    end
+                end
+                else
+                begin
+                    for( int col = 0; col < `PLAYFIELD_COL; col++ )
+                    begin
+                        garbage_playfield[row][col] = background_playfield[row+garbage_input][col];
+                    end
+                end
+                
+            end
         end
         
 

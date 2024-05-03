@@ -24,6 +24,7 @@ module draw_playfield #(parameter [9:0] PLAYFIELD_X_ = 80,
                         parameter [9:0] PLAYFIELD_Y_ = 120)(
     input  logic [9:0] draw_x, 
     input logic [9:0] draw_y,
+    input block_info_t generated_block,
     input  logic [`TETRIS_COLORS_NUM_WIDTH-1:0] playfield[`PLAYFIELD_ROW][`PLAYFIELD_COL],
     output logic draw_field_en,
     output logic [3:0]  red, green, blue
@@ -73,6 +74,26 @@ module draw_playfield #(parameter [9:0] PLAYFIELD_X_ = 80,
                     color_picker = playfield[row][col];
                   
             end
+        end
+        else if ((draw_x >= PLAYFIELD_X_ + 168) && (draw_x < PLAYFIELD_X_ + 232) && (draw_y >= PLAYFIELD_Y_ + 256) && (draw_y < PLAYFIELD_Y_ + 320))
+        begin
+            draw_field_en = 1'b1;
+            field_x = draw_x - (PLAYFIELD_X_ + 168);
+            field_y = draw_y - (PLAYFIELD_Y_ + 256);
+            col = field_x[9:4];
+            row = field_y[9:4];
+            block_x = field_x - (col<<4);
+            block_y = field_y - (row<<4);
+            
+            if (block_x == 0 || block_y == 0 || block_x == BLOCK_SIZE_ - 1 || block_y == BLOCK_SIZE_ - 1)
+                color_picker = 0;
+            else
+            begin
+                if (generated_block.data[generated_block.point][row][col] == 1'd1)
+                    color_picker = generated_block.color;
+                else
+                    color_picker = 0;
+             end
         end
 
         red = TETRIS_COLOR[color_picker][11:8];

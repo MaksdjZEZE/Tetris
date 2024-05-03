@@ -7,9 +7,7 @@
   <device name="xc7s50_0" gui_info=""/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7s50_0" gui_info="">
-      <Properties Property="FULL_PROBES.FILE" value=""/>
-      <Properties Property="PROBES.FILE" value=""/>
-      <Properties Property="PROGRAM.HW_BITSTREAM" value="D:/ece385sp24/Tetris/MP3.bit"/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/mb_usb_hdmi_top.bit"/>
       <Properties Property="SLR.COUNT" value="1"/>
     </Object>
   </ObjectList>

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/ece385sp24/labs/lab6/lab6tt/lab6tt.runs/mb_block_axi_gpio_0_3_synth_1'
+HD_PWD='D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/mb_block_axi_gpio_0_3_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

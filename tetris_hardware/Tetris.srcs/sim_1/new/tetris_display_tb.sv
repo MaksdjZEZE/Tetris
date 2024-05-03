@@ -8,13 +8,28 @@ module tetris_display_tb(); //even though the testbench doesn't create any hardw
 	// instantiated as a submodule in testbench.
 	logic 		clk;
 	logic		reset;
-	logic [`TETRIS_COLORS_NUM_WIDTH-1:0] playfield[`PLAYFIELD_ROW][`PLAYFIELD_COL];
-	logic [7:0]  keycode;
+	
+	logic [`TETRIS_COLORS_NUM_WIDTH-1:0] playfield_player1[`PLAYFIELD_ROW][`PLAYFIELD_COL];
+    logic [3:0] game_state_player1;
+    logic [15:0]  keycode;
+    block_move_t attempt_move_player1, attempt_move_next_player1;
+    
+    logic [2:0] garbage_input_player1;
+    logic [2:0] garbage_output_player1;
+    logic garbage_added_player1;
+    logic garbage_output_valid_player1;
+    
+    logic [`TETRIS_COLORS_NUM_WIDTH-1:0] playfield_player2[`PLAYFIELD_ROW][`PLAYFIELD_COL];
+    logic [3:0] game_state_player2;    
+    logic [2:0] garbage_input_player2;
+    logic [2:0] garbage_output_player2;
+    logic garbage_added_player2;
+    logic garbage_output_valid_player2;
+    logic [15:0] score1, score2;
+	
 	logic [9:0] DrawX, DrawY;
 	logic [3:0]  Red, Green, Blue;
 	
-	logic [`PLAYFIELD_COL_WIDTH-1:0] col;
-    logic [`PLAYFIELD_ROW_WIDTH-1:0] row;
 //	logic [2:0] game_state;
 //    logic signed [`PLAYFIELD_ROW_WIDTH:0] block_y;
 //    logic check_move_done;
@@ -36,7 +51,9 @@ module tetris_display_tb(); //even though the testbench doesn't create any hardw
 	   .DrawY(DrawY),
 	   .Red(Red),
 	   .Green(Green),
-	   .Blue(Blue)
+	   .Blue(Blue),
+	   .score_player1(score1),
+       .score_player2(score2)
 	);	
 
 
@@ -55,9 +72,22 @@ module tetris_display_tb(); //even though the testbench doesn't create any hardw
 		#1 clk = ~clk;
 	end
     
-    assign playfield = tetris_display_test.draw_left_playfield.playfield;   
-    assign col = tetris_display_test.draw_left_playfield.col;
-    assign row = tetris_display_test.draw_left_playfield.row;
+    assign playfield_player1 = tetris_display_test.playfield_player1;   
+    assign game_state_player1 = tetris_display_test.tetris_game_player1.game_state;   
+    assign garbage_input_player1 = tetris_display_test.garbage_input_player1;   
+    assign garbage_output_player1 = tetris_display_test.garbage_output_player1;   
+    assign garbage_added_player1 = tetris_display_test.garbage_added_player1;   
+    assign garbage_output_valid_player1 = tetris_display_test.garbage_output_valid_player1;  
+    assign attempt_move_player1 = tetris_display_test.tetris_game_player1.attempt_move; 
+    assign attempt_move_next_player1 = tetris_display_test.tetris_game_player1.attempt_move_next;
+    
+    assign playfield_player2 = tetris_display_test.playfield_player2;   
+    assign game_state_player2 = tetris_display_test.tetris_game_player2.game_state;   
+    assign garbage_input_player2 = tetris_display_test.garbage_input_player2;   
+    assign garbage_output_player2 = tetris_display_test.garbage_output_player2;   
+    assign garbage_added_player2 = tetris_display_test.garbage_added_player2;   
+    assign garbage_output_valid_player2 = tetris_display_test.garbage_output_valid_player2;  
+
 //    assign game_state = tetris_game_test.game_state;
 //    assign block_y = tetris_game_test.curr_block.y;
 //    assign check_move_done = tetris_game_test.check_move_done;
@@ -89,7 +119,69 @@ module tetris_display_tb(); //even though the testbench doesn't create any hardw
 		reset <= 0;
 		repeat (4) @(posedge clk);
 		// ----------- Test 1 ------------
+		keycode <= `MOVE_DOWN_2;
+		repeat (4) @(posedge clk);
+		keycode <= 0;
+		keycode <= `NEW_GAME_1;
 		repeat (20) @(posedge clk);
+		keycode <= 0;
+		repeat (5) @(posedge clk);
+		// move first block to 0
+		keycode <= `MOVE_LEFT_1;
+		repeat (4) @(posedge clk);
+		keycode <= 0;
+		repeat (1) @(posedge clk);
+		keycode <= `MOVE_LEFT_1;
+		repeat (4) @(posedge clk);
+		keycode <= 0;
+		repeat (1) @(posedge clk);
+		keycode <= `MOVE_LEFT_1;
+		repeat (4) @(posedge clk);
+		keycode <= 0;
+		repeat (1) @(posedge clk);
+		keycode <= `MOVE_LEFT_1;
+		repeat (4) @(posedge clk);
+		keycode <= 0;
+		repeat (300) @(posedge clk);
+		// move second block to 2
+		keycode <= `MOVE_LEFT_1;
+		repeat (4) @(posedge clk);
+		keycode <= 0;
+		repeat (1) @(posedge clk);
+		keycode <= `MOVE_LEFT_1;
+		repeat (4) @(posedge clk);
+		keycode <= 0;
+		repeat (1) @(posedge clk);
+		repeat (630) @(posedge clk);
+		// third block is already at 4
+		// move fourth block to 6
+		keycode <= `MOVE_RIGHT_1;
+		repeat (4) @(posedge clk);
+		keycode <= 0;
+		repeat (1) @(posedge clk);
+		keycode <= `MOVE_RIGHT_1;
+		repeat (4) @(posedge clk);
+		keycode <= 0;
+		repeat (1) @(posedge clk);
+		repeat (310) @(posedge clk);
+		
+		// move fifth block to 8
+		keycode <= `MOVE_RIGHT_1;
+		repeat (4) @(posedge clk);
+		keycode <= 0;
+		repeat (1) @(posedge clk);
+		keycode <= `MOVE_RIGHT_1;
+		repeat (4) @(posedge clk);
+		keycode <= 0;
+		repeat (1) @(posedge clk);
+        keycode <= `MOVE_RIGHT_1;
+		repeat (4) @(posedge clk);
+		keycode <= 0;
+		repeat (1) @(posedge clk);
+		keycode <= `MOVE_RIGHT_1;
+		repeat (4) @(posedge clk);
+		keycode <= 0;
+		repeat (1) @(posedge clk);
 		$finish(); //this task will end the simulation if the Vivado settings are properly configured
 
 

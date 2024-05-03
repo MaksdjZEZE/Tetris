@@ -60,47 +60,73 @@ module check_move(
         begin
             move_valid <= move_valid_temp;
             check_move_done <= check_move_done_temp;
-            move_x <= move_x_temp;
-            move_y <= move_y_temp;
+//            move_x <= move_x_temp;
+//            move_y <= move_y_temp;
         end   
         
+    always_ff @(posedge frame_clk or posedge Reset)
+        begin
+            if(Reset)
+            begin
+                move_x <= 0;
+                move_y <= 0;
+                attempt_point <= 0;
+            end
+            else
+            begin
+                if (check_state == CHECK_IDLE && check_start)
+                begin
+                    case (attempt_move)
+                        MOVE_LEFT:
+                        begin
+                            move_x <= -1;
+                            move_y <= 0;
+                            attempt_point <= curr_block.point;
+                        end
+                        MOVE_RIGHT:
+                        begin
+                            move_x <= 1;
+                            move_y <= 0;
+                            attempt_point <= curr_block.point;
+                        end
+                        MOVE_DOWN:
+                        begin
+                            move_x <= 0;
+                            move_y <= 1;
+                            attempt_point <= curr_block.point;
+                        end
+                        MOVE_ROTATE:
+                        begin
+                            move_x <= 0;
+                            move_y <= 0;
+                            attempt_point <= (curr_block.point + 1) % 4;
+                        end
+                        default:
+                        begin
+                            move_x  <= 0;
+                            move_y <= 0;
+                            attempt_point <= curr_block.point;
+                        end
+                    endcase
+                end
+                else
+                begin
+                    move_x <= move_x;
+                    move_y <= move_y;
+                    attempt_point <= attempt_point;
+                end
+            end
+        end     
     always_comb
         begin
             check_state_next = check_state;
             check_move_done_temp = 0;
             move_valid_temp = move_valid;
-            attempt_point = curr_block.point;
-//            move_x_temp = 0;
-//            move_y_temp = 0;
             case (check_state)
                 CHECK_IDLE:
                 begin
                     if (check_start)
                     begin
-                        case (attempt_move)
-                            MOVE_LEFT:
-                            begin
-                                move_x_temp = -1;
-                                move_y_temp = 0;
-                            end
-                            MOVE_RIGHT:
-                            begin
-                                move_x_temp = 1;
-                                move_y_temp = 0;
-                            end
-                            MOVE_DOWN:
-                            begin
-                                move_x_temp = 0;
-                                move_y_temp = 1;
-                            end
-                            MOVE_ROTATE:
-                                attempt_point = (attempt_point + 1) % 4;
-                            default:
-                            begin
-                                move_x_temp = 0;
-                                move_y_temp = 0;
-                            end
-                        endcase
                         check_state_next = CHECKING;
                     end
                 end
@@ -114,8 +140,8 @@ module check_move(
                           begin
                             if(curr_block.data[attempt_point][row][col] == 1'd1)
                                 begin
-                                    check_col = curr_block.x + col + move_x_temp;
-                                    check_row = curr_block.y + row + move_y_temp;
+                                    check_col = curr_block.x + col + move_x;
+                                    check_row = curr_block.y + row + move_y;
                                     if( check_col < 0 || check_col >= `PLAYFIELD_COL || check_row >= `PLAYFIELD_ROW || background_playfield[check_row][check_col]!=0)
                                     begin    
                                         move_valid_temp = 0;

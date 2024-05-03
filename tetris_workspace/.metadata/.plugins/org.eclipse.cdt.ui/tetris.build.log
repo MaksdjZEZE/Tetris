@@ -1,4 +1,4 @@
-01:38:35 **** Build of configuration Debug for project tetris ****
+00:22:23 **** Build of configuration Debug for project tetris ****
 make all 
 'Building file: ../src/lw_usb/HID.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -83,5 +83,5 @@ mb-size tetris.elf  |tee "tetris.elf.size"
 'Finished building: tetris.elf.size'
 ' '
 
-01:38:37 Build Finished (took 1s.656ms)
+00:22:25 Build Finished (took 2s.74ms)
 

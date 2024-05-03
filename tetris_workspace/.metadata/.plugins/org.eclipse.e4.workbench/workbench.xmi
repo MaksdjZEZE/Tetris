@@ -264,7 +264,6 @@
                     </children>
                   </children>
                   <children xsi:type="basic:PartStack" xmi:id="_vPvpYwaeEe-xObvufCOM1A" elementId="org.eclipse.debug.ui.MemoryViewMStack" containerData="5000" selectedElement="_vPvpZAaeEe-xObvufCOM1A">
-                    <tags>active</tags>
                     <children xsi:type="advanced:Placeholder" xmi:id="_vPvpZAaeEe-xObvufCOM1A" elementId="org.eclipse.debug.ui.MemoryView" ref="_6QqOAPhxEe6Mgr4PM8_6Xg" closeable="true">
                       <tags>View</tags>
                       <tags>categoryTag:Debug</tags>
@@ -287,6 +286,7 @@
               <children xsi:type="basic:PartSashContainer" xmi:id="_vPvpaAaeEe-xObvufCOM1A" containerData="2500" selectedElement="_vPvpaQaeEe-xObvufCOM1A" horizontal="true">
                 <children xsi:type="basic:PartSashContainer" xmi:id="_vPvpaQaeEe-xObvufCOM1A" containerData="7000" selectedElement="_vPvpagaeEe-xObvufCOM1A" horizontal="true">
                   <children xsi:type="basic:PartStack" xmi:id="_vPvpagaeEe-xObvufCOM1A" elementId="org.eclipse.debug.internal.ui.ToolsFolderView" containerData="7000" selectedElement="_vPvpawaeEe-xObvufCOM1A">
+                    <tags>active</tags>
                     <children xsi:type="advanced:Placeholder" xmi:id="_vPvpawaeEe-xObvufCOM1A" elementId="org.eclipse.ui.console.ConsoleView" ref="_6QOwMPhxEe6Mgr4PM8_6Xg" closeable="true">
                       <tags>View</tags>
                       <tags>categoryTag:General</tags>
@@ -472,6 +472,24 @@
       <menus xsi:type="menu:PopupMenu" xmi:id="_qrNaoAitEe-nqusjBW2zMw" elementId="com.xilinx.ide.projectExplorer#PopupMenu">
         <tags>menuContribution:popup</tags>
       </menus>
+      <menus xsi:type="menu:PopupMenu" xmi:id="_uYmzQAjKEe-gltqW9-_9kw" elementId="com.xilinx.ide.projectExplorer#PopupMenu">
+        <tags>menuContribution:popup</tags>
+      </menus>
+      <menus xsi:type="menu:PopupMenu" xmi:id="_Q9izsAjbEe-rk5oARgo-gg" elementId="com.xilinx.ide.projectExplorer#PopupMenu">
+        <tags>menuContribution:popup</tags>
+      </menus>
+      <menus xsi:type="menu:PopupMenu" xmi:id="_TO4-sAjwEe-C9tlKvu-umQ" elementId="com.xilinx.ide.projectExplorer#PopupMenu">
+        <tags>menuContribution:popup</tags>
+      </menus>
+      <menus xsi:type="menu:PopupMenu" xmi:id="_A7-9IAjyEe-SysgFB3vx2A" elementId="com.xilinx.ide.projectExplorer#PopupMenu">
+        <tags>menuContribution:popup</tags>
+      </menus>
+      <menus xsi:type="menu:PopupMenu" xmi:id="_kOnYwAj8Ee-zVI8oY1VVAA" elementId="com.xilinx.ide.projectExplorer#PopupMenu">
+        <tags>menuContribution:popup</tags>
+      </menus>
+      <menus xsi:type="menu:PopupMenu" xmi:id="_2rwd8AkGEe-et4Me3Jov-Q" elementId="com.xilinx.ide.projectExplorer#PopupMenu">
+        <tags>menuContribution:popup</tags>
+      </menus>
       <toolbar xmi:id="_6UuOofhxEe6Mgr4PM8_6Xg" elementId="com.xilinx.ide.projectExplorer"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_6QNiEPhxEe6Mgr4PM8_6Xg" elementId="com.xilinx.sdx.assistant.assistantView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Assistant" iconURI="platform:/plugin/com.xilinx.sdx.assistant/icons/assistant_view.png" tooltip="Assistant to manage Scout project setup, builds, and reports." closeable="true">
@@ -492,6 +510,8 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
+      <tags>active</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_6ngAsPhxEe6Mgr4PM8_6Xg" elementId="org.eclipse.ui.console.ConsoleView">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -738,8 +758,6 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Debug</tags>
-      <tags>active</tags>
-      <tags>activeOnClose</tags>
       <menus xmi:id="_7TEYAPxoEe6G67n7EzYybg" elementId="org.eclipse.debug.ui.MemoryView">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -3452,6 +3470,12 @@
   <addons xmi:id="_Wv2lQQhGEe-Vg-yFKUTu8A" elementId="com.xilinx.sdk.targetmanager.ui.addon.view" contributionURI="bundleclass://com.xilinx.sdk.targetmanager/com.xilinx.sdk.targetmanager.ui.ViewVisibilityAdapterAddon"/>
   <addons xmi:id="_eGjzcAhOEe-MsaUXyw4QJQ" elementId="com.xilinx.sdk.targetmanager.ui.addon.view" contributionURI="bundleclass://com.xilinx.sdk.targetmanager/com.xilinx.sdk.targetmanager.ui.ViewVisibilityAdapterAddon"/>
   <addons xmi:id="_pQqIMQitEe-nqusjBW2zMw" elementId="com.xilinx.sdk.targetmanager.ui.addon.view" contributionURI="bundleclass://com.xilinx.sdk.targetmanager/com.xilinx.sdk.targetmanager.ui.ViewVisibilityAdapterAddon"/>
+  <addons xmi:id="_tBB8UAjKEe-gltqW9-_9kw" elementId="com.xilinx.sdk.targetmanager.ui.addon.view" contributionURI="bundleclass://com.xilinx.sdk.targetmanager/com.xilinx.sdk.targetmanager.ui.ViewVisibilityAdapterAddon"/>
+  <addons xmi:id="_P1DhoQjbEe-rk5oARgo-gg" elementId="com.xilinx.sdk.targetmanager.ui.addon.view" contributionURI="bundleclass://com.xilinx.sdk.targetmanager/com.xilinx.sdk.targetmanager.ui.ViewVisibilityAdapterAddon"/>
+  <addons xmi:id="_SGJN8AjwEe-C9tlKvu-umQ" elementId="com.xilinx.sdk.targetmanager.ui.addon.view" contributionURI="bundleclass://com.xilinx.sdk.targetmanager/com.xilinx.sdk.targetmanager.ui.ViewVisibilityAdapterAddon"/>
+  <addons xmi:id="_-QQWsAjxEe-SysgFB3vx2A" elementId="com.xilinx.sdk.targetmanager.ui.addon.view" contributionURI="bundleclass://com.xilinx.sdk.targetmanager/com.xilinx.sdk.targetmanager.ui.ViewVisibilityAdapterAddon"/>
+  <addons xmi:id="_jNJ7wAj8Ee-zVI8oY1VVAA" elementId="com.xilinx.sdk.targetmanager.ui.addon.view" contributionURI="bundleclass://com.xilinx.sdk.targetmanager/com.xilinx.sdk.targetmanager.ui.ViewVisibilityAdapterAddon"/>
+  <addons xmi:id="_0_DrkAkGEe-et4Me3Jov-Q" elementId="com.xilinx.sdk.targetmanager.ui.addon.view" contributionURI="bundleclass://com.xilinx.sdk.targetmanager/com.xilinx.sdk.targetmanager.ui.ViewVisibilityAdapterAddon"/>
   <categories xmi:id="_6GMDYPhxEe6Mgr4PM8_6Xg" elementId="org.eclipse.team.ui.category.team" name="Team" description="Actions that apply when working with a Team"/>
   <categories xmi:id="_6GMDYfhxEe6Mgr4PM8_6Xg" elementId="org.eclipse.ui.category.views" name="Views" description="Commands for opening views"/>
   <categories xmi:id="_6GMDYvhxEe6Mgr4PM8_6Xg" elementId="org.eclipse.ui.category.edit" name="Edit"/>
