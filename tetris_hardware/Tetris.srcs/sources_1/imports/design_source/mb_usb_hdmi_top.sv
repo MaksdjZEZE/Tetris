@@ -37,7 +37,10 @@ module mb_usb_hdmi_top(
     output logic [7:0] hex_segA,
     output logic [3:0] hex_gridA,
     output logic [7:0] hex_segB,
-    output logic [3:0] hex_gridB
+    output logic [3:0] hex_gridB,
+    
+    output logic p1,
+    output logic p2
 );
     
     logic [31:0] keycode0_gpio, keycode1_gpio;
@@ -146,7 +149,10 @@ module mb_usb_hdmi_top(
         .Green(green),
         .Blue(blue),
         .score_player1(score1),
-        .score_player2(score2)
+        .score_player2(score2),
+        .p1(p1),
+        .p2(p2),
+        .Clk(Clk)
     );
 
     

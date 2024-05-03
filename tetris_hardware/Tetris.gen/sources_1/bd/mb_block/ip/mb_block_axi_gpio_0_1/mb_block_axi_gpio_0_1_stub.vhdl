@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
 -- Date        : Thu May  2 21:25:44 2024
 -- Host        : LAPTOP-U1IB34FN running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_1/mb_block_axi_gpio_0_1_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top mb_block_axi_gpio_0_1 -prefix
+--               mb_block_axi_gpio_0_1_ mb_block_axi_gpio_0_1_stub.vhdl
 -- Design      : mb_block_axi_gpio_0_1
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7s50csga324-1

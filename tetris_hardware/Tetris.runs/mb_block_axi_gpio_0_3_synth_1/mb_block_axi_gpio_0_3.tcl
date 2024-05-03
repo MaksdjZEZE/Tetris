@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/mb_block_axi_gpio_0_3_synth_1/mb_block_axi_gpio_0_3.tcl"
+  variable script "C:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.runs/mb_block_axi_gpio_0_3_synth_1/mb_block_axi_gpio_0_3.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "mb_block_axi_gpio_0_3_synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 4
+set_msg_config -id {Common 17-41} -limit 10000000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -79,21 +81,24 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir D:/ece385sp24/Tetris/tetris_hardware/Tetris.cache/wt [current_project]
-set_property parent.project_path D:/ece385sp24/Tetris/tetris_hardware/Tetris.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.cache/wt [current_project]
+set_property parent.project_path C:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_repo_paths d:/ece385sp24/labs/final_project/RD_hdmi_ip2020/hdmi_tx_1.0 [current_project]
+set_property ip_repo_paths {
+  c:/Users/29360/Desktop/ECE385/Tetris_final/labs/final_project/RD_hdmi_ip2020/hdmi_tx_1.0
+  c:/Users/29360/Desktop/ECE385/lab6/lab6.2/hdmi_tx_1.0
+} [current_project]
 update_ip_catalog
-set_property ip_output_repo d:/ece385sp24/Tetris/tetris_hardware/Tetris.cache/ip [current_project]
+set_property ip_output_repo c:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet D:/ece385sp24/Tetris/tetris_hardware/Tetris.srcs/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3.xci
-set_property used_in_implementation false [get_files -all d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_board.xdc]
-set_property used_in_implementation false [get_files -all d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3.xdc]
+read_ip -quiet C:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.srcs/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3.xci
+set_property used_in_implementation false [get_files -all c:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -109,7 +114,7 @@ set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 OPTRACE "Configure IP Cache" START { }
 
-set cacheID [config_ip_cache -export -no_bom  -dir D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/mb_block_axi_gpio_0_3_synth_1 -new_name mb_block_axi_gpio_0_3 -ip [get_ips mb_block_axi_gpio_0_3]]
+set cacheID [config_ip_cache -export -no_bom  -dir C:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.runs/mb_block_axi_gpio_0_3_synth_1 -new_name mb_block_axi_gpio_0_3 -ip [get_ips mb_block_axi_gpio_0_3]]
 
 OPTRACE "Configure IP Cache" END { }
 if { $cacheID == "" } {
@@ -164,32 +169,32 @@ create_report "mb_block_axi_gpio_0_3_synth_1_synth_report_utilization_0" "report
 OPTRACE "synth reports" END { }
 
 if { [catch {
-  file copy -force D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/mb_block_axi_gpio_0_3_synth_1/mb_block_axi_gpio_0_3.dcp d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3.dcp
+  file copy -force C:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.runs/mb_block_axi_gpio_0_3_synth_1/mb_block_axi_gpio_0_3.dcp c:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_stub.v
+  write_verilog -force -mode synth_stub c:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_stub.vhdl
+  write_vhdl -force -mode synth_stub c:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_sim_netlist.v
+  write_verilog -force -mode funcsim c:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim c:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -199,47 +204,47 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/mb_block_axi_gpio_0_3_synth_1/mb_block_axi_gpio_0_3.dcp d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3.dcp
+  file copy -force C:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.runs/mb_block_axi_gpio_0_3_synth_1/mb_block_axi_gpio_0_3.dcp c:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/mb_block_axi_gpio_0_3_synth_1/mb_block_axi_gpio_0_3_stub.v d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_stub.v
+  file rename -force C:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.runs/mb_block_axi_gpio_0_3_synth_1/mb_block_axi_gpio_0_3_stub.v c:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/mb_block_axi_gpio_0_3_synth_1/mb_block_axi_gpio_0_3_stub.vhdl d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_stub.vhdl
+  file rename -force C:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.runs/mb_block_axi_gpio_0_3_synth_1/mb_block_axi_gpio_0_3_stub.vhdl c:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/mb_block_axi_gpio_0_3_synth_1/mb_block_axi_gpio_0_3_sim_netlist.v d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_sim_netlist.v
+  file rename -force C:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.runs/mb_block_axi_gpio_0_3_synth_1/mb_block_axi_gpio_0_3_sim_netlist.v c:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/mb_block_axi_gpio_0_3_synth_1/mb_block_axi_gpio_0_3_sim_netlist.vhdl d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_sim_netlist.vhdl
+  file rename -force C:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.runs/mb_block_axi_gpio_0_3_synth_1/mb_block_axi_gpio_0_3_sim_netlist.vhdl c:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 }; # end if cacheID 
 
-if {[file isdir D:/ece385sp24/Tetris/tetris_hardware/Tetris.ip_user_files/ip/mb_block_axi_gpio_0_3]} {
+if {[file isdir C:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.ip_user_files/ip/mb_block_axi_gpio_0_3]} {
   catch { 
-    file copy -force d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_stub.v D:/ece385sp24/Tetris/tetris_hardware/Tetris.ip_user_files/ip/mb_block_axi_gpio_0_3
+    file copy -force c:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_stub.v C:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.ip_user_files/ip/mb_block_axi_gpio_0_3
   }
 }
 
-if {[file isdir D:/ece385sp24/Tetris/tetris_hardware/Tetris.ip_user_files/ip/mb_block_axi_gpio_0_3]} {
+if {[file isdir C:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.ip_user_files/ip/mb_block_axi_gpio_0_3]} {
   catch { 
-    file copy -force d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_stub.vhdl D:/ece385sp24/Tetris/tetris_hardware/Tetris.ip_user_files/ip/mb_block_axi_gpio_0_3
+    file copy -force c:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/ip/mb_block_axi_gpio_0_3/mb_block_axi_gpio_0_3_stub.vhdl C:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.ip_user_files/ip/mb_block_axi_gpio_0_3
   }
 }
 file delete __synthesis_is_running__

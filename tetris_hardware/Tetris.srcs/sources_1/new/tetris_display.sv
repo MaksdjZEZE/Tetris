@@ -27,7 +27,10 @@ module tetris_display(
     input  logic [9:0] DrawX, DrawY,
     output logic [3:0]  Red, Green, Blue,
     output logic [15:0] score_player1,
-    output logic [15:0] score_player2
+    output logic [15:0] score_player2,
+    output logic p1,
+    output logic p2,
+    input Clk
     );
     logic [`TETRIS_COLORS_NUM_WIDTH-1:0] playfield_player1[`PLAYFIELD_ROW][`PLAYFIELD_COL];
     logic [`TETRIS_COLORS_NUM_WIDTH-1:0] playfield_player2[`PLAYFIELD_ROW][`PLAYFIELD_COL];
@@ -60,6 +63,28 @@ module tetris_display(
         GAME_S,
         GAME_OVER_S
     } display_state, display_state_next;
+    logic bu1,bu2;
+    always_ff @(posedge frame_clk or posedge Reset)
+    begin
+        if (Reset)
+        begin
+            bu1 <= 1'b1;
+            bu2 <= 1'b0;
+        end
+        else
+        begin
+            if (display_state == GAME_S)
+                bu1 <= 1'b0;
+            else
+                bu1 <= 1'b1;
+            if (keycode[7:0] != 0)
+                bu2 <= 1'b1;
+            else
+                bu2 <= 1'b0;
+        end
+    end
+    
+    MP3 mp3_iii(.btn_pressed(bu2),.sys_clk(Clk),.sys_rst_n(bu1),.pwm_out1(p1),.pwm_out2(p2));
     
     always_ff @(posedge frame_clk or posedge Reset)
         begin

@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "D:/ece385sp24/Tetris/tetris_hardware/Tetris.runs/impl_1/mb_usb_hdmi_top.tcl"
+  variable script "C:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.runs/impl_1/mb_usb_hdmi_top.tcl"
   variable category "vivado_impl"
 }
 
@@ -115,6 +115,7 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Write Bitstream" START { ROLLUP_AUTO }
@@ -124,9 +125,8 @@ set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
   set_param chipscope.maxJobs 4
-  set_param xicom.use_bs_reader 1
   open_checkpoint mb_usb_hdmi_top_routed.dcp
-  set_property webtalk.parent_dir D:/ece385sp24/Tetris/tetris_hardware/Tetris.cache/wt [current_project]
+  set_property webtalk.parent_dir C:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.cache/wt [current_project]
 set_property TOP mb_usb_hdmi_top [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }

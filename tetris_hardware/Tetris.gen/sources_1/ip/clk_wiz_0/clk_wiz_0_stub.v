@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
 // Date        : Thu May  2 21:23:16 2024
 // Host        : LAPTOP-U1IB34FN running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top clk_wiz_0 -prefix
+//               clk_wiz_0_ clk_wiz_0_stub.v
 // Design      : clk_wiz_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7s50csga324-1

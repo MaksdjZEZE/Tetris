@@ -63,4 +63,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mb_block_ax
 # IP: bd/mb_block/ip/mb_block_xlconcat_0_1/mb_block_xlconcat_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mb_block_xlconcat_0_1 || ORIG_REF_NAME==mb_block_xlconcat_0_1} -quiet] -quiet
 
-# XDC: d:/ece385sp24/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/mb_block_ooc.xdc
+# XDC: c:/Users/29360/Desktop/ECE385/Tetris_final/Tetris/tetris_hardware/Tetris.gen/sources_1/bd/mb_block/mb_block_ooc.xdc
