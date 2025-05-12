@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 module Sound_Effect#(
-    parameter TIME_500MS = 25'd5999999, // 0.5秒计数值
+    parameter TIME_500MS = 25'd5999999, 
     parameter DO = 18'd190839 , 
     parameter RE = 18'd170067 , 
     parameter MI = 18'd151514 , 
@@ -25,10 +25,9 @@ logic [17:0] freq_data;
 // Main Code
 
 // duty cycle = 50%, affecting music volume
-logic [16:0] duty_data; // 占空比计数值
+logic [16:0] duty_data; 
 assign duty_data = freq_data >> 4;
 
-// cnt: 0.5秒循环计数器
 always @(posedge sys_clk or negedge sys_rst_n)
 begin
     if ((~sys_rst_n) || (btn_pressed))
@@ -39,7 +38,7 @@ begin
         cnt <= cnt + 1'b1;
 end
 
-// cnt_500ms: 对500ms个数进行计数，每个音阶鸣叫时间0.5s，7个音节一循环
+
 always @(posedge sys_clk or negedge sys_rst_n)
 begin
     if (~sys_rst_n)
@@ -50,7 +49,6 @@ begin
         cnt_500ms <= cnt_500ms + 1'b1;
 end
 
-// 不同时间鸣叫不同的音阶
 always @(posedge sys_clk or negedge sys_rst_n)
 begin
     if (~sys_rst_n)
@@ -71,7 +69,6 @@ begin
         freq_cnt <= freq_cnt + 1'b1;
 end
 
-// beep: 输出蜂鸣器波形
 always @(posedge sys_clk or negedge sys_rst_n)
 begin
     if (~sys_rst_n)
