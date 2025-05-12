@@ -16,10 +16,10 @@ module beep #(
 );
 
 // Parameter and Internal Signal
-logic [24:0] cnt; // 0.5秒计数器
-logic [17:0] freq_cnt; // 音调计数器
-logic [5:0] cnt_500ms; // 0.5秒个数计数
-logic [17:0] freq_data; // 音调分频计数值
+logic [24:0] cnt; 
+logic [17:0] freq_cnt; 
+logic [5:0] cnt_500ms; 
+logic [17:0] freq_data; 
 
 // Main Code
 
